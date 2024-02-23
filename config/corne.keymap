@@ -1,78 +1,218 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * Copyright (c) 2022 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
-
-#define AS(keycode) &as LS(keycode) keycode
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
-    chosen {
-      zmk,matrix_transform = &five_column_transform;
-    };
-
     behaviors {
-        as: auto_shift {
+        td: tapdance {
             compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <0>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    };
-        keymap {
-                compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
-// |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
-// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
-//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
-                        display-name = "Base";
-                        bindings = <
-   AS(Z) AS(Z) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
-   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
-   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
-        &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
-                        >;
-                };
-
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
-// | BTCLR |     |     |     |     |     |     |     |     |     |     |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
-                        display-name = "Lower";
-                        bindings = <
-   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
-   &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
-                             &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp TAB
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
-// | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-// | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
-//            | GUI | ESC | SPC |     | ENT |     | TAB |
-                        display-name = "Raise";
-                        bindings = <
-
-   AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
-   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
-                       &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
-                        >;
-                };
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_QUICK_RELEASE";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <500>;
+            quick-release;
+            ignore-modifiers;
         };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Config_Layer_5 {
+            bindings = <&mo 5>;
+            key-positions = <38 39 32 33>;
+        };
+
+        Macro1_combo {
+            bindings = <&Macro1>;
+            key-positions = <28 8>;
+            layers = <1>;
+        };
+
+        Macro11_combo {
+            bindings = <&Macro11>;
+            key-positions = <1 21>;
+            layers = <2>;
+        };
+
+        Macro2_combo {
+            bindings = <&Macro2>;
+            key-positions = <9 29>;
+            layers = <1>;
+        };
+
+        Macro22_combo {
+            bindings = <&Macro22>;
+            key-positions = <0 20>;
+            layers = <2>;
+        };
+    };
+
+    macros {
+        Macro11: Macro11 {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO11";
+            #binding-cells = <0>;
+            bindings = <&kp LS(K) &kp I &kp V &kp N2 &kp W &kp LS(Y) &kp LS(V) &kp Q &kp LS(J) &kp H &kp AT_SIGN &kp N3 &kp LS(C) &kp LS(W) &kp B &kp AMPS &kp N0 &kp LS(N)>;
+        };
+
+        Macro1: Macro1 {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO1";
+            #binding-cells = <0>;
+            bindings = <&kp LS(E) &kp C &kp M &kp Z &kp H &kp N6 &kp N9 &kp N &kp N7 &kp STAR &kp EQUAL &kp LS(X) &kp E &kp AT &kp G &kp P &kp LS(Y) &kp MINUS>;
+        };
+
+        Macro2: Macro2 {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO2";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp PLUS &kp U &kp C &kp N3 &kp S &kp LS(M) &kp R &kp UNDERSCORE &kp LS(C) &kp LS(O) &kp N4 &kp POUND &kp PERCENT &kp LS(U) &kp AT &kp N5 &kp LS(P)>;
+        };
+
+        Macro22: Macro22 {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO22";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp N9 &kp N &kp LS(A) &kp MINUS &kp N2 &kp STAR &kp RPAR &kp N1 &kp A &kp LS(F) &kp LS(W) &kp LS(A) &kp T &kp O &kp LS(B) &kp O &kp LS(W)>;
+        };
+
+        SSMS_Comment: SSMS_Comment {
+            compatible = "zmk,behavior-macro";
+            label = "SSMS_Comment";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp C>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+
+        SSMS_UnComment: SSMS_UnComment {
+            compatible = "zmk,behavior-macro";
+            label = "SSMS_UnComment";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp U>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+
+        SSMS_Format: SSMS_Format {
+            compatible = "zmk,behavior-macro";
+            label = "SSMS_Format";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp Y>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+    };
+
+    /*
+
+    #    /
+    #    &kp KP_DIVIDE
+
+    #     ~
+    #    Mac                       win
+    #    &td RA(RIGHT_BRACKET)     RC(RIGHT_BRACKET) 
+
+    #    win
+    #    |                         \  
+    #    &td RA(GRAVE)             LS(GRAVE) 
+
+    #    Mac
+    #    |                         \  
+    #    &td RA(MINUS)             RA(GRAVE)
+
+ */
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Base_layer_0 {
+            label = "Colemak";
+            bindings = <
+  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &td RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)
+  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O
+  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH
+                &mo 3  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 4
+            >;
+        };
+
+        Extend_Layer_1 {
+            label = "Extend";
+            bindings = <
+  &td LG(Z) LC(Z)  &td LG(X) LC(X)  &td LG(C) LC(C)  &td LG(V) LC(V)  &td LG(Y) LC(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(PRINTSCREEN)
+  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC
+  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN             &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS
+                                    &none            &none            &none                  &kp RETURN      &kp LGUI        &kp K_CMENU
+            >;
+        };
+
+        Symbols_Layer_2 {
+            label = "Symbol";
+            bindings = <
+  &kp EXCL              &kp AT      &kp HASH           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &td RA(MINUS) RA(GRAVE)
+  &kp BACKSLASH         &kp RA(N7)  &kp LEFT_BRACKET   &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp SEMI   &kp EQUAL
+  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp COLON  &kp APOSTROPHE
+                                    &none              &none       &none         &none          &none      &none
+            >;
+        };
+
+        Num_Layer_3 {
+            label = "Numeric";
+            bindings = <
+  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY
+  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE
+  &kp RALT  &none     &none            &kp RCTRL      &none           &none         &kp N1  &kp N2  &kp N3  &none
+                      &none            &none          &none           &kp RETURN    &kp N0  &kp N0
+            >;
+        };
+
+        Fn_Layer_4 {
+            label = "Function";
+            bindings = <
+  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &none  &kp F7  &kp F8  &kp F9  &kp F10
+  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &none  &kp F4  &kp F5  &kp F6  &kp F11
+  &kp RALT  &none     &none            &kp RCTRL      &none           &none  &kp F1  &kp F2  &kp F3  &kp F12
+                      &none            &none          &none           &none  &none   &none
+            >;
+        };
+
+        Config_Layer_5 {
+            label = "Config";
+            bindings = <
+  &bootloader   &sys_reset    &none         &none         &none           &none          &none         &none         &none  &none
+  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp LC(LA(M))  &out OUT_BLE  &out OUT_USB  &none  &none
+  &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR      &none          &none         &none         &none  &none
+                              &none         &none         &none           &none          &none         &none
+            >;
+        };
+    };
 };
