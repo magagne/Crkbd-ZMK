@@ -158,19 +158,19 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &td RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)
-  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O
-  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH
-                &mo 3  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 4
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &td RA(RIGHT_BRACKET) RC(RIGHT_BRACKET) &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH &none
+                &mo 3  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 4 &none
             >;
         };
 
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-  &td LG(Z) LC(Z)  &td LG(X) LC(X)  &td LG(C) LC(C)  &td LG(V) LC(V)  &td LG(Y) LC(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(PRINTSCREEN)
-  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC
-  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN             &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS
+&none  &td LG(Z) LC(Z)  &td LG(X) LC(X)  &td LG(C) LC(C)  &td LG(V) LC(V)  &td LG(Y) LC(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(PRINTSCREEN) &none
+&none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC &none
+&none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN             &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS &none
                                     &none            &none            &none                  &kp RETURN      &kp LGUI        &kp K_CMENU
             >;
         };
@@ -178,9 +178,9 @@
         Symbols_Layer_2 {
             label = "Symbol";
             bindings = <
-  &kp EXCL              &kp AT      &kp HASH           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &td RA(MINUS) RA(GRAVE)
-  &kp BACKSLASH         &kp RA(N7)  &kp LEFT_BRACKET   &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp SEMI   &kp EQUAL
-  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp COLON  &kp APOSTROPHE
+&none  &kp EXCL              &kp AT      &kp HASH           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &td RA(MINUS) RA(GRAVE) &none
+&none  &kp BACKSLASH         &kp RA(N7)  &kp LEFT_BRACKET   &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp SEMI   &kp EQUAL &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp COLON  &kp APOSTROPHE &none
                                     &none              &none       &none         &none          &none      &none
             >;
         };
@@ -188,9 +188,9 @@
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY
-  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE
-  &kp RALT  &none     &none            &kp RCTRL      &none           &none         &kp N1  &kp N2  &kp N3  &none
+&none  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY &none
+&none  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE &none
+&none  &kp RALT  &none     &none            &kp RCTRL      &none           &none         &kp N1  &kp N2  &kp N3  &none &none
                       &none            &none          &none           &kp RETURN    &kp N0  &kp N0
             >;
         };
@@ -198,9 +198,9 @@
         Fn_Layer_4 {
             label = "Function";
             bindings = <
-  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &none  &kp F7  &kp F8  &kp F9  &kp F10
-  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &none  &kp F4  &kp F5  &kp F6  &kp F11
-  &kp RALT  &none     &none            &kp RCTRL      &none           &none  &kp F1  &kp F2  &kp F3  &kp F12
+&none  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &none  &kp F7  &kp F8  &kp F9  &kp F10 &none
+&none  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &none  &kp F4  &kp F5  &kp F6  &kp F11 &none
+&none  &kp RALT  &none     &none            &kp RCTRL      &none           &none  &kp F1  &kp F2  &kp F3  &kp F12 &none
                       &none            &none          &none           &none  &none   &none
             >;
         };
@@ -208,9 +208,9 @@
         Config_Layer_5 {
             label = "Config";
             bindings = <
-  &bootloader   &sys_reset    &none         &none         &none           &none          &none         &none         &none  &none
-  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp LC(LA(M))  &out OUT_BLE  &out OUT_USB  &none  &none
-  &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR      &none          &none         &none         &none  &none
+ &none &bootloader   &sys_reset    &none         &none         &none           &none          &none         &none         &none  &none &none
+ &none &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp LC(LA(M))  &out OUT_BLE  &out OUT_USB  &none  &none &none
+&none  &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR      &none          &none         &none         &none  &none &none
                               &none         &none         &none           &none          &none         &none
             >;
         };
