@@ -79,16 +79,16 @@
             bindings = <&kp LS(E) &kp C &kp M &kp Z &kp H &kp N6 &kp N9 &kp N &kp N7 &kp STAR &kp EQUAL &kp LS(X) &kp E &kp AT &kp G &kp P &kp LS(Y) &kp MINUS>;
         };
 
-        Macro2: Macro2 {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO2";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp PLUS &kp U &kp C &kp N3 &kp S &kp LS(M) &kp R &kp UNDERSCORE &kp LS(C) &kp LS(O) &kp N4 &kp POUND &kp PERCENT &kp LS(U) &kp AT &kp N5 &kp LS(P)>;
-        };
-
         Macro22: Macro22 {
             compatible = "zmk,behavior-macro";
             label = "MACRO22";
+            #binding-cells = <0>;
+            bindings = <>;
+        };
+
+        Macro2: Macro2 {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO2";
             #binding-cells = <0>;
             bindings = <&kp D &kp N9 &kp N &kp LS(A) &kp MINUS &kp N2 &kp STAR &kp RPAR &kp N1 &kp A &kp LS(F) &kp LS(W) &kp LS(A) &kp T &kp O &kp LS(B) &kp O &kp LS(W)>;
         };
