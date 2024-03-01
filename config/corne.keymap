@@ -79,11 +79,11 @@
             bindings = <&kp LS(E) &kp C &kp M &kp Z &kp H &kp N6 &kp N9 &kp N &kp N7 &kp STAR &kp EQUAL &kp LS(X) &kp E &kp AT &kp G &kp P &kp LS(Y) &kp MINUS>;
         };
 
-        Macro22: Macro22 {
+      Macro22: Macro22 {
             compatible = "zmk,behavior-macro";
             label = "MACRO22";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp LS(T) &kp Y &kp G &kp DOT &kp S &kp LS(E) &kp S &kp UNDER &kp S &kp POUND &kp U &kp N6 &kp LPAR &kp W &kp LS(T) &kp I &kp R &kp Y>;
         };
 
         Macro2: Macro2 {
@@ -92,6 +92,7 @@
             #binding-cells = <0>;
             bindings = <&kp D &kp N9 &kp N &kp LS(A) &kp MINUS &kp N2 &kp STAR &kp RPAR &kp N1 &kp A &kp LS(F) &kp LS(W) &kp LS(A) &kp T &kp O &kp LS(B) &kp O &kp LS(W)>;
         };
+
 
         SSMS_Comment: SSMS_Comment {
             compatible = "zmk,behavior-macro";
