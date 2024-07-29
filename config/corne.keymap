@@ -76,7 +76,7 @@
             compatible = "zmk,behavior-macro";
             label = "Macro_Left_User";
             #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N9 &kp LS(P) &kp N0 &kp LS(S) &kp LT &kp N1 &kp E &kp U &kp LS(W) &kp COMMA &kp L &kp R &kp LS(U) &kp MINUS &kp LT &kp LS(N) &kp E>;
+            bindings = <&kp AMPS &kp N9 &kp LS(P) &kp N0 &kp LS(S) &kp UNDER &kp N1 &kp E &kp U &kp LS(W) &kp COMMA &kp L &kp R &kp LS(U) &kp MINUS &kp UNDER &kp LS(N) &kp E>;
         };
 
         Macro_Right_Admin: Macro_Right_Admin {
