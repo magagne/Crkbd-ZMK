@@ -188,20 +188,20 @@
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-&none  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
-&none  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
-&none  &kp RALT  &none     &none            &kp RCTRL      &none           &none         &kp N1  &kp N2  &kp N3  &none            &none
-                           &none            &none          &none           &kp RETURN    &kp N0  &kp N0
+&none  &none     &none      &SSMS_UnComment  &SSMS_Comment  &none           &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
+&none  &kp LALT  &kp LGUI   &kp LSHIFT       &kp LCTRL      &SSMS_Format    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
+&none  &kp RALT  &kp GLOBE  &none            &kp RCTRL      &none           &none         &kp N1  &kp N2  &kp N3  &none            &none
+                            &none            &none          &none           &kp RETURN    &kp N0  &kp N0
             >;
         };
 
         Fn_Layer_4 {
             label = "Function";
             bindings = <
-&none  &none     &none     &SSMS_UnComment  &SSMS_Comment  &none           &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
-&none  &kp LALT  &kp LGUI  &kp LSHIFT       &kp LCTRL      &SSMS_Format    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
-&none  &kp RALT  &none     &none            &kp RCTRL      &none           &none  &kp F1  &kp F2  &kp F3  &kp F12  &none
-                           &none            &none          &none           &none  &none   &none
+&none  &none     &none      &SSMS_UnComment  &SSMS_Comment  &none           &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none  &kp LALT  &kp LGUI   &kp LSHIFT       &kp LCTRL      &SSMS_Format    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none  &kp RALT  &kp GLOBE  &none            &kp RCTRL      &none           &none  &kp F1  &kp F2  &kp F3  &kp F12  &none
+                            &none            &none          &none           &none  &none   &none
             >;
         };
 
