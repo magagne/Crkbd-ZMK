@@ -135,7 +135,7 @@
         CtrlGlobe: CtrlGlobe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&sk LEFT_CONTROL &sk GLOBE>;
+            bindings = <&macro_press>, <&sk LC(GLOBE)>;
 
             label = "CTRLGLOBE";
         };
