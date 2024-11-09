@@ -141,7 +141,7 @@
                 <&macro_tap>,
                 <&kp C>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp GLOBE &kp LCTRL>;
 
             label = "SNAP_CENTER";
         };
