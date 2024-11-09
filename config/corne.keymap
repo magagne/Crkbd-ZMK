@@ -171,7 +171,7 @@
 &none  &td LG(Z) LC(Z)  &td LG(X) LC(X)  &td LG(C) LC(C)  &td LG(V) LC(V)  &td LG(Y) LC(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(PRINTSCREEN)  &none
 &none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC              &none
 &none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN             &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS             &none
-                                         &none            &none            &none                  &kp RETURN      &skq GLOBE      &kp K_CMENU
+                                         &none            &none            &none                  &kp RETURN      &skq LC(GLOBE)  &kp K_CMENU
             >;
         };
 
