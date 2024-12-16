@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -191,7 +192,7 @@
             bindings = <
 &none  &none     &none      &SSMS_UnComment  &SSMS_Comment  &none           &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
 &none  &kp LALT  &kp LGUI   &kp LSHIFT       &kp LCTRL      &SSMS_Format    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
-&none  &kp RALT  &kp GLOBE  &none            &kp RCTRL      &none           &none         &kp N1  &kp N2  &kp N3  &none            &none
+&none  &kp RALT  &kp GLOBE  &none            &kp RCTRL      &none           &kp KP_COMMA  &kp N1  &kp N2  &kp N3  &kp KP_DOT       &none
                             &none            &none          &none           &kp RETURN    &kp N0  &kp N0
             >;
         };
