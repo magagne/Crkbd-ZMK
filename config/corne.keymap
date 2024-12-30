@@ -64,6 +64,30 @@
             key-positions = <1 25>;
             layers = <2>;
         };
+
+        Bright_up {
+            bindings = <&kp LC(C_BRI_UP)>;
+            key-positions = <13 1>;
+            layers = <2>;
+        };
+
+        Bright_DOWN {
+            bindings = <&kp LC(C_BRI_DEC)>;
+            key-positions = <25 13>;
+            layers = <2>;
+        };
+
+        Vol_UP {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <10 22>;
+            layers = <1>;
+        };
+
+        Vol_DOWN {
+            bindings = <&kp C_VOL_DN>;
+            key-positions = <22 34>;
+            layers = <1>;
+        };
     };
 
     macros {
