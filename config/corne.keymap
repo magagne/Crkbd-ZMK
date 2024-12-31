@@ -65,7 +65,7 @@
             layers = <2>;
         };
 
-        Bright_up {
+        Bright_UP {
             bindings = <&kp LC(C_BRI_UP)>;
             key-positions = <13 1>;
             layers = <2>;
