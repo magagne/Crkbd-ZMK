@@ -207,7 +207,7 @@
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &td RA(MINUS) RA(GRAVE)  &none
 &none  &kp BACKSLASH         &kp RA(N7)  &td LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp SEMI   &kp EQUAL                &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp COLON  &kp APOSTROPHE           &none
-                                         &none                              &none       &trans        &none          &none      &none
+                                         &none                              &none       &trans        &none          &none      &mo 5
             >;
         };
 
@@ -227,7 +227,7 @@
 &none  &none     &none      &SSMS_UnComment  &SSMS_Comment  &none           &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
 &none  &kp LALT  &kp LGUI   &kp LSHIFT       &kp LCTRL      &SSMS_Format    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
 &none  &kp RALT  &kp GLOBE  &none            &kp RCTRL      &none           &none  &kp F1  &kp F2  &kp F3  &kp F12  &none
-                            &none            &none          &none           &none  &none   &none
+                            &none            &none          &none           &none  &mo 5   &none
             >;
         };
 
