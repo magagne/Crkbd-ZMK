@@ -197,7 +197,7 @@
 &none  &td LG(Z) LC(Z)  &td LG(X) LC(X)  &td LG(C) LC(C)  &td LG(V) LC(V)  &td LG(Y) LC(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(PRINTSCREEN)  &none
 &none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC              &none
 &none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN             &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS             &none
-                                         &none            &none            &trans                 &kp RETURN      &mkp LCLK       &mkp RCLK
+                                         &mo 5            &none            &trans                 &kp RETURN      &mkp LCLK       &mkp RCLK
             >;
         };
 
@@ -217,7 +217,7 @@
 &none  &none     &none      &SSMS_UnComment  &SSMS_Comment  &none           &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
 &none  &kp LALT  &kp LGUI   &kp LSHIFT       &kp LCTRL      &SSMS_Format    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
 &none  &kp RALT  &kp GLOBE  &none            &kp RCTRL      &none           &kp COMMA     &kp N1  &kp N2  &kp N3  &kp DOT          &none
-                            &none            &none          &none           &kp RETURN    &kp N0  &kp N0
+                            &none            &mo 5          &none           &kp RETURN    &kp N0  &kp N0
             >;
         };
 
