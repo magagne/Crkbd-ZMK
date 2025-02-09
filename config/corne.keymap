@@ -68,26 +68,32 @@
         };
 
         Bright_UP {
-            bindings = <&kp LC(C_BRI_UP)>;
-            key-positions = <13 1>;
-            layers = <2>;
+            bindings = <&kp F15>;
+            key-positions = <6 18>;
+            layers = <0>;
         };
 
         Bright_DOWN {
-            bindings = <&kp LC(C_BRI_DEC)>;
-            key-positions = <25 13>;
-            layers = <2>;
+            bindings = <&kp F14>;
+            key-positions = <30 18>;
+            layers = <0>;
         };
 
         Vol_UP {
             bindings = <&kp C_VOLUME_UP>;
-            key-positions = <10 22>;
-            layers = <1>;
+            key-positions = <5 17>;
+            layers = <0>;
         };
 
         Vol_DOWN {
             bindings = <&kp C_VOL_DN>;
-            key-positions = <22 34>;
+            key-positions = <29 17>;
+            layers = <0>;
+        };
+
+        Macro_gligli {
+            bindings = <&Macro_gligli>;
+            key-positions = <13 34 10>;
             layers = <1>;
         };
     };
@@ -158,6 +164,13 @@
                 <&kp K &kp Y>,
                 <&macro_release>,
                 <&kp LEFT_CONTROL>;
+        };
+
+        Macro_gligli: Macro_gligli {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
+            label = "MACRO_GLIGLI";
         };
     };
 
