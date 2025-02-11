@@ -105,10 +105,11 @@
 
         Macro_TileLeft {
             bindings = <&kp LS(LA(LC(LG(KP_N4))))>;
-            key-positions = <1 29>;
+            key-positions = <1 13>;
             layers = <0>;
         };
-/*
+
+        /*
         Macro_TileBottomLeft            
             bindings = <&kp LS(LA(LC(LG(KP_N1))))>;
             key-positions = <13 25>;
@@ -145,6 +146,7 @@
             layers = <0>;
         };
 */
+
         Macro_TileZoom {
             bindings = <&kp LS(LA(LC(LG(Z))))>;
             key-positions = <6 18>;
@@ -156,7 +158,6 @@
             key-positions = <18 30>;
             layers = <0>;
         };
-
     };
 
     macros {
