@@ -108,6 +108,42 @@
             key-positions = <18 30>;
             layers = <0>;
         };
+
+        Macro_TileTopLeft {
+            bindings = <&kp LS(LA(LC(LG(KP_N7))))>;
+            key-positions = <1 13>;
+            layers = <0>;
+        };
+
+        Macro_TileLeft {
+            bindings = <&kp LS(LA(LC(LG(KP_N4))))>;
+            key-positions = <1 25>;
+            layers = <0>;
+        };
+
+        Macro_TileBottomLeft {
+            bindings = <&kp LS(LA(LC(LG(KP_N1))))>;
+            key-positions = <13 25>;
+            layers = <0>;
+        };
+
+        Macro_TileTopRight {
+            bindings = <&kp LS(LA(LC(LG(KP_N9))))>;
+            key-positions = <10 22>;
+            layers = <0>;
+        };
+
+        Macro_TileRight {
+            bindings = <&kp LS(LA(LC(LG(KP_N6))))>;
+            key-positions = <10 34>;
+            layers = <0>;
+        };
+
+        Macro_TileBottomRight {
+            bindings = <&kp LS(LA(LC(LG(KP_N3))))>;
+            key-positions = <22 34>;
+            layers = <0>;
+        };
     };
 
     macros {
