@@ -109,13 +109,13 @@
             layers = <0>;
         };
 
-        /*
+   
         Macro_TileBottomLeft            
             bindings = <&kp LS(LA(LC(LG(KP_N1))))>;
             key-positions = <13 25>;
             layers = <0>;
         };
-
+     /*
         Macro_TileTopRight {
             bindings = <&kp LS(LA(LC(LG(KP_N9))))>;
             key-positions = <10 22>;
