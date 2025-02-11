@@ -97,18 +97,6 @@
             layers = <1>;
         };
 
-        Macro_TileZoom {
-            bindings = <&kp LS(LA(LC(LG(Z))))>;
-            key-positions = <6 18>;
-            layers = <0>;
-        };
-
-        Macro_TileCenter {
-            bindings = <&kp LS(LA(LC(LG(C))))>;
-            key-positions = <18 30>;
-            layers = <0>;
-        };
-
         Macro_TileTopLeft {
             bindings = <&kp LS(LA(LC(LG(KP_N7))))>;
             key-positions = <1 13>;
@@ -144,6 +132,31 @@
             key-positions = <22 34>;
             layers = <0>;
         };
+
+       Macro_TileTop {
+            bindings = <&kp LS(LA(LC(LG(KP_N8))))>;
+            key-positions = <5 17>;
+            layers = <0>;
+        };
+
+        Macro_TileBottom {
+            bindings = <&kp LS(LA(LC(LG(KP_N2))))>;
+            key-positions = <17 29>;
+            layers = <0>;
+        };
+
+        Macro_TileZoom {
+            bindings = <&kp LS(LA(LC(LG(Z))))>;
+            key-positions = <6 18>;
+            layers = <0>;
+        };
+
+        Macro_TileCenter {
+            bindings = <&kp LS(LA(LC(LG(C))))>;
+            key-positions = <18 30>;
+            layers = <0>;
+        };
+
     };
 
     macros {
