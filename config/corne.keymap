@@ -133,7 +133,7 @@
             layers = <0>;
         };
 
-       Macro_TileTop {
+        Macro_TileTop {
             bindings = <&kp LS(LA(LC(LG(KP_N8))))>;
             key-positions = <5 17>;
             layers = <0>;
@@ -152,11 +152,10 @@
         };
 
         Macro_TileCenter {
-            bindings = <&kp LS(LA(LC(LG(C))))>;
+            bindings = <&kp LS(LA(LC(LG(KP_N5))))>;
             key-positions = <18 30>;
             layers = <0>;
         };
-
     };
 
     macros {
