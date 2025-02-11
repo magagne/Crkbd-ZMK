@@ -102,34 +102,35 @@
             key-positions = <1 13>;
             layers = <0>;
         };
-/*
+
         Macro_TileLeft {
             bindings = <&kp LS(LA(LC(LG(KP_N4))))>;
-            key-positions = <17 29>;
+            key-positions = <1 29>;
             layers = <0>;
         };
 
         Macro_TileBottomLeft            
             bindings = <&kp LS(LA(LC(LG(KP_N1))))>;
-            key-positions = <6 18>;
+            key-positions = <13 25>;
             layers = <0>;
         };
 
+/*
         Macro_TileTopRight {
             bindings = <&kp LS(LA(LC(LG(KP_N9))))>;
-            key-positions = <5 17>;
+            key-positions = <10 22>;
             layers = <0>;
         };
 
         Macro_TileRight {
             bindings = <&kp LS(LA(LC(LG(KP_N6))))>;
-            key-positions = <17 29>;
+            key-positions = <10 34>;
             layers = <0>;
         };
 
         Macro_TileBottomRight
             bindings = <&kp LS(LA(LC(LG(KP_N3))))>;
-            key-positions = <6 18>;
+            key-positions = <22 34>;
             layers = <0>;
         };
 
@@ -139,18 +140,6 @@
             layers = <0>;
         };
 
-        Macro_TileBottom {
-            bindings = <&kp LS(LA(LC(LG(KP_N2))))>;
-            key-positions = <17 29>;
-            layers = <0>;
-        };
-
-        Macro_TileZoom {
-            bindings = <&kp LS(LA(LC(LG(Z))))>;
-            key-positions = <6 18>;
-            layers = <0>;
-        };
-*/
          Macro_TileTop {
             bindings = <&kp LS(LA(LC(LG(KP_N8))))>;
             key-positions = <5 17>;
