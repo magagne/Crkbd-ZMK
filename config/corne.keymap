@@ -132,7 +132,7 @@
             key-positions = <22 34>;
             layers = <0>;
         };
-*/
+
         Macro_TileTop {
             bindings = <&kp LS(LA(LC(LG(KP_N8))))>;
             key-positions = <5 17>;
@@ -144,7 +144,7 @@
             key-positions = <17 29>;
             layers = <0>;
         };
-
+*/
         Macro_TileZoom {
             bindings = <&kp LS(LA(LC(LG(Z))))>;
             key-positions = <6 18>;
