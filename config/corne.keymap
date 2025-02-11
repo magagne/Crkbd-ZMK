@@ -97,19 +97,6 @@
             layers = <1>;
         };
 
-        Macro_TileTopLeft {
-            bindings = <&kp LS(LA(LC(LG(KP_N7))))>;
-            key-positions = <1 13>;
-            layers = <0>;
-        };
-
-        Macro_TileLeft {
-            bindings = <&kp LS(LA(LC(LG(KP_N4))))>;
-            key-positions = <1 25>;
-            layers = <0>;
-        };
-
- 
         Macro_TileZoom {
             bindings = <&kp LS(LA(LC(LG(Z))))>;
             key-positions = <6 18>;
