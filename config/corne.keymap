@@ -35,7 +35,8 @@
         };
     };
 
-tible = "zmk,combos";
+    combos {
+        compatible = "zmk,combos";
 
         Config_Layer_5 {
             bindings = <&mo 5>;
@@ -138,8 +139,8 @@ tible = "zmk,combos";
             layers = <2>;
         };
 
-        Combo_TileCenter2Left {
-            bindings = <&kp LS(LA(LC(LG(KP_N4))))>;
+        Combo_TileCenterLayer2 {
+            bindings = <&kp LS(LA(LC(LG(KP_N5))))>;
             key-positions = <1 25>;
             layers = <2>;
         };
@@ -156,7 +157,7 @@ tible = "zmk,combos";
             layers = <1>;
         };
 
-        Combo_Tile1Center {
+        Combo_TileCenterLayer1 {
             bindings = <&kp LS(LA(LC(LG(KP_N5))))>;
             key-positions = <10 34>;
             layers = <1>;
