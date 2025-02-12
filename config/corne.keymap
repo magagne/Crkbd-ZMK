@@ -43,25 +43,25 @@
             key-positions = <38 39>;
         };
 
-        Macro_Right_User_combo {
+         Combo_Macro_Right_User {
             bindings = <&Macro_Right_User>;
             key-positions = <33 9>;
             layers = <1>;
         };
 
-        Macro_Left_User_combo {
+        Combo_Macro_Left_User {
             bindings = <&Macro_Left_User>;
             key-positions = <26 2>;
             layers = <2>;
         };
 
-        Macro_Right_User_Admin_combo {
+        Combo_Macro_Right_User_Admin {
             bindings = <&Macro_Right_Admin>;
             key-positions = <10 34>;
             layers = <1>;
         };
 
-        Macro_Left_Admin_combo {
+        Combo_Macro_Left_Admin {
             bindings = <&Macro_Left_Admin>;
             key-positions = <1 25>;
             layers = <2>;
@@ -199,9 +199,9 @@
             bindings = <&kp LS(K) &kp T &kp I &kp LS(A) &kp STAR &kp AMPS &kp N0 &kp E &kp N5 &kp N6 &kp U &kp UNDER &kp LS(H) &kp S &kp LS(D) &kp D &kp LS(D) &kp N5>;
         };
 
-        SSMS_Comment: SSMS_Comment {
+        Macro_SSMS_Comment: Macro_SSMS_Comment {
             compatible = "zmk,behavior-macro";
-            label = "SSMS_Comment";
+            label = "Macro_SSMS_Comment";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
@@ -212,9 +212,9 @@
                 <&kp LCTRL>;
         };
 
-        SSMS_UnComment: SSMS_UnComment {
+        Macro_SSMS_UnComment: Macro_SSMS_UnComment {
             compatible = "zmk,behavior-macro";
-            label = "SSMS_UnComment";
+            label = "Macro_SSMS_UnComment";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
@@ -225,9 +225,9 @@
                 <&kp LCTRL>;
         };
 
-        SSMS_Format: SSMS_Format {
+        Macro_SSMS_Format: Macro_SSMS_Format {
             compatible = "zmk,behavior-macro";
-            label = "SSMS_Format";
+            label = "Macro_SSMS_Format";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
@@ -235,11 +235,12 @@
                 <&macro_tap>,
                 <&kp K &kp Y>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL>;
+                <&kp LCTRL>;
         };
 
         Macro_gligli: Macro_gligli {
             compatible = "zmk,behavior-macro";
+            label = "Macro_gligli";
             #binding-cells = <0>;
             bindings = <&kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
             label = "MACRO_GLIGLI";
