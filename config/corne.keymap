@@ -43,7 +43,12 @@
             key-positions = <38 39>;
         };
 
- /*
+       Combo_Macro_Dummy {
+            bindings = <&Macro_Dummy>;
+            key-positions = <13 34 10>;
+            layers = <1>;
+        };
+/*
         Combo_Macro_Right_User {
             bindings = <&Macro_Right_User>;
             key-positions = <33 9>;
@@ -68,7 +73,6 @@
             layers = <2>;
         };
 */
-
         Combo_BrightUp {
             bindings = <&kp F15>;
             key-positions = <6 18>;
@@ -93,11 +97,7 @@
             layers = <0>;
         };
 
-        Macro_gligli {
-            bindings = <&Macro_gligli>;
-            key-positions = <13 34 10>;
-            layers = <1>;
-        };
+     
 
         Combo_TileTopLeft {
             bindings = <&kp LS(LA(LC(LG(KP_N7))))>;
@@ -173,6 +173,14 @@
     };
 
     macros {
+
+        Macro_Dummy: Macro_Dummy {
+            compatible = "zmk,behavior-macro";
+            label = "Macro_Dummy";
+            #binding-cells = <0>;
+            bindings = <&kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
+        };
+
         Macro_Right_User: Macro_Right_User {
             compatible = "zmk,behavior-macro";
             label = "Macro_Right_User";
@@ -238,14 +246,6 @@
                 <&kp K &kp Y>,
                 <&macro_release>,
                 <&kp LCTRL>;
-        };
-
-        Macro_gligli: Macro_gligli {
-            compatible = "zmk,behavior-macro";
-            label = "Macro_gligli";
-            #binding-cells = <0>;
-            bindings = <&kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
-            label = "MACRO_GLIGLI";
         };
     };
 
