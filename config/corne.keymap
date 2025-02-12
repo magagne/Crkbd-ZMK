@@ -67,28 +67,28 @@
             layers = <2>;
         };
 
-        Bright_UP {
+      Bright_UP {
             bindings = <&kp F15>;
             key-positions = <6 18>;
-            layers = <1>;
+            layers = <0>;
         };
 
         Bright_DOWN {
             bindings = <&kp F14>;
             key-positions = <30 18>;
-            layers = <1>;
+            layers = <0>;
         };
 
         Vol_UP {
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <5 17>;
-            layers = <2>;
+            layers = <0>;
         };
 
         Vol_DOWN {
             bindings = <&kp C_VOL_DN>;
             key-positions = <29 17>;
-            layers = <2>;
+            layers = <0>;
         };
 
         Macro_gligli {
@@ -135,26 +135,32 @@
 
         Macro_TileTop {
             bindings = <&kp LS(LA(LC(LG(KP_N8))))>;
-            key-positions = <5 17>;
-            layers = <0>;
+            key-positions = <1 13>;
+            layers = <2>;
         };
 
         Macro_TileBottom {
             bindings = <&kp LS(LA(LC(LG(KP_N2))))>;
-            key-positions = <17 29>;
-            layers = <0>;
+            key-positions = <25 13>;
+            layers = <2>;
         };
 
         Macro_TileZoom {
             bindings = <&kp LS(LA(LC(LG(Z))))>;
-            key-positions = <6 18>;
-            layers = <0>;
+            key-positions = <10 22>;
+            layers = <1>;
         };
 
         Macro_TileCenter {
             bindings = <&kp LS(LA(LC(LG(KP_N5))))>;
-            key-positions = <18 30>;
-            layers = <0>;
+            key-positions = <10 34>;
+            layers = <1>;
+        };
+
+        Macro_TileFill {
+            bindings = <&kp LS(LA(LC(LG(F))))>;
+            key-positions = <34 22>;
+            layers = <1>;
         };
     };
 
