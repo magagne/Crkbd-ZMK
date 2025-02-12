@@ -35,7 +35,7 @@
         };
     };
 
-    combos {
+combos {
         compatible = "zmk,combos";
 
         Config_Layer_5 {
@@ -43,12 +43,13 @@
             key-positions = <38 39>;
         };
 
-       Combo_Macro_Dummy {
+        Combo_Macro_Dummy {
             bindings = <&Macro_Dummy>;
             key-positions = <13 34 10>;
             layers = <1>;
         };
-/*
+
+        /*
         Combo_Macro_Right_User {
             bindings = <&Macro_Right_User>;
             key-positions = <33 9>;
@@ -72,7 +73,8 @@
             key-positions = <1 25>;
             layers = <2>;
         };
-*/
+    */
+
         Combo_BrightUp {
             bindings = <&kp F15>;
             key-positions = <6 18>;
@@ -97,8 +99,7 @@
             layers = <0>;
         };
 
-     
-
+        /*
         Combo_TileTopLeft {
             bindings = <&kp LS(LA(LC(LG(KP_N7))))>;
             key-positions = <1 13>;
@@ -170,6 +171,7 @@
             key-positions = <34 22>;
             layers = <1>;
         };
+    */
     };
 
     macros {
@@ -304,7 +306,7 @@
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-&none  &none     &none      &none       &none      &none    &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
+&none  &none     &none      &none       &kp LC(LA(LS(LGUI)))      &none    &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
 &none  &kp LALT  &kp LGUI   &kp LSHIFT  &kp LCTRL  &none    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
 &none  &kp RALT  &kp GLOBE  &none       &kp RCTRL  &none    &kp COMMA     &kp N1  &kp N2  &kp N3  &kp DOT          &none
                             &none       &mo 5      &none    &kp RETURN    &kp N0  &kp N0
