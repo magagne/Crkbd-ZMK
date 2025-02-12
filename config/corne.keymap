@@ -35,7 +35,7 @@
         };
     };
 
-combos {
+    combos {
         compatible = "zmk,combos";
 
         Config_Layer_5 {
@@ -49,7 +49,7 @@ combos {
             layers = <1>;
         };
 
-        /*
+    /*
         Combo_Macro_Right_User {
             bindings = <&Macro_Right_User>;
             key-positions = <33 9>;
@@ -99,7 +99,7 @@ combos {
             layers = <0>;
         };
 
-        /*
+    /*
         Combo_TileTopLeft {
             bindings = <&kp LS(LA(LC(LG(KP_N7))))>;
             key-positions = <1 13>;
