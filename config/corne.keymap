@@ -43,7 +43,8 @@
             key-positions = <38 39>;
         };
 
-         Combo_Macro_Right_User {
+ /*
+        Combo_Macro_Right_User {
             bindings = <&Macro_Right_User>;
             key-positions = <33 9>;
             layers = <1>;
@@ -55,7 +56,7 @@
             layers = <2>;
         };
 
-        Combo_Macro_Right_User_Admin {
+        Combo_Macro_Right_Admin {
             bindings = <&Macro_Right_Admin>;
             key-positions = <10 34>;
             layers = <1>;
@@ -66,6 +67,7 @@
             key-positions = <1 25>;
             layers = <2>;
         };
+*/
 
         Combo_BrightUp {
             bindings = <&kp F15>;
