@@ -35,7 +35,7 @@
         };
     };
 
-       combos {
+    combos {
         compatible = "zmk,combos";
 
         Config_Layer_5 {
@@ -48,29 +48,29 @@
             key-positions = <1 25>;
             layers = <2>;
         };
-        
+
         Combo_Macro_M11 {
             bindings = <&Macro_M11>;
             key-positions = <26 2>;
             layers = <2>;
         };
-        
+
         Combo_Macro_M12 {
             bindings = <&Macro_M12>;
             key-positions = <33 9>;
             layers = <1>;
         };
-        
+
         Combo_Macro_M13 {
             bindings = <&Macro_M13>;
             key-positions = <10 34>;
             layers = <1>;
         };
-        
+
         Combo_Macro_M14 {
             bindings = <&Macro_M14>;
-            key-positions = <13 34 10>;
-            layers = <1>;
+            key-positions = <13 34 22>;
+            layers = <0>;
         };
 
         Combo_BrightUp {
@@ -99,7 +99,6 @@
     };
 
     macros {
-
         Macro_M10: Macro_M10 {
             compatible = "zmk,behavior-macro";
             label = "Macro_M10";
@@ -120,21 +119,21 @@
             #binding-cells = <0>;
             bindings = <&kp LS(N) &kp N &kp N5 &kp MINUS &kp E &kp A &kp N7 &kp POUND &kp MINUS &kp N8 &kp F &kp N &kp POUND &kp MINUS &kp N4 &kp I &kp DLLR &kp POUND>;
         };
-        
+
         Macro_M13: Macro_M13 {
             compatible = "zmk,behavior-macro";
             label = "Macro_M13";
             #binding-cells = <0>;
             bindings = <&kp N4 &kp N5 &kp N4 &kp N9 &kp MINUS &kp T &kp LS(N) &kp T &kp E &kp MINUS &kp POUND &kp DLLR &kp N5 &kp E &kp MINUS &kp N6 &kp R &kp LS(E)>;
         };
-        
+
         Macro_M14: Macro_M14 {
             compatible = "zmk,behavior-macro";
             label = "Macro_M14";
             #binding-cells = <0>;
             bindings = <&kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
         };
-        
+
         Macro_SSMS_Comment: Macro_SSMS_Comment {
             compatible = "zmk,behavior-macro";
             label = "Macro_SSMS_Comment";
@@ -174,8 +173,8 @@
                 <&kp LCTRL>;
         };
     };
-    
-/*
+
+    /*
 
     #    /
     #    &kp KP_DIVIDE
