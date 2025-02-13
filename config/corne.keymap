@@ -35,7 +35,7 @@
         };
     };
 
-    combos {
+       combos {
         compatible = "zmk,combos";
 
         Config_Layer_5 {
@@ -43,34 +43,34 @@
             key-positions = <38 39>;
         };
 
-        Combo_Macro_Dummy {
-            bindings = <&Macro_Dummy>;
-            key-positions = <13 34 10>;
-            layers = <1>;
+        Combo_Macro_M10 {
+            bindings = <&Macro_M10>;
+            key-positions = <1 25>;
+            layers = <2>;
         };
-
-        Combo_Macro_Right_User {
-            bindings = <&Macro_Right_User>;
-            key-positions = <33 9>;
-            layers = <1>;
-        };
-
-        Combo_Macro_Left_User {
-            bindings = <&Macro_Left_User>;
+        
+        Combo_Macro_M11 {
+            bindings = <&Macro_M11>;
             key-positions = <26 2>;
             layers = <2>;
         };
-
-        Combo_Macro_Right_Admin {
-            bindings = <&Macro_Right_Admin>;
+        
+        Combo_Macro_M12 {
+            bindings = <&Macro_M12>;
+            key-positions = <33 9>;
+            layers = <1>;
+        };
+        
+        Combo_Macro_M13 {
+            bindings = <&Macro_M13>;
             key-positions = <10 34>;
             layers = <1>;
         };
-
-        Combo_Macro_Left_Admin {
-            bindings = <&Macro_Left_Admin>;
-            key-positions = <1 25>;
-            layers = <2>;
+        
+        Combo_Macro_M14 {
+            bindings = <&Macro_M14>;
+            key-positions = <13 34 10>;
+            layers = <1>;
         };
 
         Combo_BrightUp {
@@ -99,41 +99,42 @@
     };
 
     macros {
-        Macro_Dummy: Macro_Dummy {
-            compatible = "zmk,behavior-macro";
-            label = "Macro_Dummy";
-            #binding-cells = <0>;
-            bindings = <&kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
-        };
 
-        Macro_Right_User: Macro_Right_User {
+        Macro_M10: Macro_M10 {
             compatible = "zmk,behavior-macro";
-            label = "Macro_Right_User";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp N &kp N5 &kp MINUS &kp E &kp A &kp N7 &kp POUND &kp MINUS &kp N8 &kp F &kp N &kp POUND &kp MINUS &kp N4 &kp I &kp DLLR &kp POUND>;
-        };
-
-        Macro_Left_User: Macro_Left_User {
-            compatible = "zmk,behavior-macro";
-            label = "Macro_Left_User";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N9 &kp LS(P) &kp N0 &kp LS(S) &kp UNDER &kp N1 &kp E &kp U &kp LS(W) &kp COMMA &kp L &kp R &kp LS(U) &kp MINUS &kp UNDER &kp LS(N) &kp E>;
-        };
-
-        Macro_Right_Admin: Macro_Right_Admin {
-            compatible = "zmk,behavior-macro";
-            label = "Macro_Right_Admin";
-            #binding-cells = <0>;
-            bindings = <&kp N4 &kp N5 &kp N4 &kp N9 &kp MINUS &kp T &kp LS(N) &kp T &kp E &kp MINUS &kp POUND &kp DLLR &kp N5 &kp E &kp MINUS &kp N6 &kp R &kp LS(E)>;
-        };
-
-        Macro_Left_Admin: Macro_Left_Admin {
-            compatible = "zmk,behavior-macro";
-            label = "Macro_Left_Admin";
+            label = "Macro_M10";
             #binding-cells = <0>;
             bindings = <&kp LS(K) &kp T &kp I &kp LS(A) &kp STAR &kp AMPS &kp N0 &kp E &kp N5 &kp N6 &kp U &kp UNDER &kp LS(H) &kp S &kp LS(D) &kp D &kp LS(D) &kp N5>;
         };
 
+        Macro_M11: Macro_M11 {
+            compatible = "zmk,behavior-macro";
+            label = "Macro_M11";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS &kp N9 &kp LS(P) &kp N0 &kp LS(S) &kp UNDER &kp N1 &kp E &kp U &kp LS(W) &kp COMMA &kp L &kp R &kp LS(U) &kp MINUS &kp UNDER &kp LS(N) &kp E>;
+        };
+
+        Macro_M12: Macro_M12 {
+            compatible = "zmk,behavior-macro";
+            label = "Macro_M12";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp N &kp N5 &kp MINUS &kp E &kp A &kp N7 &kp POUND &kp MINUS &kp N8 &kp F &kp N &kp POUND &kp MINUS &kp N4 &kp I &kp DLLR &kp POUND>;
+        };
+        
+        Macro_M13: Macro_M13 {
+            compatible = "zmk,behavior-macro";
+            label = "Macro_M13";
+            #binding-cells = <0>;
+            bindings = <&kp N4 &kp N5 &kp N4 &kp N9 &kp MINUS &kp T &kp LS(N) &kp T &kp E &kp MINUS &kp POUND &kp DLLR &kp N5 &kp E &kp MINUS &kp N6 &kp R &kp LS(E)>;
+        };
+        
+        Macro_M14: Macro_M14 {
+            compatible = "zmk,behavior-macro";
+            label = "Macro_M14";
+            #binding-cells = <0>;
+            bindings = <&kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
+        };
+        
         Macro_SSMS_Comment: Macro_SSMS_Comment {
             compatible = "zmk,behavior-macro";
             label = "Macro_SSMS_Comment";
@@ -173,8 +174,8 @@
                 <&kp LCTRL>;
         };
     };
-
-    /*
+    
+/*
 
     #    /
     #    &kp KP_DIVIDE
