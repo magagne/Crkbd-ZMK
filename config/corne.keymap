@@ -131,7 +131,7 @@
             compatible = "zmk,behavior-macro";
             label = "Macro_M14";
             #binding-cells = <0>;
-            bindings = <&kp LS(J) &kp N5 &kp LS(R) &kp MINUS &kp N3 &kp LS(T) &kp N5 &kp UNDER>;
+            bindings = <>;
         };
 
         Macro_SSMS_Comment: Macro_SSMS_Comment {
