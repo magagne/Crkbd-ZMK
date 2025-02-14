@@ -69,7 +69,7 @@
 
         Combo_Macro_M14 {
             bindings = <&Macro_M14>;
-            key-positions = <13 34 22>;
+            key-positions = <34 10>;
             layers = <0>;
         };
 
