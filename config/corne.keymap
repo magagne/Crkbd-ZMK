@@ -70,7 +70,7 @@
         Combo_Macro_M14 {
             bindings = <&Macro_M14>;
             key-positions = <34 10>;
-            layers = <0>;
+            layers = <3>;
         };
 
         Combo_BrightUp {
