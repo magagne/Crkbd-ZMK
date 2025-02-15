@@ -96,6 +96,12 @@
             key-positions = <29 17>;
             layers = <0>;
         };
+        
+        Unlock {
+            bindings = <&studio_unlock>;
+            key-positions = <10 1>;
+            layers = <5>;
+        };        
     };
 
     macros {
