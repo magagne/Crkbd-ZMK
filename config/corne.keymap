@@ -70,7 +70,7 @@
         Combo_Macro_M14 {
             bindings = <&Macro_M14>;
             key-positions = <34 10>;
-            layers = <0>;
+            layers = <3>;
         };
 
         Combo_BrightUp {
@@ -137,7 +137,7 @@
             compatible = "zmk,behavior-macro";
             label = "Macro_M14";
             #binding-cells = <0>;
-            bindings = <&kp LS(J) &kp N5 &kp LS(R) &kp MINUS &kp N3 &kp LS(T) &kp N5 &kp UNDER>;
+            bindings = <&kp LS(J) &kp N5 &kp LS(R) &kp UNDER &kp N3 &kp LS(T) &kp N5 &kp UNDER &kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
         };
 
         Macro_SSMS_Comment: Macro_SSMS_Comment {
