@@ -255,9 +255,9 @@
         Config_Layer_5 {
             label = "Config";
             bindings = <
-&none  &bootloader   &sys_reset    &none         &out OUT_TOG  &none           &none           &none           &none         &none            &none      &none
-&none  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK  &none
-&none  &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mkp RCLK  &none
+&none  &bootloader   &sys_reset    &none         &out OUT_TOG  &none           &none           &none            &mmv MOVE_UP        &none             &none      &none
+&none  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &none           &mmv MOVE_LEFT   &none               &mmv MOVE_RIGHT   &none      &none
+&none  &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR     &noneT           &none            &mmv MOVE_DOWN      &none             &none      &none
                                    &none         &none         &none           &none           &none           &none
             >;
         };
