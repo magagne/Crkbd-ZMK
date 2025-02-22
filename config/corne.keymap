@@ -214,9 +214,9 @@
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-&none  &td LG(Z) LC(Z)  &td LG(X) LC(X)  &td LG(C) LC(C)  &td LG(V) LC(V)  &td LG(Y) LC(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(PRINTSCREEN)  &none
-&none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC              &none
-&none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN             &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS             &none
+&none  &td LG(Z) LC(Z)  &td LG(X) LC(X)  &td LG(C) LC(C)  &td LG(V) LC(V)  &td LG(Y) LC(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
+&none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
+&none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN             &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
                                          &mo 5            &none            &trans                 &kp RETURN      &mkp LCLK       &mkp RCLK
             >;
         };
@@ -250,14 +250,14 @@
                             &none       &none      &none    &none  &mo 5   &none
             >;
         };
- 
+
         Config_Layer_5 {
             label = "Config";
             bindings = <
-&none        &bootloader        &bt BT_CLR         &none               &out OUT_TOG             &none                            &none            &none                   &none               &none               &none       &none
-&none        &none              &none              &mkp RCLK           &mkp LCLK                &none                            &mmv MOVE_LEFT   &mmv MOVE_DOWN          &mmv MOVE_UP        &mmv MOVE_RIGHT     &none       &none
-&none        &bt BT_SEL 4       &bt BT_SEL 3       &bt BT_SEL 2        &bt BT_SEL 1             &bt BT_SEL 0                     &none            &none                   &none               &none               &none       &none
-                                                   &none               &none                    &none                            &none            &none                   &none
+&none  &bootloader   &bt BT_CLR    &none         &out OUT_TOG  &none           &none           &none           &none         &none            &none  &none
+&none  &none         &none         &mkp RCLK     &mkp LCLK     &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
+&none  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &none           &none           &none         &none            &none  &none
+                                   &none         &none         &none           &none           &none           &none
             >;
         };
     };
