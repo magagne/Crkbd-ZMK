@@ -83,17 +83,17 @@
             key-positions = <30 18>;
             layers = <0>;
         };
-        
+
         Combo_BrightUp_2 {
             bindings = <&kp C_BRI_UP>;
             key-positions = <6 18>;
-            layers = <0>;
+            layers = <1>;
         };
 
         Combo_BrightDown_2 {
             bindings = <&kp C_BRI_DN>;
             key-positions = <30 18>;
-            layers = <0>;
+            layers = <1>;
         };
 
         Combo_VolUp {
