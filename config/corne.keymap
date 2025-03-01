@@ -72,14 +72,26 @@
             layers = <3>;
         };
 
-        Combo_BrightUp {
+        Combo_BrightUp_1 {
             bindings = <&kp F15>;
             key-positions = <6 18>;
             layers = <0>;
         };
 
-        Combo_BrightDown {
+        Combo_BrightDown_1 {
             bindings = <&kp F14>;
+            key-positions = <30 18>;
+            layers = <0>;
+        };
+        
+        Combo_BrightUp_2 {
+            bindings = <&kp C_BRI_UP>;
+            key-positions = <6 18>;
+            layers = <0>;
+        };
+
+        Combo_BrightDown_2 {
+            bindings = <&kp C_BRI_DN>;
             key-positions = <30 18>;
             layers = <0>;
         };
