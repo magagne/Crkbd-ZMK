@@ -248,7 +248,7 @@
 &none  &none     &kp LC(LS(LA(LEFT_GUI)))  &kp LC(LS(LEFT_ALT))  &none      &none    &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
 &none  &kp LALT  &kp LGUI                  &kp LSHIFT            &kp LCTRL  &none    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
 &none  &kp RALT  &kp GLOBE                 &none                 &kp RCTRL  &none    &kp COMMA     &kp N1  &kp N2  &kp N3  &kp DOT          &none
-                                           &none                 &mo 5      &none    &kp RETURN    &kp N0  &kp N0
+                                           &none                 &mo 5      &none    &kp SPACE     &kp N0  &kp N0
             >;
         };
 
