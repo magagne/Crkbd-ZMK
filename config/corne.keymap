@@ -235,9 +235,9 @@
         Symbols_Layer_2 {
             label = "Symbol";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &td RA(MINUS) RA(GRAVE)  &none
-&none  &kp BACKSLASH         &kp RA(N7)  &td LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp SEMI   &kp EQUAL                &none
-&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp COLON  &kp APOSTROPHE           &none
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS     &td RA(MINUS) RA(GRAVE)  &none
+&none  &kp BACKSLASH         &kp RA(N7)  &td LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp RA(DOT)  &kp EQUAL                &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp SEMI       &kp COLON    &kp APOSTROPHE           &none
                                          &none                              &none       &trans        &none          &none      &mo 5
             >;
         };
