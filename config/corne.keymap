@@ -65,12 +65,6 @@
             layers = <1>;
         };
 
-        Combo_Macro_M14 {
-            bindings = <&Macro_M14>;
-            key-positions = <34 10>;
-            layers = <3>;
-        };
-
         Combo_BrightUp_1 {
             bindings = <&kp F15>;
             key-positions = <6 18>;
@@ -134,13 +128,6 @@
             label = "Macro_M12";
             #binding-cells = <0>;
             bindings = <&kp LS(N) &kp N &kp N5 &kp MINUS &kp E &kp A &kp N7 &kp POUND &kp MINUS &kp N8 &kp F &kp N &kp POUND &kp MINUS &kp N4 &kp I &kp DLLR &kp POUND>;
-        };
-
-        Macro_M13: Macro_M13 {
-            compatible = "zmk,behavior-macro";
-            label = "Macro_M13";
-            #binding-cells = <0>;
-            bindings = <&kp N4 &kp N5 &kp N4 &kp N9 &kp MINUS &kp T &kp LS(N) &kp T &kp E &kp MINUS &kp POUND &kp DLLR &kp N5 &kp E &kp MINUS &kp N6 &kp R &kp LS(E)>;
         };
 
         Macro_M14: Macro_M14 {
