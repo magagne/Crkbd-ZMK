@@ -225,9 +225,7 @@
             bindings = <
 &none,  &td &kp LG(Z) &kp LC(Z),  &td &kp LG(X) &kp LC(X),  &td &kp LG(C) &kp LC(C),  &td &kp LG(V) &kp LC(V),  &td &kp LG(Y) &kp LC(Y),   &kp HOME,        &kp PAGE_DOWN,   &kp PAGE_UP,   &kp END,          &kp PRINTSCREEN,  &none,
 &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               &kp BACKSPACE,             &kp LEFT_ARROW,  &kp DOWN_ARROW,  &kp UP_ARROW,  &kp RIGHT_ARROW,  &kp ESC,          &none,
-&none,  &skq RALT,                &kp LS(TAB),              &kp TAB,                  &skq RCTRL,               &kp RETURN,                &kp DELETE,      &kp BACKSPACE,   &kp TAB,       &kp INSERT,       &kp CAPS,         &none,
-&mo 5, &none, &trans, &kp RETURN, &mkp LCLK, &mkp RCLK
-            >;
+&none,  &skq RALT,                &kp LS(TAB),              &kp TAB,                  &skq RCTRL,               &kp RETURN,                &kp DELETE,      &kp BACKSPACE,   &kp TAB,       &kp INSERT,       &kp CAPS,         &none, &mo 5, &none, &trans, &kp RETURN, &mkp LCLK, &mkp RCLK >;
         };
 
         Symbols_Layer_2 {
