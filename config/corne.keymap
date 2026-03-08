@@ -203,30 +203,30 @@
         Symbols_Layer_2 {
             label = "Symbol";
             bindings = <
-                &none,  EXCL,              AT,      HASH,                                   DOLLAR,  PRCNT,     LS(N6),     AMPS,   ASTRK,      PLUS,     &th RA(MINUS), A(GRAVE),  &none,
-                &none,  BACKSLASH,        RA(N7),  &th LS(LEFT_BRACKET), LEFT_BRACKET,  LPAR,    RA(N9),    KP_SLASH,   MINUS,  RA(COMMA),  RA(DOT),  EQUAL,                       &none,
-                &none,  RA(LEFT_BRACKET), RA(N8),  RIGHT_BRACKET,                          RPAR,    RA(N0),    LS(GRAVE),  UNDER,  SEMI,       COLON,    APOSTROPHE,                  &none,
-                &none, &none, &trans, &none, &none, &mo 5
+                   &none,  &th LG(Z), LC(Z),  &th LG(X), LC(X),  &th LG(C), LC(C),  &th LG(V), LC(V),  &th LG(Y), LC(Y), HOME,       PAGE_DOWN,  PAGE_UP,  END,         PRINTSCREEN, &none,
+                &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               BACKSPACE,           LEFT_ARROW, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, ESC,         &none,
+                &none,  &skq RALT,                LS(TAB),              TAB,                  &skq RCTRL,               RETURN,              DELETE,     BACKSPACE,  TAB,      INSERT,      CAPS,        &none, 
+                &mo 5, &none, &trans, RETURN, &mkp LCLK, &mkp RCLK
             >;
         };
         
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-                &none,  &none,    LC(LS(LGUI)),  LC(LS(LALT)),  &none,      &none,    KP_PLUS,   N7,  N8,  N9,  KP_MULTIPLY,  &none,
-                &none,  &kp LALT, &kp LGUI,          &kp LSHIFT,        &kp LCTRL,  &none,    &kp KP_MINUS, &kp N4,  &kp N5,  &kp N6,  &kp KP_DIVIDE,    &none,
-                &none,  &kp RALT, &kp GLOBE,         &none,             &kp RCTRL,  &none,    &kp COMMA,    &kp N1,  &kp N2,  &kp N3,  &kp DOT,          &none,
-                &none, &mo 5, &none, &kp SPACE, &kp N0, &kp N0
+                &none,  &th LG(Z), LC(Z),  &th LG(X), LC(X),  &th LG(C), LC(C),  &th LG(V), LC(V),  &th LG(Y), LC(Y), HOME,       PAGE_DOWN,  PAGE_UP,  END,         PRINTSCREEN, &none,
+                &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               BACKSPACE,           LEFT_ARROW, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, ESC,         &none,
+                &none,  &skq RALT,                LS(TAB),              TAB,                  &skq RCTRL,               RETURN,              DELETE,     BACKSPACE,  TAB,      INSERT,      CAPS,        &none, 
+                &mo 5, &none, &trans, RETURN, &mkp LCLK, &mkp RCLK
             >;
         };
            
         Fn_Layer_4 {
             label = "Function";
             bindings = <
-                &none,  &none,     &none,      &none,       &none,      &none,    &none,  F7,  F8,  F9,  F10,  &none,
-                &none,  LALT,      LGUI,       LSHIFT,      LCTRL,      &none,    &none,  F4,  F5,  F6,  F11,  &none,
-                &none,  RALT,      GLOBE,      &none,       RCTRL,      &none,    &none,  F1,  F2,  F3,  F12,  &none,
-                &none, &none, &none, &none, &mo 5, &none
+                  &none,  &th LG(Z), LC(Z),  &th LG(X), LC(X),  &th LG(C), LC(C),  &th LG(V), LC(V),  &th LG(Y), LC(Y), HOME,       PAGE_DOWN,  PAGE_UP,  END,         PRINTSCREEN, &none,
+                &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               BACKSPACE,           LEFT_ARROW, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, ESC,         &none,
+                &none,  &skq RALT,                LS(TAB),              TAB,                  &skq RCTRL,               RETURN,              DELETE,     BACKSPACE,  TAB,      INSERT,      CAPS,        &none, 
+                &mo 5, &none, &trans, RETURN, &mkp LCLK, &mkp RCLK
             >;
         };
             
