@@ -149,18 +149,6 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL &macro_tap &kp K &kp Y &macro_release &kp LCTRL>;
         };
-        
-        Macro_SSMS_ExpandCollapse: Macro_SSMS_ExpandCollapse {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL &macro_tap &kp M &kp L &macro_release &kp LCTRL>;
-        };
-        
-        Macro_SSMS_Expand: Macro_SSMS_Expand {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL &macro_tap &kp M &kp M &macro_release &kp LCTRL>;
-        };
     };
 
    /*
