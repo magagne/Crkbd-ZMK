@@ -32,7 +32,7 @@
             ignore-modifiers;
         };
     };
-
+/*
     combos {
         compatible = "zmk,combos";
 
@@ -107,7 +107,8 @@
             layers = <5>;
         };
     };
-
+*/
+/*
     macros {
         Macro_M10: Macro_M10 {
             compatible = "zmk,behavior-macro";
@@ -187,26 +188,26 @@
                 <&macro_release> <&kp LCTRL>;
         };
     };
-
+*/
     /*
 
-    #    /
-    #    &kp KP_DIVIDE
+            #    /
+            #    &kp KP_DIVIDE
+        
+            #     ~
+            #    Mac                       win
+            #    &td RA(RIGHT_BRACKET)     RC(RIGHT_BRACKET) 
+        
+            #    win
+            #    |                         \  
+            #    &td RA(GRAVE)             LS(GRAVE) 
+        
+            #    Mac
+            #    |                         \  
+            #    &td RA(MINUS)             RA(GRAVE)
 
-    #     ~
-    #    Mac                       win
-    #    &td RA(RIGHT_BRACKET)     RC(RIGHT_BRACKET) 
-
-    #    win
-    #    |                         \  
-    #    &td RA(GRAVE)             LS(GRAVE) 
-
-    #    Mac
-    #    |                         \  
-    #    &td RA(MINUS)             RA(GRAVE)
-
- */
-
+   */
+/*
     keymap {
         compatible = "zmk,keymap";
 
@@ -218,7 +219,9 @@
 &none,  &kp Z,  &kp X,  &kp C,  &kp D,  &kp V,          &kp K,      &kp H,  &kp COMMA,  &kp DOT,  &kp FSLH,                                         &none,
                      &mo 3,  &mo 1,  &skq LSHIFT,                         &kp SPACE,  &mo 2,  &mo 4 >;
         };
-/*
+
+
+
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
