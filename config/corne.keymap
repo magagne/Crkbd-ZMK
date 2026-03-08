@@ -13,61 +13,61 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-                &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
-                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
-                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
-                &none, &none, &none,                   &none, &none,&none
+               &none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &none   &none
+               &none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
+               &none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
+                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
             >;
         };
     
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-                  &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
-                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
-                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
-                &none, &none, &none,                   &none, &none,&none
+                &none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &none   &none
+               &none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
+               &none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
+                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
             >;
         };
     
         Symbols_Layer_2 {
             label = "Symbol";
             bindings = <
-               &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
-                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
-                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
-                &none, &none, &none,                   &none, &none,&none
+                &none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &none   &none
+               &none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
+               &none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
+                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
             >;
         };
         
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-                &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
-                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
-                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
-                &none, &none, &none,                   &none, &none,&none
+               &none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &none   &none
+               &none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
+               &none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
+                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
             >;
         };
            
         Fn_Layer_4 {
             label = "Function";
             bindings = <
-                 &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
-                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
-                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
-                &none, &none, &none,                   &none, &none,&none
-            >;
+               &none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &none   &none
+               &none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
+               &none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
+                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
+           >;
         };
             
         Config_Layer_5 {
             label = "Config";
             bindings = <
-               &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
-                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
-                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
-                &none, &none, &none,                   &none, &none,&none
-            >;
+              &none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &none   &none
+               &none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
+               &none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
+                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
+           >;
         };
     };
 };
