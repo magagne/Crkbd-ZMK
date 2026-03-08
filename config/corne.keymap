@@ -12,7 +12,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 
-/ {
+{
     behaviors {
         td: tapdance {
             compatible = "zmk,behavior-hold-tap";
@@ -32,7 +32,7 @@
             ignore-modifiers;
         };
     };
-/*
+
     combos {
         compatible = "zmk,combos";
 
@@ -107,7 +107,7 @@
             layers = <5>;
         };
     };
-*/
+
 /*
     macros {
         Macro_M10: Macro_M10 {
