@@ -1,73 +1,26 @@
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/behaviors.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
-   
     keymap {
         compatible = "zmk,keymap";
 
-        Base_layer_0 {
-            label = "Colemak";
+        default_layer {
             bindings = <
-                 &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
-                 &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
-                 &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
+                Q, W, F, P, G, J, L, U, Y,
+                A, S, D, F, H, N, E, I, O,
+                Z, X, C, V, K, M, COMMA, DOT, MINUS,
+                TG(1), SPACE, ENT, BKSP
             >;
         };
-    
-        Extend_Layer_1 {
-            label = "Extend";
+
+        layer1 {
             bindings = <
-                 &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
-                 &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
-                 &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
+                F1, F2, F3, F4, F5, F6, F7, F8, F9,
+                F10, F11, F12, PAUS, SLCK, TRSC,
+                INS, HOME, PGUP, DEL, END, PGDN,
+                TG(2), SPACE, ENT, BKSP
             >;
-        };
-    
-        Symbols_Layer_2 {
-            label = "Symbol";
-            bindings = <
-                        &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
-                 &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
-                 &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
-            >;
-        };
-        
-        Num_Layer_3 {
-            label = "Numeric";
-            bindings = <
-                                &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
-                 &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
-                 &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
-            >;
-        };
-           
-        Fn_Layer_4 {
-            label = "Function";
-            bindings = <
-                             &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
-                 &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
-                 &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
-           >;
-        };
-            
-        Config_Layer_5 {
-            label = "Config";
-            bindings = <
-                        &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
-                 &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
-                 &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
-           >;
         };
     };
 };
