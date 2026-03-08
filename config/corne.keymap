@@ -157,8 +157,6 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL &macro_tap &kp M &kp M &macro_release &kp LCTRL>;
         };
-
-
     };
 
     /*
@@ -215,9 +213,9 @@
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-                &none,  &none,    LC(LS(LA(LEFT_GUI))),  LC(LS(LEFT_ALT)),  &none,      &none,    KP_PLUS,   N7,  N8,  N9,  KP_MULTIPLY,  &none,
-                &none,  LALT,     LGUI,                  LSHIFT,           LCTRL,      &none,    KP_MINUS,  N4,  N5,  N6,  KP_DIVIDE,    &none,
-                &none,  RALT,     GLOBE,                 &none,            RCTRL,      &none,    COMMA,     N1,  N2,  N3,  DOT,          &none,
+                &none,  &none,    &kp LC(LS(LGUI)),  &kp LC(LS(LALT)),  &none,      &none,    &kp KP_PLUS,   N7,  N8,  N9,  &kp KP_MULTIPLY,  &none,
+                &none,  LALT,     LGUI,                  LSHIFT,           LCTRL,      &none,    &kp KP_MINUS,  N4,  N5,  N6,  &kp KP_DIVIDE,    &none,
+                &none,  RALT,     GLOBE,                 &none,            RCTRL,      &none,    COMMA,        N1,  N2,  N3,  DOT,          &none,
                 &none, &mo 5, &none, SPACE, N0, N0
             >;
         };
