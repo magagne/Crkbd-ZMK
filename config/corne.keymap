@@ -216,8 +216,7 @@
 &none,  &kp Q,  &kp W,  &kp F,  &kp P,  &kp B,          &kp J,      &kp L,  &kp U,      &kp Y,    &td &kp RA(RIGHT_BRACKET) &kp RC(RIGHT_BRACKET),  &none,
 &none,  &kp A,  &kp R,  &kp S,  &kp T,  &kp G,          &kp M,      &kp N,  &kp E,      &kp I,    &kp O,                                            &none,
 &none,  &kp Z,  &kp X,  &kp C,  &kp D,  &kp V,          &kp K,      &kp H,  &kp COMMA,  &kp DOT,  &kp FSLH,                                         &none,
-                     &mo 3,  &mo 1,  &skq LSHIFT,                         &kp SPACE,  &mo 2,  &mo 4
-            >;
+                     &mo 3,  &mo 1,  &skq LSHIFT,                         &kp SPACE,  &mo 2,  &mo 4 >;
         };
 
         Extend_Layer_1 {
@@ -226,8 +225,7 @@
 &none,  &td &kp LG(Z) &kp LC(Z),  &td &kp LG(X) &kp LC(X),  &td &kp LG(C) &kp LC(C),  &td &kp LG(V) &kp LC(V),  &td &kp LG(Y) &kp LC(Y),   &kp HOME,        &kp PAGE_DOWN,   &kp PAGE_UP,   &kp END,          &kp PRINTSCREEN,  &none,
 &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               &kp BACKSPACE,             &kp LEFT_ARROW,  &kp DOWN_ARROW,  &kp UP_ARROW,  &kp RIGHT_ARROW,  &kp ESC,          &none,
 &none,  &skq RALT,                &kp LS(TAB),              &kp TAB,                  &skq RCTRL,               &kp RETURN,                &kp DELETE,      &kp BACKSPACE,   &kp TAB,       &kp INSERT,       &kp CAPS,         &none, 
-&mo 5, &none, &trans, &kp RETURN, &mkp LCLK, &mkp RCLK>
-             >;
+&mo 5, &none, &trans, &kp RETURN, &mkp LCLK, &mkp RCLK> >;
         };
 
         Symbols_Layer_2 {
@@ -236,8 +234,7 @@
 &none,  &kp EXCL,              &kp AT,      &kp HASH,                           &kp DOLLAR,  &kp PRCNT,     &kp LS(N6),     &kp AMPS,   &kp ASTRK,      &kp PLUS,     &td &kp RA(MINUS) &kp A(GRAVE),  &none,
 &none,  &kp BACKSLASH ,        &kp RA(N7),  &td &kp LS(LEFT_BRACKET) &kp LEFT_BRACKET,  &kp LPAR,    &kp RA(N9),    &kp KP_SLASH,   &kp MINUS,  &kp RA(COMMA),  &kp RA(DOT),  &kp EQUAL,                &none,
 &none,  &kp RA(LEFT_BRACKET),  &kp RA(N8),  &kp RIGHT_BRACKET,                  &kp RPAR,    &kp RA(N0),    &kp LS(GRAVE),  &kp UNDER,  &kp SEMI,       &kp COLON,    &kp APOSTROPHE,           &none,
-                                         &none, &none, &trans,        &none, &none, &mo 5
-             >;
+                                         &none, &none, &trans,        &none, &none, &mo 5 >;
         };
 
         Num_Layer_3 {
@@ -246,8 +243,7 @@
 &none,  &none,    &kp LC(LS(LA(LEFT_GUI))),  &kp LC(LS(LEFT_ALT)),  &none,      &none,    &kp KP_PLUS,   &kp N7,  &kp N8,  &kp N9,  &kp KP_MULTIPLY,  &none,
 &none,  &kp LALT,  &kp LGUI,                  &kp LSHIFT,           &kp LCTRL,  &none,    &kp KP_MINUS,  &kp N4,  &kp N5,  &kp N6,  &kp KP_DIVIDE,    &none,
 &none,  &kp RALT,  &kp GLOBE,                 &none,                 &kp RCTRL,  &none,    &kp COMMA,     &kp N1,  &kp N2,  &kp N3,  &kp DOT,          &none,
-                                           &none,                    &mo 5,      &none,    &kp SPACE,     &kp N0,  &kp N0
-            >;
+                                           &none,                    &mo 5,      &none,    &kp SPACE,     &kp N0,  &kp N0 >;
         };
 
         Fn_Layer_4 {
@@ -256,8 +252,7 @@
 &none,  &none,     &none,      &none,       &none,      &none,    &none,  &kp F7,  &kp F8,  &kp F9,  &kp F10,  &none,
 &none,  &kp LALT,  &kp LGUI,   &kp LSHIFT,  &kp LCTRL,  &none,    &none,  &kp F4,  &kp F5,  &kp F6,  &kp F11,  &none,
 &none,  &kp RALT,  &kp GLOBE,  &none,       &kp RCTRL,  &none,    &none,  &kp F1,  &kp F2,  &kp F3,  &kp F12,  &none,
-                            &none,       &none,      &none,    &none,  &mo 5,   &none
-            >;
+                            &none,       &none,      &none,    &none,  &mo 5,   &none >;
         };
 
         Config_Layer_5 {
