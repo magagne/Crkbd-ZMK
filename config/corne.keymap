@@ -16,47 +16,47 @@
                  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
                  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
                  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
+                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
             >;
         };
     
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-                     &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
+                 &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
                  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
                  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
+                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
             >;
         };
     
         Symbols_Layer_2 {
             label = "Symbol";
             bindings = <
-            &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
+                        &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
                  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
                  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
+                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
             >;
         };
         
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-                      &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
+                                &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
                  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
                  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
+                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
             >;
         };
            
         Fn_Layer_4 {
             label = "Function";
             bindings = <
-             &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
+                             &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y       
                  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    
                  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 
-                                    &mo 3  &mo 1  &none     &kp SPACE  &mo 2  &mo 4
+                                    &mo 3  &mo 1  &kp Q     &kp SPACE  &mo 2  &mo 4
            >;
         };
             
