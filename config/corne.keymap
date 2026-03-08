@@ -183,60 +183,60 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-                &none, Q, W, F, P, B,    J, L, U, Y,   &th RA(RIGHT_BRACKET), RC(RIGHT_BRACKET), &none,
+                &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
                 &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
                 &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
-                &mo 3, &mo 1, &skq LSHIFT,                   SPACE, &mo 2, &mo 4
+                &none, &none, &none,                   &none, &none,&none
             >;
         };
     
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-                &none,  &th LG(Z), LC(Z),  &th LG(X), LC(X),  &th LG(C), LC(C),  &th LG(V), LC(V),  &th LG(Y), LC(Y), HOME,       PAGE_DOWN,  PAGE_UP,  END,         PRINTSCREEN, &none,
-                &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               BACKSPACE,           LEFT_ARROW, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, ESC,         &none,
-                &none,  &skq RALT,                LS(TAB),              TAB,                  &skq RCTRL,               RETURN,              DELETE,     BACKSPACE,  TAB,      INSERT,      CAPS,        &none, 
-                &mo 5, &none, &trans, RETURN, &mkp LCLK, &mkp RCLK
+                  &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
+                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
+                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
+                &none, &none, &none,                   &none, &none,&none
             >;
         };
     
         Symbols_Layer_2 {
             label = "Symbol";
             bindings = <
-                   &none,  &th LG(Z), LC(Z),  &th LG(X), LC(X),  &th LG(C), LC(C),  &th LG(V), LC(V),  &th LG(Y), LC(Y), HOME,       PAGE_DOWN,  PAGE_UP,  END,         PRINTSCREEN, &none,
-                &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               BACKSPACE,           LEFT_ARROW, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, ESC,         &none,
-                &none,  &skq RALT,                LS(TAB),              TAB,                  &skq RCTRL,               RETURN,              DELETE,     BACKSPACE,  TAB,      INSERT,      CAPS,        &none, 
-                &mo 5, &none, &trans, RETURN, &mkp LCLK, &mkp RCLK
+               &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
+                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
+                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
+                &none, &none, &none,                   &none, &none,&none
             >;
         };
         
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-                &none,  &th LG(Z), LC(Z),  &th LG(X), LC(X),  &th LG(C), LC(C),  &th LG(V), LC(V),  &th LG(Y), LC(Y), HOME,       PAGE_DOWN,  PAGE_UP,  END,         PRINTSCREEN, &none,
-                &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               BACKSPACE,           LEFT_ARROW, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, ESC,         &none,
-                &none,  &skq RALT,                LS(TAB),              TAB,                  &skq RCTRL,               RETURN,              DELETE,     BACKSPACE,  TAB,      INSERT,      CAPS,        &none, 
-                &mo 5, &none, &trans, RETURN, &mkp LCLK, &mkp RCLK
+                &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
+                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
+                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
+                &none, &none, &none,                   &none, &none,&none
             >;
         };
            
         Fn_Layer_4 {
             label = "Function";
             bindings = <
-                  &none,  &th LG(Z), LC(Z),  &th LG(X), LC(X),  &th LG(C), LC(C),  &th LG(V), LC(V),  &th LG(Y), LC(Y), HOME,       PAGE_DOWN,  PAGE_UP,  END,         PRINTSCREEN, &none,
-                &none,  &skq LALT,                &skq LGUI,                &skq LSHIFT,              &skq LCTRL,               BACKSPACE,           LEFT_ARROW, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, ESC,         &none,
-                &none,  &skq RALT,                LS(TAB),              TAB,                  &skq RCTRL,               RETURN,              DELETE,     BACKSPACE,  TAB,      INSERT,      CAPS,        &none, 
-                &mo 5, &none, &trans, RETURN, &mkp LCLK, &mkp RCLK
+                 &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
+                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
+                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
+                &none, &none, &none,                   &none, &none,&none
             >;
         };
             
         Config_Layer_5 {
             label = "Config";
             bindings = <
-                &none,  &bootloader,   <&bt BT_CLR>,    &none,         &out OUT_TOG,  &none,         &none,           &none,           &none,         &none,            &none,  &none,
-                &none,  &none,         &none,         &mkp RCLK,     &mkp LCLK,     &none,         &mmv MOVE_LEFT,  &mmv MOVE_DOWN,  &mmv MOVE_UP,  &mmv MOVE_RIGHT,  &none,  &none,
-                &none,  <&bt BT_SEL_CMD 4>, <&bt BT_SEL_CMD 3>, <&bt BT_SEL_CMD 2>, <&bt BT_SEL_CMD 1>, <&bt BT_SEL_CMD 0>  ,  &none,           &none,           &none,         &none,            &none,  &none,
-                &none, &none, &none, &none, &none, &none
+               &none, Q, W, F, P, B,    J, L, U, Y,   &none, &none,
+                &none, A, R, S, T, G,    M, N, E, I, O,                                        &none,
+                &none, Z, X, C, D, V,    K, H, COMMA, DOT, FSLH,                               &none,
+                &none, &none, &none,                   &none, &none,&none
             >;
         };
     };
