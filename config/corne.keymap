@@ -27,7 +27,8 @@
         };
     };
 
-    combos {
+   combos {
+        
         compatible = "zmk,combos";
 
         Config_Layer_5 {
@@ -40,7 +41,7 @@
             key-positions = <1 25>;
             layers = <2>;
         };
-
+        
         Combo_Macro_M11 {
             bindings = <&Macro_M11>;
             key-positions = <26 2>;
@@ -100,7 +101,7 @@
             key-positions = <10 1>;
             layers = <5>;
         };
-    };
+    }; 
 
     macros {
         Macro_M10: Macro_M10 {
