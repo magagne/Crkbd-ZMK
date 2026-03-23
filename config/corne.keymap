@@ -105,7 +105,7 @@
 
     macros {
 
-        Macro_M0_SSMS_Outline_ToggleCurrent: Macro_SSMS_Outline_ToggleCurrent {
+        Macro_M0_SSMS_Outline_ToggleCurrent: Macro_M0_SSMS_Outline_ToggleCurrent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -114,7 +114,7 @@
                 <&macro_release &kp LCTRL>;
         };
     
-        Macro_M1_SSMS_Outline_ToggleAll: Macro_SSMS_Outline_ToggleAll {
+        Macro_M1_SSMS_Outline_ToggleAll: Macro_M1_SSMS_Outline_ToggleAll {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -123,7 +123,7 @@
                 <&macro_release &kp LCTRL>;
         };
 
-        Macro_M2_SSMS_Outline_CollapseAll: Macro_SSMS_Outline_CollapseAll {
+        Macro_M2_SSMS_Outline_CollapseAll: Macro_M2_SSMS_Outline_CollapseAll {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -132,7 +132,7 @@
                 <&macro_release &kp LCTRL>;
         };        
 
-        Macro_M3_SSMS_Outline_HideSelection: Macro_SSMS_Outline_HideSelection {
+        Macro_M3_SSMS_Outline_HideSelection: Macro_M3_SSMS_Outline_HideSelection {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -141,7 +141,7 @@
                 <&macro_release &kp LCTRL>;
         };
 
-        Macro_M4_SSMS_Outline_CollapseToDef: Macro_SSMS_Outline_CollapseToDef {
+        Macro_M4_SSMS_Outline_CollapseToDef: Macro_M4_SSMS_Outline_CollapseToDef {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -150,7 +150,7 @@
                 <&macro_release &kp LCTRL>;
         };
 
-        Macro_M5_SSMS_Bookmark_Toggle: Macro_SSMS_Bookmark_Toggle {
+        Macro_M5_SSMS_Bookmark_Toggle: Macro_M5_SSMS_Bookmark_Toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -159,7 +159,7 @@
                 <&macro_release &kp LCTRL>;
         };
 
-        Macro_M6_SSMS_Bookmark_Next: Macro_SSMS_Bookmark_Next {
+        Macro_M6_SSMS_Bookmark_Next: Macro_M6_SSMS_Bookmark_Next {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -168,7 +168,7 @@
                 <&macro_release &kp LCTRL>;
         };
 
-        Macro_M7_SSMS_Bookmark_Previous: Macro_SSMS_Bookmark_Previous {
+        Macro_M7_SSMS_Bookmark_Previous: Macro_M7_SSMS_Bookmark_Previous {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -177,7 +177,7 @@
                 <&macro_release &kp LCTRL>;
         };
 
-        Macro_M8_SSMS_Comment: Macro_SSMS_Comment {
+        Macro_M8_SSMS_Comment: Macro_M8_SSMS_Comment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -186,7 +186,7 @@
                 <&macro_release &kp LCTRL>;
         };
 
-        Macro_M9_SSMS_UnComment: Macro_SSMS_UnComment {
+        Macro_M9_SSMS_UnComment: Macro_M9_SSMS_UnComment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
