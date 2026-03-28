@@ -27,8 +27,7 @@
         };
     };
 
-   combos {
-        
+    combos {
         compatible = "zmk,combos";
 
         Config_Layer_5 {
@@ -41,7 +40,7 @@
             key-positions = <1 25>;
             layers = <2>;
         };
-        
+
         Combo_Macro_M11 {
             bindings = <&Macro_M11>;
             key-positions = <26 2>;
@@ -60,37 +59,37 @@
             layers = <1>;
         };
 
-        Combo_BrightUp_1 {
+        Combo_BrightnessUp_Mac {
             bindings = <&kp F15>;
             key-positions = <6 18>;
             layers = <0>;
         };
 
-        Combo_BrightDown_1 {
+        Combo_BrightnessDown_Mac {
             bindings = <&kp F14>;
             key-positions = <30 18>;
             layers = <0>;
         };
 
-        Combo_BrightUp_2 {
+        Combo_BrightnessUp_Win {
             bindings = <&kp C_BRI_UP>;
             key-positions = <6 18>;
             layers = <1>;
         };
 
-        Combo_BrightDown_2 {
+        Combo_BrightnessDown_Win {
             bindings = <&kp C_BRI_DN>;
             key-positions = <30 18>;
             layers = <1>;
         };
 
-        Combo_VolUp {
+        Combo_VolumeUp {
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <5 17>;
             layers = <0>;
         };
 
-        Combo_VolDown {
+        Combo_VolumeDown {
             bindings = <&kp C_VOL_DN>;
             key-positions = <29 17>;
             layers = <0>;
@@ -101,7 +100,7 @@
             key-positions = <10 1>;
             layers = <5>;
         };
-    }; 
+    };
 
     macros {
 
@@ -275,9 +274,9 @@
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-                &th LC(LA(LS(LG(N8)))) LC(LA(LS(LG(N7))))  &none     &kp LC(LS(LA(LEFT_GUI)))   &kp LC(LS(LEFT_ALT))  &none      &none    &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &th LC(LA(LS(LG(KP_PLUS)))) LC(LA(LS(LG(N9))))
-                &th LC(LA(LS(LG(N5)))) LC(LA(LS(LG(N4))))  &kp LALT  &kp LGUI                   &kp LSHIFT            &kp LCTRL  &none    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &th LC(LA(LS(LG(KP_MINUS)))) LC(LA(LS(LG(N6))))
-                &th LC(LA(LS(LG(N2)))) LC(LA(LS(LG(N1))))  &kp RALT  &kp GLOBE                  &none                 &kp RCTRL  &none    &kp COMMA     &kp N1  &kp N2  &kp N3  &kp DOT          &th LC(LA(LS(LG(N0)))) LC(LA(LS(LG(N3))))
+                &none  &none     &kp LC(LS(LA(LEFT_GUI)))   &kp LC(LS(LEFT_ALT))  &none      &none    &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
+                &none  &kp LALT  &kp LGUI                   &kp LSHIFT            &kp LCTRL  &none    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
+                &none  &kp RALT  &kp GLOBE                  &none                 &kp RCTRL  &none    &kp COMMA     &kp N1  &kp N2  &kp N3  &kp DOT          &none
                                                                                                 &none                 &mo 5      &none    &kp SPACE     &kp N0  &kp N0
             >;
         };
@@ -285,9 +284,9 @@
         Fn_Layer_4 {
             label = "Function";
             bindings = <
-                &th LC(LA(LS(LG(N8)))) LC(LA(LS(LG(N7))))  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &th LC(LA(LS(LG(KP_PLUS)))) LC(LA(LS(LG(N9))))
-                &th LC(LA(LS(LG(N5)))) LC(LA(LS(LG(N4))))  &kp LALT  &kp LGUI   &kp LSHIFT  &kp LCTRL  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11  &th LC(LA(LS(LG(KP_MINUS)))) LC(LA(LS(LG(N6))))
-                &th LC(LA(LS(LG(N2)))) LC(LA(LS(LG(N1))))  &kp RALT  &kp GLOBE  &none       &kp RCTRL  &none    &none  &kp F1  &kp F2  &kp F3  &kp F12  &th LC(LA(LS(LG(N0)))) LC(LA(LS(LG(N3))))
+                &none  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
+                &none  &kp LALT  &kp LGUI   &kp LSHIFT  &kp LCTRL  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
+                &none  &kp RALT  &kp GLOBE  &none       &kp RCTRL  &none    &none  &kp F1  &kp F2  &kp F3  &kp F12  &none
                                                                                 &none       &none      &none    &none  &mo 5   &none
             >;
         };
