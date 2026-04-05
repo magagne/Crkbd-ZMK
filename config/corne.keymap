@@ -111,7 +111,6 @@
 				<&macro_tap &kp M &kp A>,
 				<&macro_release &kp LCTRL>;
 		};		  
-		
 		Macro_M01_Outline_ToggleCurrent: Macro_M01_Outline_ToggleCurrent {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -120,7 +119,7 @@
 				<&macro_tap &kp M &kp M>,
 				<&macro_release &kp LCTRL>; 
 		};
-	
+
 		Macro_M02_Outline_ExpandAll: Macro_M02_Outline_ExpandAll {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -129,7 +128,6 @@
 				<&macro_tap &kp M &kp L>,
 				<&macro_release &kp LCTRL>;
 		};
-
 		Macro_M03_Bookmark_Previous: Macro_M03_Bookmark_Previous {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -138,7 +136,6 @@
 				<&macro_tap &kp K &kp P>,
 				<&macro_release &kp LCTRL>;
 		};
-
 		Macro_M04_Bookmark_Toggle: Macro_M04_Bookmark_Toggle {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -147,8 +144,15 @@
 				<&macro_tap &kp K &kp K>,
 				<&macro_release &kp LCTRL>;
 		};
-
-		Macro_M05_Bookmark_Next: Macro_M05_Bookmark_Next {
+		Macro_M05_Bookmark_ClearAll: Macro_M05_Bookmark_ClearAll {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings =
+				<&macro_press &kp LCTRL>,
+				<&macro_tap &kp K &kp L>,
+				<&macro_release &kp LCTRL>;
+		};
+		Macro_M06_Bookmark_Next: Macro_M06_Bookmark_Next {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings =
@@ -156,8 +160,7 @@
 				<&macro_tap &kp K &kp N>,
 				<&macro_release &kp LCTRL>;
 		};
-
-		Macro_M06_Comment: Macro_M06_Comment {
+		Macro_M07_Comment: Macro_M07_Comment {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings =
@@ -165,8 +168,7 @@
 				<&macro_tap &kp K &kp C>,
 				<&macro_release &kp LCTRL>;
 		};
-
-		Macro_M07_UnComment: Macro_M07_UnComment {
+		Macro_M08_UnComment: Macro_M08_UnComment {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings =
