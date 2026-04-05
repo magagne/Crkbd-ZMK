@@ -119,7 +119,6 @@
 				<&macro_tap &kp M &kp M>,
 				<&macro_release &kp LCTRL>; 
 		};
-
 		Macro_M02_Outline_ExpandAll: Macro_M02_Outline_ExpandAll {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
