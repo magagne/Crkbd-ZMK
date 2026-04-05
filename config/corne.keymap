@@ -17,6 +17,14 @@
 			bindings = <&kp>, <&kp>;
 		};
 
+		mth: macro_tap_hold {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+
 		skq: sticky_key_quick_release {
 			compatible = "zmk,behavior-sticky-key";
 			#binding-cells = <1>;
