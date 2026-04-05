@@ -7,6 +7,15 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define mth(macro_tap, macro_hold) \
+	mth_##macro_tap##_##macro_hold { \
+		compatible = "zmk,behavior-hold-tap"; \
+		#binding-cells = <0>; \
+		tapping-term-ms = <200>; \
+		flavor = "tap-preferred"; \
+		bindings = <&macro_tap>, <&macro_hold>; \
+	}
+
 / {
 	behaviors {
 		th: holdtap {
@@ -25,6 +34,8 @@
 			quick-release;
 			ignore-modifiers;
 		};
+
+    	mth(Macro_M04_Bookmark_Toggle, Macro_M05_Bookmark_ClearAll);
 	};
 
 	combos {
@@ -103,6 +114,7 @@
 	};
 
 	macros {
+
 		Macro_M00_Outline_CollapseAll: Macro_M00_Outline_CollapseAll {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -228,7 +240,7 @@
 			label = "Colemak";
 			bindings = <
 				&none	&kp Q	&kp W	&kp F	&kp P	&kp B																				&kp J		&kp L	&kp U		&kp Y		&th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)	&none
-				&none	&kp A	&kp R	&kp S	&kp T	&kp G																				&kp M		&kp N	&kp E		&kp I		&kp O									&th &Macro_M04_Bookmark_Toggle &Macro_M05_Bookmark_ClearAll
+				&none	&kp A	&kp R	&kp S	&kp T	&kp G																				&kp M		&kp N	&kp E		&kp I		&kp O									&mth Macro_M04_Bookmark_Toggle_Macro_M05_Bookmark_ClearAll
 				&none	&kp Z	&kp X	&kp C	&kp D	&kp V																				&kp K		&kp H	&kp COMMA	&kp DOT		&kp FSLH								&none
 										&mo 3	&mo 1	&skq LSHIFT																			&kp SPACE	&mo 2	&mo 4
 			>;
