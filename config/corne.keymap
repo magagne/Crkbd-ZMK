@@ -12,12 +12,11 @@
 		th: holdtap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>
+			tapping-term-ms = <200>;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
 
-		// Clean macro‑friendly hold‑tap (no default behavior)
 		mht: macro_holdtap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
