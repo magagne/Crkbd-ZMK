@@ -68,13 +68,13 @@
 		};
 
 		Combo_BrightnessUp_Mac {
-			bindings = <&kp F15>;
+			bindings = <&kp LC(LS(LA(LGUI(F10))))>;
 			key-positions = <6 18>;
 			layers = <0>;
 		};
 
 		Combo_BrightnessDown_Mac {
-			bindings = <&kp F14>;
+			bindings = <&kp LC(LS(LA(LGUI(F11))))>;
 			key-positions = <30 18>;
 			layers = <0>;
 		};
