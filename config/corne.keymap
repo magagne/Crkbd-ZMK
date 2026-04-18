@@ -8,216 +8,242 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-	behaviors {
+    behaviors {
+        td: MyTapDance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
 
-		td: MyTapDance {
-			compatible = "zmk,behavior-tap-dance";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp>, <&kp>;
-		};
+        th: MyTapHold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 
-		th: MyTapHold {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			flavor = "tap-preferred";
-			bindings = <&kp>, <&kp>;
-		};
+        skq: MyStickyKeyQuickRelease {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <500>;
+            quick-release;
+            ignore-modifiers;
+        };
+    };
 
-		skq: MyStickyKeyQuickRelease {
-			compatible = "zmk,behavior-sticky-key";
-			#binding-cells = <1>;
-			bindings = <&kp>;
-			release-after-ms = <500>;
-			quick-release;
-			ignore-modifiers;
-		};
-	};
+    combos {
+        compatible = "zmk,combos";
 
-	combos {
-		compatible = "zmk,combos";
+        Config_Layer_5 {
+            bindings = <&mo 5>;
+            key-positions = <38 39>;
+        };
 
-		Config_Layer_5 {
-			bindings = <&mo 5>;
-			key-positions = <38 39>;
-		};
+        Combo_Macro_M10 {
+            bindings = <&Macro_M10>;
+            key-positions = <1 25>;
+            layers = <2>;
+        };
 
-		Combo_Macro_M10 {
-			bindings = <&Macro_M10>;
-			key-positions = <1 25>;
-			layers = <2>;
-		};
+        Combo_Macro_M11 {
+            bindings = <&Macro_M11>;
+            key-positions = <26 2>;
+            layers = <2>;
+        };
 
-		Combo_Macro_M11 {
-			bindings = <&Macro_M11>;
-			key-positions = <26 2>;
-			layers = <2>;
-		};
+        Combo_Macro_M12 {
+            bindings = <&Macro_M12>;
+            key-positions = <33 9>;
+            layers = <1>;
+        };
 
-		Combo_Macro_M12 {
-			bindings = <&Macro_M12>;
-			key-positions = <33 9>;
-			layers = <1>;
-		};
+        Combo_Macro_M13 {
+            bindings = <&Macro_M13>;
+            key-positions = <10 34>;
+            layers = <1>;
+        };
 
-		Combo_Macro_M13 {
-			bindings = <&Macro_M13>;
-			key-positions = <10 34>;
-			layers = <1>;
-		};
+        Combo_BrightnessUp_Mac {
+            bindings = <&kp LC(LS(LA(LG(F10))))>;
+            key-positions = <6 18>;
+            layers = <0>;
+        };
 
-		Combo_BrightnessUp_Mac {
-			bindings = <&kp LC(LS(LA(LG(F10))))>;
-			key-positions = <6 18>;
-			layers = <0>;
-		};
+        Combo_BrightnessDown_Mac {
+            bindings = <&kp LC(LS(LA(LG(F11))))>;
+            key-positions = <30 18>;
+            layers = <0>;
+        };
 
-		Combo_BrightnessDown_Mac {
-			bindings = <&kp LC(LS(LA(LG(F11))))>;
-			key-positions = <30 18>;
-			layers = <0>;
-		};
+        Combo_BrightnessUp_Win {
+            bindings = <&kp C_BRI_UP>;
+            key-positions = <6 18>;
+            layers = <1>;
+        };
 
-		Combo_BrightnessUp_Win {
-			bindings = <&kp C_BRI_UP>;
-			key-positions = <6 18>;
-			layers = <1>;
-		};
+        Combo_BrightnessDown_Win {
+            bindings = <&kp C_BRI_DN>;
+            key-positions = <30 18>;
+            layers = <1>;
+        };
 
-		Combo_BrightnessDown_Win {
-			bindings = <&kp C_BRI_DN>;
-			key-positions = <30 18>;
-			layers = <1>;
-		};
+        Combo_VolumeUp {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <5 17>;
+            layers = <0>;
+        };
 
-		Combo_VolumeUp {
-			bindings = <&kp C_VOLUME_UP>;
-			key-positions = <5 17>;
-			layers = <0>;
-		};
+        Combo_VolumeDown {
+            bindings = <&kp C_VOL_DN>;
+            key-positions = <29 17>;
+            layers = <0>;
+        };
 
-		Combo_VolumeDown {
-			bindings = <&kp C_VOL_DN>;
-			key-positions = <29 17>;
-			layers = <0>;
-		};
+        Combo_Unlock {
+            bindings = <&studio_unlock>;
+            key-positions = <10 1>;
+            layers = <5>;
+        };
+    };
 
-		Combo_Unlock {
-			bindings = <&studio_unlock>;
-			key-positions = <10 1>;
-			layers = <5>;
-		};
-	};
+    macros {
+        Macro_M00_Outline_CollapseAll: Macro_M00_Outline_CollapseAll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp M &kp A>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-	macros {
-		Macro_M00_Outline_CollapseAll: Macro_M00_Outline_CollapseAll {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp M &kp A>,
-				<&macro_release &kp LCTRL>;
-		};	
+        Macro_M01_Outline_ToggleCurrent: Macro_M01_Outline_ToggleCurrent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp M &kp M>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M01_Outline_ToggleCurrent: Macro_M01_Outline_ToggleCurrent {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp M &kp M>,
-				<&macro_release &kp LCTRL>; 
-		};
+        Macro_M02_Outline_ExpandAll: Macro_M02_Outline_ExpandAll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp M &kp L>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M02_Outline_ExpandAll: Macro_M02_Outline_ExpandAll {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp M &kp L>,
-				<&macro_release &kp LCTRL>;
-		};
+        Macro_M03_Bookmark_Previous: Macro_M03_Bookmark_Previous {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp P>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M03_Bookmark_Previous: Macro_M03_Bookmark_Previous {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp K &kp P>,
-				<&macro_release &kp LCTRL>;
-		};
+        Macro_M04_Bookmark_Toggle: Macro_M04_Bookmark_Toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp K>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M04_Bookmark_Toggle: Macro_M04_Bookmark_Toggle {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp K &kp K>,
-				<&macro_release &kp LCTRL>;
-		};
+        Macro_M05_Bookmark_ClearAll: Macro_M05_Bookmark_ClearAll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp L>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M05_Bookmark_ClearAll: Macro_M05_Bookmark_ClearAll {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp K &kp L>,
-				<&macro_release &kp LCTRL>;
-		};
+        Macro_M06_Bookmark_Next: Macro_M06_Bookmark_Next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp N>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M06_Bookmark_Next: Macro_M06_Bookmark_Next {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp K &kp N>,
-				<&macro_release &kp LCTRL>;
-		};
+        Macro_M07_Comment: Macro_M07_Comment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp C>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M07_Comment: Macro_M07_Comment {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp K &kp C>,
-				<&macro_release &kp LCTRL>;
-		};
+        Macro_M08_UnComment: Macro_M08_UnComment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K &kp U>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-		Macro_M08_UnComment: Macro_M08_UnComment {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings =
-				<&macro_press &kp LCTRL>,
-				<&macro_tap &kp K &kp U>,
-				<&macro_release &kp LCTRL>;
-		};
-		
-		Macro_M10: Macro_M10 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LS(K) &kp T &kp I &kp LS(A) &kp STAR &kp AMPS &kp N0 &kp E &kp N5 &kp N6 &kp U &kp UNDER &kp LS(H) &kp S &kp LS(D) &kp D &kp LS(D) &kp N5>;
-		};
+        Macro_M10: Macro_M10 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(K) &kp T &kp I &kp LS(A) &kp STAR &kp AMPS &kp N0 &kp E &kp N5 &kp N6 &kp U &kp UNDER &kp LS(H) &kp S &kp LS(D) &kp D &kp LS(D) &kp N5>;
+        };
 
-		Macro_M11: Macro_M11 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp AMPS &kp N9 &kp LS(P) &kp N0 &kp LS(S) &kp UNDER &kp N1 &kp E &kp U &kp LS(W) &kp COMMA &kp L &kp R &kp LS(U) &kp MINUS &kp UNDER &kp LS(N) &kp E>;
-		};
+        Macro_M11: Macro_M11 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS &kp N9 &kp LS(P) &kp N0 &kp LS(S) &kp UNDER &kp N1 &kp E &kp U &kp LS(W) &kp COMMA &kp L &kp R &kp LS(U) &kp MINUS &kp UNDER &kp LS(N) &kp E>;
+        };
 
-		Macro_M12: Macro_M12 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LS(N) &kp N &kp N5 &kp MINUS &kp E &kp A &kp N7 &kp POUND &kp MINUS &kp N8 &kp F &kp N &kp POUND &kp MINUS &kp N4 &kp I &kp DLLR &kp POUND>;
-		};
+        Macro_M12: Macro_M12 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp N &kp N5 &kp MINUS &kp E &kp A &kp N7 &kp POUND &kp MINUS &kp N8 &kp F &kp N &kp POUND &kp MINUS &kp N4 &kp I &kp DLLR &kp POUND>;
+        };
 
-		Macro_M13: Macro_M13 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LS(J) &kp N5 &kp LS(R) &kp UNDER &kp N3 &kp LS(T) &kp N5 &kp UNDER &kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
-		};
-	};
+        Macro_M13: Macro_M13 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(J) &kp N5 &kp LS(R) &kp UNDER &kp N3 &kp LS(T) &kp N5 &kp UNDER &kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
+        };
+    };
 
-	/*
+    /*
 
 		/
 		&kp KP_DIVIDE
@@ -236,67 +262,67 @@
 
 	*/
 
-	keymap {
-		compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-		Base_layer_0 {
-			label = "Colemak";
-			bindings = <
-				&none	&kp Q	&kp W	&kp F	&kp P	&kp B																				&kp J		&kp L	&kp U		&kp Y		&th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)	&none
-				&none	&kp A	&kp R	&kp S	&kp T	&kp G																				&kp M		&kp N	&kp E		&kp I		&kp O									&none
-				&none	&kp Z	&kp X	&kp C	&kp D	&kp V																				&kp K		&kp H	&kp COMMA	&kp DOT		&kp FSLH								&none
-										&mo 3	&mo 1	&skq LSHIFT																			&kp SPACE	&mo 2	&mo 4
-			>;
-		};
+        Base_layer_0 {
+            label = "Colemak";
+            bindings = <
+&Macro_M00_Outline_CollapseAll    &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &Macro_M03_Bookmark_Previous
+&Macro_M01_Outline_ToggleCurrent  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &Macro_M04_Bookmark_Toggle
+&Macro_M02_Outline_ExpandAll      &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &Macro_M06_Bookmark_Next
+                                                &mo 3  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 4
+            >;
+        };
 
-		Extend_Layer_1 {
-			label = "Extend";
-			bindings = <
-				&none	&th LG(Z) LC(Z)		&th LG(X) LC(X)		&th LG(C) LC(C)		&th LG(V) LC(V)		&th LG(Y) LC(Y)						&kp HOME			&kp PAGE_DOWN		&kp PAGE_UP		&kp END				&kp PRINTSCREEN		&none
-				&none	&skq LALT			&skq LGUI			&skq LSHIFT			&skq LCTRL			&kp BACKSPACE						&kp LEFT_ARROW		&kp DOWN_ARROW		&kp UP_ARROW	&kp RIGHT_ARROW		&kp ESC				&none
-				&none	&skq RALT			&kp LS(TAB)			&kp TAB				&skq RCTRL			&kp RETURN							&kp DELETE			&kp BACKSPACE		&kp TAB			&kp INSERT			&kp CAPS			&none
-																&mo 5				&none				&trans								&kp RETURN			&mkp LCLK			&mkp RCLK
-			>;
-		};
+        Extend_Layer_1 {
+            label = "Extend";
+            bindings = <
+&none  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
+&none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
+&none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
+                                         &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
+            >;
+        };
 
-		Symbols_Layer_2 {
-			label = "Symbol";
-			bindings = <
-				&none	&kp EXCL				&kp AT		&kp HASH							&kp DOLLAR		&kp PRCNT					&kp LS(N6)		&kp AMPS	&kp ASTRK		&kp PLUS		&th RA(MINUS) RA(GRAVE)	&none
-				&none	&kp BACKSLASH			&kp RA(N7)	&th LS(LEFT_BRACKET) LEFT_BRACKET	&kp LPAR		&kp RA(N9)					&kp KP_SLASH	&kp MINUS	&kp RA(COMMA)	&kp COLON		&kp EQUAL				&none
-				&none	&kp RA(LEFT_BRACKET)	&kp RA(N8)	&kp RIGHT_BRACKET					&kp RPAR		&kp RA(N0)					&kp LS(GRAVE)	&kp UNDER	&kp RA(DOT)		&kp SEMI		&kp APOSTROPHE			&none
-															&none								&none			&trans						&none			&none		&mo 5
-			>;
-		};
-		
-		Num_Layer_3 {
-			label = "Numeric";
-			bindings = <
-				&none	&none		&kp LC(LS(LA(LEFT_GUI)))	&kp LC(LS(LEFT_ALT))	&none		&none									&kp KP_PLUS	&kp N7	&kp N8	&kp N9	&kp KP_MULTIPLY			&none
-				&none	&kp LALT	&kp LGUI					&kp LSHIFT				&kp LCTRL	&none									&kp KP_MINUS		&kp N4	&kp N5	&kp N6	&kp KP_DIVIDE	&none
-				&none	&kp RALT	&kp GLOBE					&none					&kp RCTRL	&none									&kp COMMA			&kp N1	&kp N2	&kp N3	&kp DOT			&none
-																&none					&mo 5		&none									&kp SPACE			&kp N0	&kp N0
-			>;
-		};
+        Symbols_Layer_2 {
+            label = "Symbol";
+            bindings = <
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RA(MINUS) RA(GRAVE)  &none
+&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL                &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE           &none
+                                         &none                              &none       &trans        &none          &none      &mo 5
+            >;
+        };
 
-		Fn_Layer_4 {
-			label = "Function";
-			bindings = <
-				&none	&none		&none		&none		&none		&none																&none	&kp F7	&kp F8	&kp F9	&kp F10	&none
-				&none	&kp LALT	&kp LGUI	&kp LSHIFT	&kp LCTRL	&none																&none	&kp F4	&kp F5	&kp F6	&kp F11	&none
-				&none	&kp RALT	&kp GLOBE	&none		&kp RCTRL	&none																&none	&kp F1	&kp F2	&kp F3	&kp F12	&none
-												&none		&none		&none																&none	&mo 5	&none
-			>;
-		};
+        Num_Layer_3 {
+            label = "Numeric";
+            bindings = <
+&none  &none     &kp LC(LS(LA(LEFT_GUI)))  &kp LC(LS(LEFT_ALT))  &none      &none    &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &none
+&none  &kp LALT  &kp LGUI                  &kp LSHIFT            &kp LCTRL  &none    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &none
+&none  &kp RALT  &kp GLOBE                 &none                 &kp RCTRL  &none    &kp COMMA     &kp N1  &kp N2  &kp N3  &kp DOT          &none
+                                           &none                 &mo 5      &none    &kp SPACE     &kp N0  &kp N0
+            >;
+        };
 
-		Config_Layer_5 {
-			label = "Config";
-			bindings = <
-				&none	&bootloader		&bt BT_CLR		&none			&out OUT_TOG	&none												&none				&none				&none			&none				&none	&none
-				&none	&none			&none			&mkp RCLK		&mkp LCLK		&none												&mmv MOVE_LEFT		&mmv MOVE_DOWN		&mmv MOVE_UP	&mmv MOVE_RIGHT		&none	&none
-				&none	&bt BT_SEL 4	&bt BT_SEL 3	&bt BT_SEL 2	&bt BT_SEL 1	&bt BT_SEL 0										&none				&none				&none			&none				&none	&none
-														&none			&none			&none												&none				&none				&none
-			>;
-		};
-	};
+        Fn_Layer_4 {
+            label = "Function";
+            bindings = <
+&none  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none  &kp LALT  &kp LGUI   &kp LSHIFT  &kp LCTRL  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none  &kp RALT  &kp GLOBE  &none       &kp RCTRL  &none    &none  &kp F1  &kp F2  &kp F3  &kp F12  &none
+                            &none       &none      &none    &none  &mo 5   &none
+            >;
+        };
+
+        Config_Layer_5 {
+            label = "Config";
+            bindings = <
+&none  &bootloader   &bt BT_CLR    &none         &out OUT_TOG  &none           &none           &none           &none         &none            &none  &none
+&none  &none         &none         &mkp RCLK     &mkp LCLK     &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
+&none  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &none           &none           &none         &none            &none  &none
+                                   &none         &none         &none           &none           &none           &none
+            >;
+        };
+    };
 };
