@@ -268,10 +268,10 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-&Macro_M00_Outline_CollapseAll    &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &Macro_M03_Bookmark_Previous
-&Macro_M01_Outline_ToggleCurrent  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &Macro_M04_Bookmark_Toggle
-&Macro_M02_Outline_ExpandAll      &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &Macro_M06_Bookmark_Next
-                                                &mo 3  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 4
+&kp C_AC_BACK                 &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &kp C_AC_FORWARD
+&mkp LCLK                     &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &mkp RCLK
+&Macro_M02_Outline_ExpandAll  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &Macro_M06_Bookmark_Next
+                                            &mo 3  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 4
             >;
         };
 
@@ -321,10 +321,8 @@
 &trans  &bootloader   &bt BT_CLR    &none         &out OUT_TOG  &none           &none           &none           &none         &none            &none  &trans
 &trans  &none         &none         &mkp RCLK     &mkp LCLK     &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &trans
 &trans  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &none           &none           &none         &none            &none  &trans
-                                    &none         &none         &none           &none           &none           &none                                                       
-             >;
+                                    &none         &none         &none           &none           &none           &none
+            >;
         };
     };
 };
-
-
