@@ -269,8 +269,8 @@
             label = "Colemak";
             bindings = <
 &kp C_AC_BACK  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &kp C_AC_FORWARD
-&mkp LCLK      &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &mkp RCLK
-&mkp LCLK      &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &mkp RCLK
+&mkp LCLK      &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                                    &mkp LCLK
+&mkp RCLK      &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &mkp RCLK
                              &mo 3  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 4
             >;
         };
