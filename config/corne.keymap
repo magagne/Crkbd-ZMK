@@ -285,7 +285,7 @@
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-&Macro_M01_Outline_ToggleCurrent  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &Macro_M03_Bookmark_Previous
+&Macro_M00_Outline_CollapseAll    &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &Macro_M03_Bookmark_Previous
 &Macro_M01_Outline_ToggleCurrent  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &Macro_M04_Bookmark_Toggle
 &Macro_M02_Outline_ExpandAll      &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &Macro_M06_Bookmark_Next
                                                                     &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
@@ -329,6 +329,15 @@
 &trans  &none         &none         &mkp RCLK     &mkp LCLK     &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &trans
 &trans  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &none           &none           &none         &none            &none  &trans
                                     &none         &none         &none           &none           &none           &none
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
