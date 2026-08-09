@@ -242,7 +242,7 @@
             bindings = <&kp LS(J) &kp N5 &kp LS(R) &kp UNDER &kp N3 &kp LS(T) &kp N5 &kp UNDER &kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
         };
 
-        Macro_M14: Macro_M14 {
+        Macro_M14_DoubleClick: Macro_M14 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp LCLK &mkp LCLK>;
@@ -275,20 +275,20 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-&mkp MCLK   &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &kp C_AC_FORWARD
-&mkp LCLK   &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                                    &mkp RCLK
-&Macro_M14  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &kp C_AC_BACK
-                          &mo 3  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &mo 4
+&mkp MCLK  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &kp C_AC_EXIT
+&mkp LCLK  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                                    &kp C_AC_BACK
+&mkp RCLK  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &kp C_AC_FORWARD
+                         &mo 3  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &mo 4
             >;
         };
 
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-&Macro_M00_Outline_CollapseAll    &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &Macro_M03_Bookmark_Previous
-&Macro_M01_Outline_ToggleCurrent  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &Macro_M04_Bookmark_Toggle
-&Macro_M02_Outline_ExpandAll      &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &Macro_M06_Bookmark_Next
-                                                                    &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
+&trans                  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &Macro_M00_Outline_CollapseAll
+&Macro_M14_DoubleClick  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &Macro_M01_Outline_ToggleCurrent
+&trans                  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &Macro_M02_Outline_ExpandAll
+                                                          &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
             >;
         };
 
