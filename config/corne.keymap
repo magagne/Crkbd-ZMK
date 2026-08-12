@@ -299,10 +299,10 @@
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-&Macro_M15_AltClick      &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &Macro_M00_Outline_CollapseAll
-&Macro_M14_DoubleClick   &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &Macro_M01_Outline_ToggleCurrent
-&Macro_M16_AltShftClick  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &Macro_M02_Outline_ExpandAll
-                                                           &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
+&trans  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &Macro_M00_Outline_CollapseAll
+&trans  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &Macro_M01_Outline_ToggleCurrent
+&trans  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &Macro_M02_Outline_ExpandAll
+                                          &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
             >;
         };
 
