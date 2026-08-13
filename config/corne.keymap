@@ -314,7 +314,7 @@
 &Macro_M16_ShftAltClick  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &trans
 &Macro_M14_DoubleClick   &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &trans
 &Macro_M15_AltClick      &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &trans
-                                                           &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
+                                                           &mo 5            &none            &trans             &kp RETURN      &mkp MB4        &mkp MB5
             >;
         };
 
