@@ -301,19 +301,19 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-&mkp MB3  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &mkp MB3
-&mkp MB1  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                                    &mkp MB1
-&mkp MB2  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &mkp MB2
-                        &mo 3  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &mo 4
+&mkp MCLK  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &th LC(LG(Q)) LG(L)
+&mkp LCLK  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                                    &mkp MB4
+&mkp RCLK  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &mkp MB5
+                         &mo 3  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &mo 4
             >;
         };
 
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-&Macro_M16_ShftAltClick  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &th LC(LG(Q)) LG(L)
-&Macro_M14_DoubleClick   &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &kp K_BACK
-&Macro_M15_AltClick      &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &kp K_FORWARD
+&Macro_M16_ShftAltClick  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &trans
+&Macro_M14_DoubleClick   &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &trans
+&Macro_M15_AltClick      &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &trans
                                                            &mo 5            &none            &trans             &kp RETURN      &mkp LCLK       &mkp RCLK
             >;
         };
