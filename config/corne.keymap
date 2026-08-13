@@ -272,7 +272,7 @@
                 <&macro_release>,
                 <&kp LSHIFT &kp LEFT_ALT &mkp MB1>;
 
-            label = "MACRO_M15_ALTCLICK";
+            label = "MACRO_M16_SHFTALTCLICK";
         };
     };
 
