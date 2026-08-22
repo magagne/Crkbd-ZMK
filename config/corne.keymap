@@ -32,6 +32,11 @@
             quick-release;
             ignore-modifiers;
         };
+        
+        rs: RawDragScroll {
+            compatible = "zmk,behavior-raw-hid";
+            #binding-cells = <0>;
+        };        
     };
 
     combos {
