@@ -22,7 +22,9 @@ static uint8_t drag_scroll_off[32] = {
 
 static int on_drag_scroll_pressed(struct zmk_behavior_binding *binding,
                                   struct zmk_behavior_binding_event event) {
-    LOG_DBG("DRAG SCROLL PRESSED"); /* MATTHIEU*/
+    raise_zmk_keycode_state_changed_from_encoded(
+    HID_USAGE_KEYBOARD_A, true, event.timestamp
+);/* MATTHIEU*/
     raise_zmk_keycode_state_changed_from_encoded(HID_USAGE_KEYBOARD_F24, true, event.timestamp);
     
     raise_raw_hid_sent_event(
@@ -37,7 +39,9 @@ static int on_drag_scroll_pressed(struct zmk_behavior_binding *binding,
 
 static int on_drag_scroll_released(struct zmk_behavior_binding *binding,
                                    struct zmk_behavior_binding_event event) {
-    LOG_DBG("DRAG SCROLL RELEASED"); /* MATTHIEU*/
+   raise_zmk_keycode_state_changed_from_encoded(
+    HID_USAGE_KEYBOARD_A, true, event.timestamp
+);/* MATTHIEU*/
     raise_zmk_keycode_state_changed_from_encoded(HID_USAGE_KEYBOARD_F24, false, event.timestamp);
 
     raise_raw_hid_sent_event(
