@@ -1,5 +1,6 @@
 #define DT_DRV_COMPAT zmk_behavior_raw_drag_scroll
 
+
 #include <zephyr/device.h>
 #include <drivers/behavior.h>
 #include <zmk/behavior.h>
@@ -7,6 +8,7 @@
 
 /* MATTHIEU */
 #include <zephyr/logging/log.h>
+#include <zmk/keycode_state_changed.h>
 LOG_MODULE_REGISTER(raw_drag_scroll, LOG_LEVEL_DBG);
 
 
@@ -22,6 +24,8 @@ static uint8_t drag_scroll_off[32] = {
 static int on_drag_scroll_pressed(struct zmk_behavior_binding *binding,
                                   struct zmk_behavior_binding_event event) {
     LOG_DBG("DRAG SCROLL PRESSED"); /* MATTHIEU*/
+    raise_zmk_keycode_state_changed_from_encoded(HID_USAGE_KEYBOARD_F24, true, event.timestamp);
+    
     raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_on,
@@ -35,6 +39,8 @@ static int on_drag_scroll_pressed(struct zmk_behavior_binding *binding,
 static int on_drag_scroll_released(struct zmk_behavior_binding *binding,
                                    struct zmk_behavior_binding_event event) {
     LOG_DBG("DRAG SCROLL RELEASED"); /* MATTHIEU*/
+    raise_zmk_keycode_state_changed_from_encoded(HID_USAGE_KEYBOARD_F24, false, event.timestamp);
+
     raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_off,
