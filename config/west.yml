@@ -2,11 +2,18 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: zzeneg
+      url-base: https://github.com/zzeneg
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
+
+    - name: zmk-raw-hid
+      remote: zzeneg
+      revision: main
+
   self:
     path: config
-    
