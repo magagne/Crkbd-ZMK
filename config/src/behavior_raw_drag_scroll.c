@@ -9,8 +9,7 @@
 /* MATTHIEU */
 #include <zephyr/logging/log.h>
 #include <zmk/keycode_state_changed.h>
-LOG_MODULE_REGISTER(raw_drag_scroll, LOG_LEVEL_DBG);
-
+LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 
 static uint8_t drag_scroll_on[32] = {
@@ -64,11 +63,5 @@ static const struct behavior_driver_api drag_scroll_driver_api = {
         &drag_scroll_driver_api \
     );
 
-
-/* MATTHIEU */
-#if DT_HAS_COMPAT_STATUS_OKAY(zmk_behavior_raw_drag_scroll)
-#warning "RAW_DRAG_SCROLL COMPAT FOUND"
-#endif
-/* END OF MATTHIEU */
 
 DT_INST_FOREACH_STATUS_OKAY(DRAG_SCROLL_INST)
