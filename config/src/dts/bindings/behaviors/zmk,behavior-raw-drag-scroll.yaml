@@ -1,0 +1,5 @@
+description: Raw HID drag scroll
+
+compatible: "zmk,behavior-raw-drag-scroll"
+
+include: zero_param.yaml
