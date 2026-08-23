@@ -6,6 +6,11 @@
 #include <zmk/behavior.h>
 #include <raw_hid/events.h>
 
+/* MATTHIEU */
+#include <zephyr/logging/log.h>
+LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
+/* EN OF MATTHIEU*/
+
 static uint8_t drag_scroll_on[32] = {
     0x53
 };
@@ -16,6 +21,7 @@ static uint8_t drag_scroll_off[32] = {
 
 static int on_drag_scroll_pressed(struct zmk_behavior_binding *binding,
                                   struct zmk_behavior_binding_event event) {
+    LOG_DBG("DRAG SCROLL PRESSED");/*MATTHIEU*/
     raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_on,
@@ -28,7 +34,8 @@ static int on_drag_scroll_pressed(struct zmk_behavior_binding *binding,
 
 static int on_drag_scroll_released(struct zmk_behavior_binding *binding,
                                    struct zmk_behavior_binding_event event) {
-     raise_raw_hid_sent_event(
+    LOG_DBG("DRAG SCROLL RELEASED");/*MATTHIEU*/
+    raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_off,
             .length = sizeof(drag_scroll_off),
