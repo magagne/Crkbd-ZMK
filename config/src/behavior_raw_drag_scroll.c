@@ -50,6 +50,9 @@ static const struct behavior_driver_api drag_scroll_driver_api = {
     .binding_released = on_drag_scroll_released,
 };
 
+
+
+/* ORIGINAL
 #define DRAG_SCROLL_INST(n) \
     BEHAVIOR_DT_INST_DEFINE( \
         n, NULL, NULL, NULL, NULL, \
@@ -57,5 +60,20 @@ static const struct behavior_driver_api drag_scroll_driver_api = {
         CONFIG_KERNEL_INIT_PRIORITY_DEFAULT, \
         &drag_scroll_driver_api \
     );
+*/
+/* NEW */
+static int drag_scroll_init(const struct device *dev) {
+    LOG_INF("RAW DRAG SCROLL DEVICE INITIALIZED");
+    return 0;
+}
+#define DRAG_SCROLL_INST(n) \
+    BEHAVIOR_DT_INST_DEFINE( \
+        n, drag_scroll_init, NULL, NULL, NULL, \
+        POST_KERNEL, \
+        CONFIG_KERNEL_INIT_PRIORITY_DEFAULT, \
+        &drag_scroll_driver_api \
+    );
+/* END OF NEW */
+    
 
 DT_INST_FOREACH_STATUS_OKAY(DRAG_SCROLL_INST)
