@@ -289,7 +289,7 @@
                 <&kp SCROLLLOCK>,
                 <&macro_pause_for_release>,
                 <&macro_tap>,
-                <&kp KP_NUMLOCK>;
+                <&kp SCROLLLOCK>;
 
             label = "MACRO_M17_DRAGSCROLL";
         };
