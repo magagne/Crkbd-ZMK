@@ -263,6 +263,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LEFT_ALT &mkp MB1>;
+
             label = "MACRO_M15_ALTCLICK";
         };
 
@@ -275,6 +276,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LSHIFT &kp LEFT_ALT &mkp MB1>;
+
             label = "MACRO_M16_SHFTALTCLICK";
         };
 
@@ -283,12 +285,14 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings =
-                <&macro_tap &kp KP_NUMLOCK>,
+                <&macro_tap>,
+                <&kp SCROLLLOCK>,
                 <&macro_pause_for_release>,
-                <&macro_tap &kp KP_NUMLOCK>;
+                <&macro_tap>,
+                <&kp KP_NUMLOCK>;
+
             label = "MACRO_M17_DRAGSCROLL";
         };
-
     };
 
     /*
