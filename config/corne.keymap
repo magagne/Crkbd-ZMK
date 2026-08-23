@@ -306,7 +306,7 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-&mkp MCLK  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &kp CAPS
+&mkp MCLK  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &kp KP_NUMLOCK
 &mkp LCLK  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                                    &msc SCRL_DOWN
 &mkp RCLK  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &msc SCRL_UP
                          &mo 3  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &mo 4
