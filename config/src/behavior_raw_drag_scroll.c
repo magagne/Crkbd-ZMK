@@ -6,12 +6,6 @@
 #include <zmk/behavior.h>
 #include <raw_hid/events.h>
 
-/* MATTHIEU */
-#include <zephyr/logging/log.h>
-#include <zmk/keycode_state_changed.h>
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
-
-
 static uint8_t drag_scroll_on[32] = {
     0x53
 };
@@ -22,11 +16,6 @@ static uint8_t drag_scroll_off[32] = {
 
 static int on_drag_scroll_pressed(struct zmk_behavior_binding *binding,
                                   struct zmk_behavior_binding_event event) {
-    raise_zmk_keycode_state_changed_from_encoded(
-HID_USAGE_KEYBOARD_A, true, event.timestamp
-);/* MATTHIEU*/
-    raise_zmk_keycode_state_changed_from_encoded(HID_USAGE_KEYBOARD_F24, true, event.timestamp);
-    
     raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_on,
@@ -39,12 +28,7 @@ HID_USAGE_KEYBOARD_A, true, event.timestamp
 
 static int on_drag_scroll_released(struct zmk_behavior_binding *binding,
                                    struct zmk_behavior_binding_event event) {
-   raise_zmk_keycode_state_changed_from_encoded(
-HID_USAGE_KEYBOARD_A, false, event.timestamp
-);/* MATTHIEU*/
-    raise_zmk_keycode_state_changed_from_encoded(HID_USAGE_KEYBOARD_F24, false, event.timestamp);
-
-    raise_raw_hid_sent_event(
+     raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_off,
             .length = sizeof(drag_scroll_off),
@@ -66,6 +50,5 @@ static const struct behavior_driver_api drag_scroll_driver_api = {
         CONFIG_KERNEL_INIT_PRIORITY_DEFAULT, \
         &drag_scroll_driver_api \
     );
-
 
 DT_INST_FOREACH_STATUS_OKAY(DRAG_SCROLL_INST)
