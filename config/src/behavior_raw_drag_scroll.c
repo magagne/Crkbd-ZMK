@@ -9,7 +9,8 @@
 /* MATTHIEU */
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
-/* EN OF MATTHIEU*/
+#if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
+/* END OF MATTHIEU*/
 
 static uint8_t drag_scroll_on[32] = {
     0x53
@@ -77,3 +78,6 @@ static int drag_scroll_init(const struct device *dev) {
     
 
 DT_INST_FOREACH_STATUS_OKAY(DRAG_SCROLL_INST)
+
+
+#endif /* MATTHIEU */
