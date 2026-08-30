@@ -265,7 +265,7 @@
             bindings = <&mkp LCLK &mkp LCLK>;
         };
 
-        LALT_LCLK: LALT_LCLK {
+        ALT_CLK: ALT_CLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -276,7 +276,7 @@
                 <&kp LALT &mkp MB1>;
         };
 
-        LGUI_LCLK: LGUI_LCLK {
+        GUI_CLK: GUI_CLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -287,7 +287,7 @@
                 <&kp LGUI &mkp MB1>;
         };
 
-        LSHIFT_LCLK: LSHIFT_LCLK {
+        SHIFT_CLK: SHIFT_CLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -298,7 +298,7 @@
                 <&kp LSHIFT &mkp MB1>;
         };
 
-        LCTRL_LCLK: LCTRL_LCLK {
+        CTRL_CLK: CTRL_CLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -397,7 +397,7 @@
             bindings = <
 &trans  &none       &none       &HID_DragScroll  &LED_DragScroll  &none    &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &trans
 &trans  &LCLK_LCLK  &mkp MCLK   &mkp RCLK        &mkp LCLK        &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &trans
-&trans  &LALT_LCLK  &LGUI_LCLK  &LSHIFT_LCLK     &LCTRL_LCLK      &none    &none           &none           &none           &none            &none  &trans
+&trans  &ALT_CLK  &GUI_CLK  &SHIFT_CLK     &CTRL_CLK      &none    &none           &none           &none           &none            &none  &trans
                                 &none            &none            &none    &none           &mkp MB4        &mkp MB5
             >;
         };
