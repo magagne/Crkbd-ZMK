@@ -42,7 +42,7 @@
     combos {
         compatible = "zmk,combos";
 
-        Config_Layer_5 {
+        Config_Layer_6 {
             bindings = <&mo 6>;
             key-positions = <38 39>;
         };
