@@ -235,38 +235,38 @@
         Macro_M10: Macro_M10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(K) &kp T &kp I &kp LS(A) &kp STAR &kp AMPS &kp N0 &kp E &kp N5 &kp N6 &kp U &kp UNDER &kp LS(H) &kp S &kp LS(D) &kp D &kp LS(D) &kp N5>;
+            bindings = <&kp LS(K) >;
         };
 
         Macro_M11: Macro_M11 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N9 &kp LS(P) &kp N0 &kp LS(S) &kp UNDER &kp N1 &kp E &kp U &kp LS(W) &kp COMMA &kp L &kp R &kp LS(U) &kp MINUS &kp UNDER &kp LS(N) &kp E>;
+            bindings = <&kp AMPS >;
         };
 
         Macro_M12: Macro_M12 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp N &kp N5 &kp MINUS &kp E &kp A &kp N7 &kp POUND &kp MINUS &kp N8 &kp F &kp N &kp POUND &kp MINUS &kp N4 &kp I &kp DLLR &kp POUND>;
+            bindings = <&kp LS(N) >;
         };
 
         Macro_M13: Macro_M13 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(J) &kp N5 &kp LS(R) &kp UNDER &kp N3 &kp LS(T) &kp N5 &kp UNDER &kp N5 &kp N1 &kp N4 &kp N6 &kp N3 &kp N2 &kp N2 &kp N8 &kp N1 &kp N5>;
+            bindings = <&kp LS(J)>;
         };
 
         // ------------------------------------------------------------- 
         // Mouse
         // ------------------------------------------------------------- 
 
-        LCLK-LCLK: LCLK-LCLK {
+        LCLK_LCLK: LCLK_LCLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp LCLK &mkp LCLK>;
         };
 
-        LALT-LCLK: LALT-LCLK {
+        LALT_LCLK: LALT_LCLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -277,7 +277,7 @@
                 <&kp LALT &mkp MB1>;
         };
 
-        LGUI-LCLK: LGUI-LCLK {
+        LGUI_LCLK: LGUI_LCLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -288,7 +288,7 @@
                 <&kp LGUI &mkp MB1>;
         };
 
-        LSHIFT-LCLK: LSHIFT-LCLK {
+        LSHIFT_LCLK: LSHIFT_LCLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -299,7 +299,7 @@
                 <&kp LSHIFT &mkp MB1>;
         };
 
-        LCTRL-LCLK: LCTRL-LCLK {
+        LCTRL_LCLK: LCTRL_LCLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -308,7 +308,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LCTRL &mkp MB1>;
-        };  
+        };
 
         LED_DragScroll: LED_DragScroll {
             compatible = "zmk,behavior-macro";
@@ -324,23 +324,21 @@
     };
 
     /*
+        /
+        &kp KP_DIVIDE
 
-		/
-		&kp KP_DIVIDE
+         ~
+        Mac                              win
+        &th RA(RIGHT_BRACKET)            RC(RIGHT_BRACKET) 
 
-		 ~
-		Mac							  win
-		&th RA(RIGHT_BRACKET)	  RC(RIGHT_BRACKET) 
+        win
+        |                                 \  
+        &th RA(GRAVE)                     LS(GRAVE) 
 
-		win
-		|								 \  
-		&th RA(GRAVE)				 LS(GRAVE) 
-
-		Mac
-		|								 \  
-		&th RA(MINUS)				 RA(GRAVE)
-
-	*/
+        Mac
+        |                                 \  
+        &th RA(MINUS)                     RA(GRAVE)
+    */
 
     keymap {
         compatible = "zmk,keymap";
@@ -399,8 +397,8 @@
             label = "Mouse";
             bindings = <
 &trans  &none           &none        &HID_DragScroll    &LED_DragScroll                       &none           &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &trans
-&trans  &LCLK-LCLK      &mkp MCLK    &mkp RCLK          &mkp LCLK                             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &trans
-&trans  &LALT-LCLK      &LGUI-LCLK   &LSHIFT-LCLK       &LCTRL-LCLK                           &none           &none           &none           &none           &none            &none  &trans
+&trans  &LCLK_LCLK      &mkp MCLK    &mkp RCLK          &mkp LCLK                             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &trans
+&trans  &LALT_LCLK      &LGUI_LCLK   &LSHIFT_LCLK       &LCTRL_LCLK                           &none           &none           &none           &none            &none           &none  &trans
                         &none        &none              &none                                 &none           &none           &none
             >;
         };
@@ -408,11 +406,11 @@
         Config_Layer_6 {
             label = "Config";
             bindings = <
-&trans  &bootloader   &none         &none         &out OUT_TOG  &none                 &none           &none           &none           &none          &bootloader    &trans
-&trans  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0          &none           &none           &none           &none          &none          &trans
-&trans  &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR            &none           &none           &none           &none          &none          &trans
+&trans  &bootloader   &none         &none         &out OUT_TOG  &none                 &none           &none           &none          &none          &bootloader    &trans
+&trans  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0          &none           &none           &none          &none          &none          &trans
+&trans  &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR            &none           &none           &none          &none          &none          &trans
                                     &none         &none         &none                 &none           &none           &none
             >;
-        };        
+        };
     };
 };
