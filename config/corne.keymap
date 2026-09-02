@@ -42,9 +42,10 @@
     combos {
         compatible = "zmk,combos";
 
-        Config_Layer_6 {
-            bindings = <&mo 6>;
+        Combo_Shift {
+            bindings = <&sk LSHFT>;
             key-positions = <38 39>;
+            layers = <0>;
         };
 
         Combo_Macro_M10 {
@@ -358,7 +359,7 @@
 &trans  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &trans
 &trans  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &trans
 &trans  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &trans
-                                          &mo 6            &none            &trans             &kp RETURN      &mkp MB4        &mkp MB5
+                                          &mo 6            &none            &none              &kp RETURN      &none           &none
             >;
         };
 
@@ -366,19 +367,19 @@
             label = "Symbol";
             bindings = <
 &trans  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RA(MINUS) RA(GRAVE)  &trans
-&trans  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL                &trans
-&trans  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE           &trans
-                                          &none                              &none       &trans        &none          &none      &mo 6
+&trans  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp SEMI   &kp EQUAL                &trans
+&trans  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp COLON  &kp APOSTROPHE           &trans
+                                          &none                              &none       &none         &none          &none      &mo 6
             >;
         };
 
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
-&trans  &none     &kp LC(LS(LEFT_ALT))  &kp LC(LS(LA(LEFT_GUI)))  &none      &none    &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &trans
-&trans  &kp LALT  &kp LGUI              &kp LSHIFT                &kp LCTRL  &none    &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_DIVIDE    &trans
-&trans  &kp RALT  &kp GLOBE             &none                     &kp RCTRL  &none    &kp COMMA     &kp N1  &kp N2  &kp N3  &kp DOT          &trans
-                                        &none                     &mo 6      &none    &kp SPACE     &kp N0  &kp N0
+&trans  &none     &kp LC(LS(LEFT_ALT))  &kp LC(LS(LA(LEFT_GUI)))  &none      &none    &kp KP_PLUS   &kp N7     &kp N8      &kp N9  &kp KP_MULTIPLY  &trans
+&trans  &kp LALT  &kp LGUI              &kp LSHIFT                &kp LCTRL  &none    &kp KP_MINUS  &kp N4     &kp N5      &kp N6  &kp KP_DIVIDE    &trans
+&trans  &kp RALT  &kp GLOBE             &none                     &kp RCTRL  &none    &kp COMMA     &kp N1     &kp N2      &kp N3  &kp DOT          &trans
+                                        &none                     &mo 6      &none    &kp N0        &kp COMMA  &kp KP_DOT
             >;
         };
 
