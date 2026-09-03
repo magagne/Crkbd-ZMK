@@ -1,12 +1,10 @@
 #define DT_DRV_COMPAT zmk_behavior_raw_drag_scroll
 
 #include <zephyr/device.h>
-#include <zephyr/logging/log.h>
 #include <drivers/behavior.h>
 #include <zmk/behavior.h>
 #include <raw_hid/events.h>
 
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 static uint8_t drag_scroll_on[32] = {
     0x53,
@@ -20,8 +18,6 @@ static int on_drag_scroll_pressed(
     struct zmk_behavior_binding *binding,
     struct zmk_behavior_binding_event event
 ) {
-    LOG_INF("DS PRESSED");
-
     raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_on,
@@ -36,8 +32,6 @@ static int on_drag_scroll_released(
     struct zmk_behavior_binding *binding,
     struct zmk_behavior_binding_event event
 ) {
-    LOG_INF("DS RELEASED");
-
     raise_raw_hid_sent_event(
         (struct raw_hid_sent_event){
             .data = drag_scroll_off,
@@ -54,7 +48,6 @@ static const struct behavior_driver_api drag_scroll_driver_api = {
 };
 
 static int drag_scroll_init(const struct device *dev) {
-    LOG_INF("RAW DRAG SCROLL DEVICE INITIALIZED");
     return 0;
 }
 
