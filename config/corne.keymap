@@ -266,50 +266,6 @@
             bindings = <&mkp LCLK &mkp LCLK>;
         };
 
-        ALT_LCLK: ALT_LCLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &mkp MB1>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LALT &mkp MB1>;
-        };
-
-        GUI_LCLK: GUI_LCLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI &mkp MB1>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LGUI &mkp MB1>;
-        };
-
-        SHIFT_LCLK: SHIFT_LCLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHIFT &mkp MB1>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LSHIFT &mkp MB1>;
-        };
-
-        CTRL_LCLK: CTRL_LCLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &mkp MB1>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LCTRL &mkp MB1>;
-        };
-
         LED_DragScroll: LED_DragScroll {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
