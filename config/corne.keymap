@@ -41,13 +41,13 @@
 
     combos {
         compatible = "zmk,combos";
-        
+
         Combo_ConfigLayer6 {
-            bindings = <&mo 6>;
+            bindings = <&mo 7>;
             key-positions = <38 39>;
             layers = <0>;
         };
-        
+
         Combo_Macro_M10 {
             bindings = <&Macro_M10>;
             key-positions = <1 25>;
@@ -315,7 +315,7 @@
 &none  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                                         &mo 6            &none            &none              &kp RETURN      &mo 4           &none
+                                         &mo 6            &none            &none              &kp RETURN      &none           &none
             >;
         };
 
@@ -325,7 +325,7 @@
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RA(MINUS) RA(GRAVE)  &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL                &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE           &none
-                                         &none                              &none       &none         &none          &none      &mo 6
+                                         &none                              &mo 4       &none         &none          &none      &none
             >;
         };
 
@@ -362,10 +362,19 @@
         Config_Layer_6 {
             label = "Config";
             bindings = <
-&bootloader  &bootloader  &none  &none  &none  &none    &none  &out OUT_BLE  &none         &none         &none         &none
-&bt BT_CLR   &bt BT_CLR   &none  &none  &none  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
-&none        &none        &none  &none  &none  &none    &none  &out OUT_USB  &none         &none         &none         &none
-                                 &none  &none  &none    &none  &none         &none
+&none  &none  &none  &none  &none  &none    &none  &out OUT_BLE  &none         &none         &none         &none
+&none  &none  &none  &none  &none  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
+&none  &none  &none  &none  &none  &none    &none  &out OUT_USB  &none         &none         &none         &none
+                     &none  &none  &none    &none  &none         &none
+            >;
+        };
+
+        Reset_Layer_7 {
+            bindings = <
+&bootloader  &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR   &bt BT_CLR   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
