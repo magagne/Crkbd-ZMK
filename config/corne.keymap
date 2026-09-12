@@ -293,7 +293,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        PC_Base_layer_0 {
+        PC_Base {
             label = "Colemak";
             bindings = <
 &none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)  &none
@@ -303,7 +303,7 @@
             >;
         };
 
-        PC_Extend_Layer_1 {
+        PC_Extend {
             label = "Extend";
             bindings = <
 &none  &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
@@ -313,7 +313,7 @@
             >;
         };
 
-        PC_Symbols_Layer_2 {
+        PC_Symbol {
             label = "Symbol";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)   &none
@@ -323,7 +323,7 @@
             >;
         };
 
-        Num_Layer_3 {
+        Num {
             label = "Numeric";
             bindings = <
 &none  &none     &kp LC(LS(LEFT_ALT))  &kp LC(LS(LA(LEFT_GUI)))  &none      &none      &none         &kp N7  &kp N8   &kp N9  &kp LOCKING_NUM  &none
@@ -333,8 +333,8 @@
             >;
         };
 
-        Fn_Layer_4 {
-            label = "Function";
+        Fn {
+            label = "Fn";
             bindings = <
 &none  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
 &none  &kp LALT  &kp LGUI   &kp LSHIFT  &kp LCTRL  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
@@ -343,7 +343,7 @@
             >;
         };
 
-        Mouse_Layer_5 {
+        Mouse {
             label = "Mouse";
             bindings = <
 &none  &none       &mkp LCLK  &LED_DragScroll  &HID_DragScroll  &kp SCROLLLOCK    &none           &none           &none           &none            &none  &none
@@ -353,7 +353,7 @@
             >;
         };
 
-        Config_Layer_6 {
+        Config {
             label = "Config";
             bindings = <
 &none  &none         &none         &none         &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
@@ -363,7 +363,7 @@
             >;
         };
 
-        Reset_Layer_7 {
+        Reset {
             label = "Reset";
             bindings = <
 &bootloader  &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -373,7 +373,7 @@
             >;
         };
 
-        Mac_Base_layer_8 {
+        Mac_Base {
             label = "Colemak";
             bindings = <
 &none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L   &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
@@ -383,7 +383,7 @@
             >;
         };
 
-        Mac_Extend_Layer_9 {
+        Mac_Extend {
             label = "Extend";
             bindings = <
 &none  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)   &kp LG(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
@@ -393,7 +393,7 @@
             >;
         };
 
-        Mac_Symbols_Layer_10 {
+        Mac_Symbol {
             label = "Symbol";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
