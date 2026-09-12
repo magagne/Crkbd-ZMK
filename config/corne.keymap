@@ -293,7 +293,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        WinBase {
+        Win_Base_Layout {
             label = "WinBase";
             bindings = <
 &none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)  &none
@@ -303,7 +303,7 @@
             >;
         };
 
-        MacBase {
+        Mac_Base_Layout {
             label = "MacBase";
             bindings = <
 &none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
@@ -313,7 +313,7 @@
             >;
         };
 
-        WinExtend {
+        Win_Extend_Layout {
             label = "WinExt";
             bindings = <
 &none  &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
@@ -323,7 +323,7 @@
             >;
         };
 
-        MacExtend {
+        Mac_Extend_Layout {
             label = "MacExt";
             bindings = <
 &none  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)   &kp LG(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
@@ -333,7 +333,7 @@
             >;
         };
 
-        WinSymbol {
+        Win_Symbol_Layout {
             label = "WinSym";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)   &none
@@ -343,7 +343,7 @@
             >;
         };
 
-        MacSymbol {
+        Mac_Symbol_Layout {
             label = "MacSym";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
@@ -353,7 +353,7 @@
             >;
         };
 
-        Num {
+        Num_Layout {
             label = "Num";
             bindings = <
 &none  &none     &kp LC(LS(LEFT_ALT))  &kp LC(LS(LA(LEFT_GUI)))  &none      &none      &none         &kp N7  &kp N8   &kp N9  &kp LOCKING_NUM  &none
@@ -363,7 +363,7 @@
             >;
         };
 
-        Fn {
+        Fn_Layout {
             label = "Fn";
             bindings = <
 &none  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
@@ -373,7 +373,7 @@
             >;
         };
 
-        Mouse {
+        Mouse_Layout {
             label = "Mouse";
             bindings = <
 &none  &none       &mkp LCLK  &LED_DragScroll  &HID_DragScroll  &kp SCROLLLOCK    &none           &none           &none           &none            &none  &none
@@ -383,17 +383,17 @@
             >;
         };
 
-        Config {
+        Config_Layout {
             label = "Config";
             bindings = <
-&none  &none         &none         &none         &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
-&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none    &none  &to 0  &to 1  &none  &none  &none
-&none  &none         &none         &none         &out OUT_USB  &none    &none  &none  &none  &none  &none  &none
+&none  &none         &none         &out OUT_USB         &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
+&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none    &none  &none  &none  &none  &none  &none
+&none  &none         &none         &to 0         &to 1  &none    &none  &none  &none  &none  &none  &none
                                    &none         &none         &none    &none  &none  &none
             >;
         };
 
-        Reset {
+        Reset_Layout {
             label = "Reset";
             bindings = <
 &bootloader  &bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
