@@ -41,7 +41,13 @@
 
     combos {
         compatible = "zmk,combos";
-
+        
+        Combo_ConfigLayer6 {
+            bindings = <&mo 6>;
+            key-positions = <38 39>;
+            layers = <0>;
+        };
+        
         Combo_Macro_M10 {
             bindings = <&Macro_M10>;
             key-positions = <1 25>;
