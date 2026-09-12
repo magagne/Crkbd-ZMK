@@ -296,33 +296,60 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &none
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)  &none
 &none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
 &none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
                      &mo 5  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &none
             >;
         };
 
+
+        Base_layer_10 {
+            label = "Colemak";
+            bindings = <
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
+                     &mo 5  &mo 11  &sk LSHIFT    &kp SPACE  &mo 12  &none
+            >;
+        };
         Extend_Layer_1 {
             label = "Extend";
             bindings = <
-&none  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
+&none  &kp LC(Z)  &kpLC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
                                          &none            &none            &none              &kp RETURN      &mo 6           &mo 7
             >;
         };
 
+       Extend_Layer_11 {
+            label = "Extend";
+            bindings = <
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)   &kp LG(V)   &kp LG(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
+&none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
+&none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
+                                         &none            &none            &none              &kp RETURN      &mo 6           &mo 7
+            >;
+        };
         Symbols_Layer_2 {
             label = "Symbol";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RA(MINUS) RA(GRAVE)  &none
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)  &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL                &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE           &none
                                          &mo 4                              &mo 3       &none         &none          &none      &none
             >;
         };
-
+        Symbols_Layer_12 {
+            label = "Symbol";
+            bindings = <
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
+&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL                &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE           &none
+                                         &mo 4                              &mo 3       &none         &none          &none      &none
+            >;
+        };
         Num_Layer_3 {
             label = "Numeric";
             bindings = <
