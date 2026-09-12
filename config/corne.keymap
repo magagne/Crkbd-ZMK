@@ -302,10 +302,10 @@
         Base_layer_0 {
             label = "Colemak";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B    &kp J      &kp L  &kp U      &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G    &kp M      &kp N  &kp E      &kp I    &kp O                                    &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V    &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH                                 &none
-                     &mo 3  &mo 1  &mo 5    &kp SPACE  &mo 2  &mo 4
+&none       &kp Q  &kp W  &kp F  &kp P  &kp B    &kp J      &kp L  &kp U       &kp Y    &th RA(RIGHT_BRACKET) RC(RIGHT_BRACKET)  &none
+&kp LSHIFT  &kp A  &kp R  &kp S  &kp T  &kp G    &kp M      &kp N  &kp E       &kp I    &kp O                                    &kp RSHIFT
+&none       &kp Z  &kp X  &kp C  &kp D  &kp V    &kp K      &kp H  &kp COMMA   &kp DOT  &kp FSLH                                 &none
+                          &mo 3  &mo 1  &mo 5    &kp SPACE  &mo 2  &sk LSHIFT
             >;
         };
 
@@ -315,7 +315,7 @@
 &none  &th LG(Z) LC(Z)  &th LG(X) LC(X)  &th LG(C) LC(C)  &th LG(V) LC(V)  &th LG(Y) LC(Y)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT        &skq LGUI        &skq LSHIFT      &skq LCTRL       &kp BACKSPACE      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT        &kp LS(TAB)      &kp TAB          &skq RCTRL       &kp RETURN         &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                                         &mo 6            &none            &none              &kp RETURN      &none           &none
+                                         &mo 6            &none            &none              &kp RETURN      &mo 4           &none
             >;
         };
 
@@ -345,7 +345,7 @@
 &none  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
 &none  &kp LALT  &kp LGUI   &kp LSHIFT  &kp LCTRL  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
 &none  &kp RALT  &kp GLOBE  &none       &kp RCTRL  &none    &none  &kp F1  &kp F2  &kp F3  &kp F12  &none
-                            &none       &none      &none    &none  &mo 6   &none
+                            &none       &none      &none    &none  &none   &none
             >;
         };
 
