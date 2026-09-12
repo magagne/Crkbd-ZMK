@@ -348,7 +348,7 @@
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
-&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp BACKSLASH  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp NON_US_BACKSLASH  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
                                          &mo 7                              &mo 6       &none         &none          &none      &none
             >;
         };
