@@ -43,6 +43,7 @@
         compatible = "zmk,combos";
 
         Combo_Shift {
+            timeout-ms = <50>;
             bindings = <&sk LSHFT>;
             key-positions = <38 39>;
             layers = <0>;
