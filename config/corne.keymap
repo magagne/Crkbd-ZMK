@@ -345,7 +345,7 @@
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans  &th RA(RIGHT_BRACKET) RA(MINUS)  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans  &trans                           &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(GRAVE)  &trans  &trans  &trans                           &none
-                       &mo 7   &mo 6   &none     &none   &none          &none
+                       &mo 7   &mo 6   &none     &none   &trans         &trans
             >;
         };
 
