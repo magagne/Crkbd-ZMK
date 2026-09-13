@@ -315,7 +315,7 @@
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp RA(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
-                                         &mo 7                              &mo 6       &none         &none          &none      &none
+                                         &mo 7                              &mo 6       &sk LSHIFT    &none          &none      &none
             >;
         };
 
@@ -345,17 +345,17 @@
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)   &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
-                                         &mo 7                              &mo 6       &none         &none          &none      &none
+                                         &mo 7                              &mo 6       &sk LSHIFT    &none          &none      &none
             >;
         };
 
         Num_Layout_6 {
             label = "Num";
             bindings = <
-&none  &none     &kp LC(LS(LEFT_ALT))  &kp LC(LS(LA(LEFT_GUI)))  &none      &none      &none         &kp N7  &kp N8   &kp N9  &kp LOCKING_NUM  &none
-&none  &kp LALT  &kp LGUI              &kp LSHIFT                &kp LCTRL  &kp DEL    &kp KP_MINUS  &kp N4  &kp N5   &kp N6  &kp KP_DIVIDE    &none
-&none  &kp RALT  &kp GLOBE             &none                     &kp RCTRL  &kp RET    &kp KP_PLUS   &kp N1  &kp N2   &kp N3  &kp KP_MULTIPLY  &none
-                                       &none                     &none      &none      &kp SPACE     &kp N0  &kp DOT
+&none  &none     &none      &kp LC(LS(LA(LEFT_GUI)))  &none      &none      &none         &kp N7  &kp N8   &kp N9  &kp LOCKING_NUM  &none
+&none  &kp LALT  &kp LGUI   &kp LSHIFT                &kp LCTRL  &kp DEL    &kp KP_MINUS  &kp N4  &kp N5   &kp N6  &kp KP_DIVIDE    &none
+&none  &kp RALT  &kp GLOBE  &none                     &kp RCTRL  &kp RET    &kp KP_PLUS   &kp N1  &kp N2   &kp N3  &kp KP_MULTIPLY  &none
+                            &none                     &none      &none      &kp SPACE     &kp N0  &kp DOT
             >;
         };
 
