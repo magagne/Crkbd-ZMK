@@ -226,39 +226,29 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings =
-                <&bt BT_SEL 0>,
-                <&to 0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
         };
 
         Macro_SetWin: Macro_SetWin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings =
-                <&bt BT_SEL 1>,
-                <&to 4>;
+            bindings = <&bt BT_SEL 1 &to 4>;
         };
 
         Macro_SetiPad: Macro_SetiPad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings =
-                <&bt BT_SEL 2>,
-                <&to 0>;
+            bindings = <&bt BT_SEL 2 &to 0>;
         };
 
         Macro_SetiPhone: Macro_SetiPhone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings =
-                <&bt BT_SEL 3>,
-                <&to 0>;
+            bindings = <&bt BT_SEL 3 &to 0>;
         };
-
-
 
         // ------------------------------------------------------------- 
         // Password for local stuff
@@ -311,7 +301,7 @@
         };
     };
 
-/*
+    /*
         Symbol      Mac — ZMK                    Mac — QMK
         -------     ----------------------       ----------------------
         ~           &kp RA(RIGHT_BRACKET)        RALT(KC_RBRC)
@@ -347,7 +337,7 @@
 &none  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)   &kp LG(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 10           &mo 11
+                               &none        &none       &none            &kp RETURN      &mo 10          &mo 11
             >;
         };
 
@@ -364,14 +354,12 @@
         Mac_Mouse_Layout_3 {
             label = "M.Mouse";
             bindings = <
-&none  &none       &mkp LCLK        &HID_DragScroll  &kp SCROLLLOCK  &none   &none           &none           &none           &none            &none  &none
-&none  &LCLK_LCLK  &mkp MCLK  &mkp RCLK        &mkp LCLK        &none             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
-&none  &kp LALT    &kp LGUI   &kp LSHFT        &kp LCTRL        &none             &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
-                              &none            &none            &none             &none           &mkp MB4        &mkp MB5
+&none  &none       &mkp LCLK  &HID_DragScroll  &none      &none    &none           &none           &none           &none            &none  &none
+&none  &LCLK_LCLK  &mkp MCLK  &mkp RCLK        &mkp LCLK  &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &kp LALT    &kp LGUI   &kp LSHFT        &kp LCTRL  &none    &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                              &none            &none      &none    &none           &mkp MB4        &mkp MB5
             >;
         };
-
-
 
         Win_Base_Layout_4 {
             label = "Win / OS";
@@ -389,7 +377,7 @@
 &none  &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 10           &mo 11
+                               &none        &none       &none            &kp RETURN      &mo 10          &mo 11
             >;
         };
 
@@ -406,10 +394,10 @@
         Win_Mouse_Layout_7 {
             label = "W.Mouse";
             bindings = <
-&none  &none          &mkp LCLK        &LED_DragScroll  &kp SCROLLLOCK  &none   &none           &none           &none           &none            &none  &none
-&none  &LCLK_LCLK  &mkp MCLK  &mkp RCLK        &mkp LCLK        &none             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
-&none  &kp LALT    &kp LGUI   &kp LSHFT        &kp LCTRL        &none             &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
-                              &none            &none            &none             &none           &mkp MB4        &mkp MB5
+&none  &none       &mkp LCLK  &LED_DragScroll  &kp SCROLLLOCK  &none    &none           &none           &none           &none            &none  &none
+&none  &LCLK_LCLK  &mkp MCLK  &mkp RCLK        &mkp LCLK       &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &kp LALT    &kp LGUI   &kp LSHFT        &kp LCTRL       &none    &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                              &none            &none           &none    &none           &mkp MB4        &mkp MB5
             >;
         };
 
@@ -436,10 +424,10 @@
         Config_Layout_10 {
             label = "Config";
             bindings = <
-&none  &none         &none         &out OUT_USB  &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
-&none  &Macro_SetiPhone  &Macro_SetiPad &Macro_SetWin &Macro_SetMac &none    &none  &none  &none  &none  &none  &none
-&none &none         &none           &none          &none          &none    &none  &none  &none  &none  &none  &none
-                                   &none         &none         &none    &none  &none  &none
+&none  &none             &none           &out OUT_USB   &out OUT_BLE   &none    &none  &none  &none  &none  &none  &none
+&none  &Macro_SetiPhone  &Macro_SetiPad  &Macro_SetWin  &Macro_SetMac  &none    &none  &none  &none  &none  &none  &none
+&none  &none             &none           &none          &none          &none    &none  &none  &none  &none  &none  &none
+                                         &none          &none          &none    &none  &none  &none
             >;
         };
 
