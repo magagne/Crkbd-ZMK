@@ -299,7 +299,7 @@
 &none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
 &none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                  &none
 &none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
-                     &mo 8  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &none
+                     &mo 3  &mo 1  &sk LSHIFT    &kp SPACE  &mo 2  &none
             >;
         };
 
@@ -309,7 +309,7 @@
 &none  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)   &kp LG(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 9           &mo 10
+                               &none        &none       &none            &kp RETURN      &mo 10           &mo 11
             >;
         };
 
@@ -319,41 +319,63 @@
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp RA(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
-                                         &mo 7                              &mo 6       &sk LSHIFT    &none          &none      &none
+                                         &mo 9                              &mo 8       &sk LSHIFT    &none          &none      &none
             >;
         };
 
-        Win_Base_Layout_3 {
+        Mac_Mouse_Layout_3 {
+            label = "M.Mouse";
+            bindings = <
+&none  &none       &mkp LCLK  &LED_DragScroll  &HID_DragScroll  &kp SCROLLLOCK    &none           &none           &none           &none            &none  &none
+&none  &LCLK_LCLK  &mkp MCLK  &mkp RCLK        &mkp LCLK        &none             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &kp LALT    &kp LGUI   &kp LSHFT        &kp LCTRL        &none             &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                              &none            &none            &none             &none           &mkp MB4        &mkp MB5
+            >;
+        };
+
+
+
+        Win_Base_Layout_4 {
             label = "Win / OS";
             bindings = <
 &none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)  &none
 &none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                  &none
 &none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
-                     &mo 8  &mo 4  &sk LSHIFT    &kp SPACE  &mo 5  &none
+                     &mo 7  &mo 5  &sk LSHIFT    &kp SPACE  &mo 6  &none
             >;
         };
 
-        Win_Extend_Layout_4 {
+        Win_Extend_Layout_5 {
             label = "W.Ext";
             bindings = <
 &none  &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 9           &mo 10
+                               &none        &none       &none            &kp RETURN      &mo 10           &mo 11
             >;
         };
 
-        Win_Symbol_Layout_5 {
+        Win_Symbol_Layout_6 {
             label = "W.Symb";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)   &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
-                                         &mo 7                              &mo 6       &sk LSHIFT    &none          &none      &none
+                                         &mo 9                              &mo 8       &sk LSHIFT    &none          &none      &none
             >;
         };
 
-        Num_Layout_6 {
+        Win_Mouse_Layout_7 {
+            label = "W.Mouse";
+            bindings = <
+&none  &none       &mkp LCLK  &LED_DragScroll  &HID_DragScroll  &kp SCROLLLOCK    &none           &none           &none           &none            &none  &none
+&none  &LCLK_LCLK  &mkp MCLK  &mkp RCLK        &mkp LCLK        &none             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &kp LALT    &kp LGUI   &kp LSHFT        &kp LCTRL        &none             &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                              &none            &none            &none             &none           &mkp MB4        &mkp MB5
+            >;
+        };
+
+        Num_Layout_8 {
             label = "Num";
             bindings = <
 &none  &none     &none      &kp LC(LS(LA(LEFT_GUI)))  &none      &none      &none         &kp N7  &kp N8   &kp N9  &kp LOCKING_NUM  &none
@@ -363,7 +385,7 @@
             >;
         };
 
-        Fn_Layout_7 {
+        Fn_Layout_9 {
             label = "Fn";
             bindings = <
 &none  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
@@ -373,27 +395,17 @@
             >;
         };
 
-        Mouse_Layout_8 {
-            label = "Mouse";
-            bindings = <
-&none  &none       &mkp LCLK  &LED_DragScroll  &HID_DragScroll  &kp SCROLLLOCK    &none           &none           &none           &none            &none  &none
-&none  &LCLK_LCLK  &mkp MCLK  &mkp RCLK        &mkp LCLK        &none             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
-&none  &kp LALT    &kp LGUI   &kp LSHFT        &kp LCTRL        &none             &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
-                              &none            &none            &none             &none           &mkp MB4        &mkp MB5
-            >;
-        };
-
-        Config_Layout_9 {
+        Config_Layout_10 {
             label = "Config";
             bindings = <
 &none  &none         &none         &out OUT_USB  &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
 &none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none    &none  &none  &none  &none  &none  &none
-&none  &none         &none         &to 3         &to 0         &none    &none  &none  &none  &none  &none  &none
+&none  &none         &none         &to 4         &to 0         &none    &none  &none  &none  &none  &none  &none
                                    &none         &none         &none    &none  &none  &none
             >;
         };
 
-        Reset_Layout_10 {
+        Reset_Layout_11 {
             label = "Reset";
             bindings = <
 &bootloader  &bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
