@@ -302,10 +302,10 @@
         Mac_Base_Layout_1 {
             label = "Mac/OS";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &none              &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O              &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH           &none
-                     &mo 8  &mo 3  &sk LSHIFT    &kp SPACE  &mo 5 &none
+&none  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &none
+&none  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &none
+&none  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &none
+                    &trans  &mo 3  &trans    &trans  &mo 5 &none
             >;
         };
 
@@ -322,10 +322,10 @@
         Mac_Extend_Layout_3 {
             label = "MacExt";
             bindings = <
-&none  &kp LG(Z)    &kp LG(X)   &kp LG(C)    &kp LG(V)   &kp LG(Y)         &tran        &tran           &tran       &tran           &tran  &none
-&none  &tran        &tran       &tran       &tran        &tran             &tran        &tran           &tran      &tran            &tran         &none
-&none  &tran        &tran       &tran       &tran        &tran             &tran        &tran           &tran        &tran       &tran        &none
-                                &none       &none       &none              &tran        &tran           &tran
+&none  &kp LG(Z)    &kp LG(X)   &kp LG(C)    &kp LG(V)   &kp LG(Y)         &trans        &trans           &trans       &trans           &trans  &none
+&none  &trans        &trans       &trans       &trans        &trans             &trans        &trans           &trans      &trans            &trans         &none
+&none  &trans        &trans       &trans       &trans        &trans             &trans        &trans           &trans        &trans       &trans        &none
+                                &none       &none       &none              &trans        &trans           &trans
             >;
         };
 
@@ -342,10 +342,10 @@
         Mac_Symbol_Layout_5{
             label = "MacSym";
             bindings = <
-&none  &tran  &tran  &tran  &tran &tran  &tran          &tran &tran &tran  &tran       &th RA(RIGHT_BRACKET) RA(MINUS)      &none
-&none  &tran  &tran  &tran  &tran &tran  &tran          &tran &tran &tran  &tran       &tran                               &none
-&none  &tran  &tran  &tran  &tran &tran  &kp RA(GRAVE)  &tran &tran &tran  &tran       &tran                              &none
-              &tran  &tran  &none &none  &none          &none
+&none  &trans  &trans  &trans  &trans &trans  &trans          &trans &trans &trans  &trans       &th RA(RIGHT_BRACKET) RA(MINUS)      &none
+&none  &trans  &trans  &trans  &trans &trans  &trans          &trans &trans &trans  &trans       &trans                               &none
+&none  &trans  &trans  &trans  &trans &trans  &kp RA(GRAVE)  &trans &trans &trans  &trans       &trans                              &none
+              &trans  &trans  &none &none  &none          &none
             >;
         };
 
