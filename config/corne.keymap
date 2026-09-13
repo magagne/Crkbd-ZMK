@@ -322,12 +322,12 @@
         compatible = "zmk,keymap";
 
         Mac_Base_Layout_0 {
-            label = "Mac Base";
+            label = "Mac OS";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                  &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
-                     &mo 8  &mo 1  &mo 3         &kp SPACE  &mo 2  &sk LSHIFT
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B    &kp J      &kp L  &kp U       &kp Y    &kp RA(RIGHT_BRACKET)  &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G    &kp M      &kp N  &kp E       &kp I    &kp O                  &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V    &kp K      &kp H  &kp COMMA   &kp DOT  &kp FSLH               &none
+                     &mo 8  &mo 1  &mo 3    &kp SPACE  &mo 2  &sk LSHIFT
             >;
         };
 
@@ -362,12 +362,12 @@
         };
 
         Win_Base_Layout_4 {
-            label = "Win Base";
+            label = "Windows";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)  &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                  &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
-                     &mo 8  &mo 5  &mo 7         &kp SPACE  &mo 6 &sk LSHIFT
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B    &kp J      &kp L  &kp U       &kp Y    &kp RC(RIGHT_BRACKET)  &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G    &kp M      &kp N  &kp E       &kp I    &kp O                  &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V    &kp K      &kp H  &kp COMMA   &kp DOT  &kp FSLH               &none
+                     &mo 8  &mo 5  &mo 7    &kp SPACE  &mo 6  &sk LSHIFT
             >;
         };
 
@@ -387,7 +387,7 @@
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)   &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
-                                         &none                              &mo 9        &sk LSHIFT    &none          &none      &none
+                                         &none                              &mo 9       &sk LSHIFT    &none          &none      &none
             >;
         };
 
