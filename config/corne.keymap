@@ -337,7 +337,7 @@
             label = "WinSym";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp LS(BACKSLASH)    &none
-&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp FSLH       &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL            &none
+&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_SLASH      &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL            &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE       &none
                                          &mo 7                              &mo 6       &none         &none          &none      &none
             >;
@@ -346,10 +346,10 @@
         Mac_Symbol_Layout {
             label = "MacSym";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(LS(GRAVE))   &none
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)  &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp RA(FSLH)   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL           &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp RA(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE      &none
-                                         &mo 7                              &mo 6       &none         &none          &none      &none
+A                                         &mo 7                              &mo 6       &none         &none          &none      &none
             >;
         };
 
