@@ -231,7 +231,7 @@
                 <&to 0>;
         };
 
-        Macro_SetMac Macro_SetMac {
+        Macro_SetMac: Macro_SetMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
