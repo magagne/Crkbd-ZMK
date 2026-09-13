@@ -305,7 +305,7 @@
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                       &trans  &mo 3   &trans    &trans  &mo 5   &none
+                       &mo 8   &mo 3   &trans    &trans  &mo 5   &none
             >;
         };
 
@@ -325,7 +325,7 @@
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Y)    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &none
-                             &trans     &trans     &trans       &trans  &trans  &trans
+                             &none      &none      &none        &trans  &mo 9   &mo 10
             >;
         };
 
@@ -345,7 +345,7 @@
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans  &th RA(RIGHT_BRACKET) RA(MINUS)  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans  &trans                           &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(GRAVE)  &trans  &trans  &trans                           &none
-                       &trans  &trans  &none     &none   &trans         &trans
+                       &mo 7   &mo 6   &none     &none   &none          &none
             >;
         };
 
