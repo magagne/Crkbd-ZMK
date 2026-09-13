@@ -305,7 +305,7 @@
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                       &mo 8   &mo 3   &trans    &trans  &mo 5   &none
+                       &mo 8   &mo 3   &trans    &trans  &mo 5   &trans
             >;
         };
 
@@ -315,7 +315,7 @@
 &none  &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
 &none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 9           &mo 10
+                               &trans       &trans      &none            &kp RETURN      &mo 9           &mo 10
             >;
         };
 
@@ -325,7 +325,7 @@
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Y)    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &none
-                             &none      &none      &none        &trans  &mo 9   &mo 10
+                             &trans     &trans     &none        &trans  &mo 9   &mo 10
             >;
         };
 
@@ -335,7 +335,7 @@
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RC(RIGHT_BRACKET) RA(GRAVE)  &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL                        &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE                   &none
-                                         &mo 7                              &mo 6       &none         &none          &none      &none
+                                         &mo 7                              &mo 6       &none         &none          &trans     &trans
             >;
         };
 
