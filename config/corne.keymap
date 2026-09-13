@@ -342,10 +342,10 @@
         Mac_Symbol_Layout_5{
             label = "MacSym";
             bindings = <
-&none  &trans  &trans  &trans  &trans &trans  &trans          &trans &trans &trans  &trans       &th RA(RIGHT_BRACKET) RA(MINUS)      &none
-&none  &trans  &trans  &trans  &trans &trans  &trans          &trans &trans &trans  &trans       &trans                               &none
-&none  &trans  &trans  &trans  &trans &trans  &kp RA(GRAVE)  &trans &trans &trans  &trans       &trans                              &none
-              &trans  &trans  &none &none  &none          &none
+&none  &trans  &trans  &trans  &trans &trans          &trans    &trans           &trans &trans      &th RA(RIGHT_BRACKET) RA(MINUS)      &none
+&none  &trans  &trans  &trans  &trans &trans          &trans    &trans           &trans &trans      &trans                               &none
+&none  &trans  &trans  &trans  &trans &trans          &trans    &kp RA(GRAVE)    &trans &trans      &trans                               &none
+              &trans  &trans  &none &none  &none        &none
             >;
         };
 
