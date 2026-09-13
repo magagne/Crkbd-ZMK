@@ -277,40 +277,40 @@
 
         Symbol      Mac                         Win
         -------     ----------------------      ----------------------
-        ~           &kp RA(RIGHT_BRACKET)       &kp RC(RIGHT_BRACKET) 
+        ~           &kp RA(RIGHT_BRACKET)       &kp RC(RIGHT_BRACKET)
  
-        /           &kp KP_DIVIDE               &kp KP_DIVIDE 
+        /           &kp KP_DIVIDE               &kp KP_DIVIDE or &kp RA(FSLH)
  
-        \           &kp  RA(GRAVE)              &kp LS(GRAVE) 
+        \           &kp RA(GRAVE)               &kp LS(GRAVE)
 
-        |           &kp  RA(MINUS)              &kp RA(GRAVE)
+        |           &kp RA(MINUS)               &kp RA(GRAVE)
     */
 
     keymap {
         compatible = "zmk,keymap";
 
-        Win_Base_Layout {
-            label = "WinBase";
+        Win_Base_Layout_0 {
+            label = "Windows";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)   &none
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &none              &none
 &none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O              &none
 &none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH           &none
                      &mo 8  &mo 2  &sk LSHIFT    &kp SPACE  &mo 4  &none
             >;
         };
-
-        Mac_Base_Layout {
-            label = "MacBase";
+        
+        Mac_Base_Layout_1 {
+            label = "Mac/OS";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)   &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O          &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH       &none
-                     &mo 8  &mo 3  &sk LSHIFT    &kp SPACE  &mo 5  &none
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &none              &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O              &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH           &none
+                     &mo 8  &mo 3  &sk LSHIFT    &kp SPACE  &mo 5 &none
             >;
         };
 
-        Win_Extend_Layout {
-            label = "WinExt";
+        Win_Extend_Layout_2 {
+            label = "Extend";
             bindings = <
 &none  &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
 &none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
@@ -319,37 +319,37 @@
             >;
         };
 
-        Mac_Extend_Layout {
+        Mac_Extend_Layout_3 {
             label = "MacExt";
             bindings = <
-&none  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)   &kp LG(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
-&none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
-&none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 9           &mo 10
+&none  &kp LG(Z)    &kp LG(X)   &kp LG(C)    &kp LG(V)   &kp LG(Y)         &tran        &tran           &tran       &tran           &tran  &none
+&none  &tran        &tran       &tran       &tran        &tran             &tran        &tran           &tran      &tran            &tran         &none
+&none  &tran        &tran       &tran       &tran        &tran             &tran        &tran           &tran        &tran       &tran        &none
+                                &none       &none       &none              &tran        &tran           &tran
             >;
         };
 
-        Win_Symbol_Layout {
-            label = "WinSym";
+        Win_Symbol_Layout_4{
+            label = "Symbol";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)     &none
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RC(RIGHT_BRACKET) RA(GRAVE)     &none
 &none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL          &none
 &none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE     &none
                                          &mo 7                              &mo 6       &none         &none          &none      &none
             >;
         };
 
-        Mac_Symbol_Layout {
+        Mac_Symbol_Layout_5{
             label = "MacSym";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
-&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp RA(FSLH)   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
-&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp RA(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
-                                         &mo 7                              &mo 6       &none         &none          &none      &none
+&none  &tran  &tran  &tran  &tran &tran  &tran          &tran &tran &tran  &tran       &th RA(RIGHT_BRACKET) RA(MINUS)      &none
+&none  &tran  &tran  &tran  &tran &tran  &tran          &tran &tran &tran  &tran       &tran                               &none
+&none  &tran  &tran  &tran  &tran &tran  &kp RA(GRAVE)  &tran &tran &tran  &tran       &tran                              &none
+              &tran  &tran  &none &none  &none          &none
             >;
         };
 
-        Num_Layout {
+        Num_Layout_6{
             label = "Num";
             bindings = <
 &none  &none     &kp LC(LS(LEFT_ALT))  &kp LC(LS(LA(LEFT_GUI)))  &none      &none      &none         &kp N7  &kp N8   &kp N9  &kp LOCKING_NUM  &none
@@ -359,7 +359,7 @@
             >;
         };
 
-        Fn_Layout {
+        Fn_Layout_7 {
             label = "Fn";
             bindings = <
 &none  &none     &none      &none       &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
@@ -369,7 +369,7 @@
             >;
         };
 
-        Mouse_Layout {
+        Mouse_Layout_8 {
             label = "Mouse";
             bindings = <
 &none  &none       &mkp LCLK  &LED_DragScroll  &HID_DragScroll  &kp SCROLLLOCK    &none           &none           &none           &none            &none  &none
@@ -379,7 +379,7 @@
             >;
         };
 
-        Config_Layout {
+        Config_Layout_9 {
             label = "Config";
             bindings = <
 &none  &none         &none         &out OUT_USB  &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
@@ -389,7 +389,7 @@
             >;
         };
 
-        Reset_Layout {
+        Reset_Layout_10{
             label = "Reset";
             bindings = <
 &bootloader  &bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
