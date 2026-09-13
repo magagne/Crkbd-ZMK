@@ -296,7 +296,7 @@
         Win_Base_Layout {
             label = "WinBase";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)   &none
 &none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O              &none
 &none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH           &none
                      &mo 8  &mo 2  &sk LSHIFT    &kp SPACE  &mo 4  &none
@@ -306,7 +306,7 @@
         Mac_Base_Layout {
             label = "MacBase";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(MINUS)   &none
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)   &none
 &none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O          &none
 &none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH       &none
                      &mo 8  &mo 3  &sk LSHIFT    &kp SPACE  &mo 5  &none
