@@ -222,7 +222,7 @@
                 <&kp LCTRL>;
         };
 
-        Macro_SetWin: Macro_SetWin {
+        Macro_SetMac: Macro_SetMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
@@ -231,7 +231,7 @@
                 <&to 0>;
         };
 
-        Macro_SetMac: Macro_SetMac {
+        Macro_SetWin: Macro_SetWin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
@@ -239,6 +239,25 @@
                 <&bt BT_SEL 1>,
                 <&to 4>;
         };
+
+        Macro_SetiPad: Macro_SetiPad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            bindings =
+                <&bt BT_SEL 2>,
+                <&to 0>;
+        };
+
+        Macro_SetiPhone: Macro_SetiPhone {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            bindings =
+                <&bt BT_SEL 3>,
+                <&to 0>;
+        };
+
 
 
         // ------------------------------------------------------------- 
@@ -418,8 +437,8 @@
             label = "Config";
             bindings = <
 &none  &none         &none         &out OUT_USB  &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
-&none  &bt BT_SEL 3  &bt BT_SEL 2  &Macro_SetWin &Macro_SetMac &none    &none  &none  &none  &none  &none  &none
-&none  &none         &none         &to 4         &to 0         &none    &none  &none  &none  &none  &none  &none
+&none  &Macro_SetiPhone  &Macro_SetiPad &Macro_SetWin &Macro_SetMac &none    &none  &none  &none  &none  &none  &none
+&none  &to 0        &to 0          &to 4         &to 0         &none    &none  &none  &none  &none  &none  &none
                                    &none         &none         &none    &none  &none  &none
             >;
         };
