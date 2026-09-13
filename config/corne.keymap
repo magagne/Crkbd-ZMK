@@ -222,6 +222,25 @@
                 <&kp LCTRL>;
         };
 
+        Macro_SetWin: Macro_SetWin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            bindings =
+                <&bt BT_SEL 0>,
+                <&to 0>;
+        };
+
+        Macro_SetMac Macro_SetMac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            bindings =
+                <&bt BT_SEL 1>,
+                <&to 4>;
+        };
+
+
         // ------------------------------------------------------------- 
         // Password for local stuff
         // ------------------------------------------------------------- 
@@ -399,7 +418,7 @@
             label = "Config";
             bindings = <
 &none  &none         &none         &out OUT_USB  &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
-&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none    &none  &none  &none  &none  &none  &none
+&none  &bt BT_SEL 3  &bt BT_SEL 2  &Macro_SetWin &Macro_SetMac &none    &none  &none  &none  &none  &none  &none
 &none  &none         &none         &to 4         &to 0         &none    &none  &none  &none  &none  &none  &none
                                    &none         &none         &none    &none  &none  &none
             >;
