@@ -274,20 +274,16 @@
     };
 
     /*
-        /
-        &kp KP_DIVIDE
 
-         ~
-        Mac                              win
-        &kp RA(RIGHT_BRACKET)            &kp RC(RIGHT_BRACKET) 
+        Symbol      Mac                         Win
+        -------     ----------------------      ----------------------
+        ~           &kp RA(RIGHT_BRACKET)       &kp RC(RIGHT_BRACKET) 
+ 
+        /           &kp KP_DIVIDE               &kp KP_DIVIDE 
+ 
+        \           &kp  RA(GRAVE)              &kp LS(GRAVE) 
 
-        win
-        |                                 \  
-        &th RA(GRAVE)                     LS(GRAVE) 
-
-        Mac
-        |                                 \  
-        &th RA(MINUS)                     RA(GRAVE)
+        |           &kp  RA(MINUS)              &kp RA(GRAVE)
     */
 
     keymap {
