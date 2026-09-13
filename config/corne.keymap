@@ -292,20 +292,20 @@
         Win_Base_Layout_0 {
             label = "Windows";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &none              &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O              &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH           &none
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &none     &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O     &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH  &none
                      &mo 8  &mo 2  &sk LSHIFT    &kp SPACE  &mo 4  &none
             >;
         };
-        
+
         Mac_Base_Layout_1 {
             label = "Mac/OS";
             bindings = <
-&none  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &none
-&none  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &none
-&none  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &none
-                    &trans  &mo 3  &trans    &trans  &mo 5 &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
+                       &trans  &mo 3   &trans    &trans  &mo 5   &none
             >;
         };
 
@@ -322,34 +322,34 @@
         Mac_Extend_Layout_3 {
             label = "MacExt";
             bindings = <
-&none  &kp LG(Z)    &kp LG(X)   &kp LG(C)    &kp LG(V)   &kp LG(Y)         &trans        &trans           &trans       &trans           &trans  &none
-&none  &trans        &trans       &trans       &trans        &trans             &trans        &trans           &trans      &trans            &trans         &none
-&none  &trans        &trans       &trans       &trans        &trans             &trans        &trans           &trans        &trans       &trans        &none
-                                &none       &none       &none              &trans        &trans           &trans
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Y)    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &none
+                             &trans     &trans     &trans       &trans  &trans  &trans
             >;
         };
 
-        Win_Symbol_Layout_4{
+        Win_Symbol_Layout_4 {
             label = "Symbol";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RC(RIGHT_BRACKET) RA(GRAVE)     &none
-&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL          &none
-&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE     &none
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &th RC(RIGHT_BRACKET) RA(GRAVE)  &none
+&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp KP_DIVIDE  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL                        &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE                   &none
                                          &mo 7                              &mo 6       &none         &none          &none      &none
             >;
         };
 
-        Mac_Symbol_Layout_5{
+        Mac_Symbol_Layout_5 {
             label = "MacSym";
             bindings = <
-&none  &trans  &trans  &trans  &trans &trans          &trans    &trans           &trans &trans      &th RA(RIGHT_BRACKET) RA(MINUS)      &none
-&none  &trans  &trans  &trans  &trans &trans          &trans    &trans           &trans &trans      &trans                               &none
-&none  &trans  &trans  &trans  &trans &trans          &trans    &kp RA(GRAVE)    &trans &trans      &trans                               &none
-              &trans  &trans  &none &none  &none        &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans  &th RA(RIGHT_BRACKET) RA(MINUS)  &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans  &trans                           &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(GRAVE)  &trans  &trans  &trans                           &none
+                       &trans  &trans  &none     &none   &trans         &trans
             >;
         };
 
-        Num_Layout_6{
+        Num_Layout_6 {
             label = "Num";
             bindings = <
 &none  &none     &kp LC(LS(LEFT_ALT))  &kp LC(LS(LA(LEFT_GUI)))  &none      &none      &none         &kp N7  &kp N8   &kp N9  &kp LOCKING_NUM  &none
@@ -389,7 +389,7 @@
             >;
         };
 
-        Reset_Layout_10{
+        Reset_Layout_10 {
             label = "Reset";
             bindings = <
 &bootloader  &bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
