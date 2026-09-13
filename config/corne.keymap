@@ -273,18 +273,22 @@
         };
     };
 
-    /*
+/*
+        Symbol      Mac — ZMK                    Mac — QMK
+        -------     ----------------------       ----------------------
+        ~           &kp RA(RIGHT_BRACKET)        RALT(KC_RBRC)
+        /           &kp KP_DIVIDE                KC_KP_SLASH
+        \           &kp RA(GRAVE)                RALT(KC_GRV)
+        |           &kp RA(MINUS)                RALT(KC_MINS)
 
-        Symbol      Mac                         Win
-        -------     ----------------------      ----------------------
-        ~           &kp RA(RIGHT_BRACKET)       &kp RC(RIGHT_BRACKET)
- 
-        /           &kp KP_DIVIDE               &kp KP_DIVIDE or &kp RA(FSLH)
- 
-        \           &kp RA(GRAVE)               &kp LS(GRAVE)
 
-        |           &kp RA(MINUS)               &kp RA(GRAVE)
-    */
+        Symbol      Win — ZMK                    Win — QMK
+        -------     ----------------------       ----------------------
+        ~           &kp RC(RIGHT_BRACKET)        RCTL(KC_RBRC)
+        /           &kp KP_DIVIDE                KC_KP_SLASH
+        \           &kp LS(GRAVE)                LSFT(KC_GRV)
+        |           &kp RA(GRAVE)                RALT(KC_GRV)
+*/
 
     keymap {
         compatible = "zmk,keymap";
