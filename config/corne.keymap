@@ -297,8 +297,8 @@
             label = "WinBase";
             bindings = <
 &none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(LS(GRAVE))  &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                  &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O              &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH           &none
                      &mo 8  &mo 2  &sk LSHIFT    &kp SPACE  &mo 4  &none
             >;
         };
@@ -306,9 +306,9 @@
         Mac_Base_Layout {
             label = "MacBase";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(MINUS)         &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O                  &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
+&none  &kp Q  &kp W  &kp F  &kp P  &kp B         &kp J      &kp L  &kp U      &kp Y    &kp RA(MINUS)  &none
+&none  &kp A  &kp R  &kp S  &kp T  &kp G         &kp M      &kp N  &kp E      &kp I    &kp O          &none
+&none  &kp Z  &kp X  &kp C  &kp D  &kp V         &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH       &none
                      &mo 8  &mo 3  &sk LSHIFT    &kp SPACE  &mo 5  &none
             >;
         };
@@ -336,9 +336,9 @@
         Win_Symbol_Layout {
             label = "WinSym";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(LS(GRAVE))    &none
-&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp RA(GRAVE)   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL            &none
-&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE       &none
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(LS(GRAVE))  &none
+&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp RA(GRAVE)  &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL          &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp LS(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE     &none
                                          &mo 7                              &mo 6       &none         &none          &none      &none
             >;
         };
@@ -346,9 +346,9 @@
         Mac_Symbol_Layout {
             label = "MacSym";
             bindings = <
-&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)       &none
-&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp RA(FSLH)   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL           &none
-&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp RA(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE      &none
+&none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
+&none  &kp BACKSLASH         &kp RA(N7)  &th LS(LEFT_BRACKET) LEFT_BRACKET  &kp LPAR    &kp RA(N9)    &kp RA(FSLH)   &kp MINUS  &kp RA(COMMA)  &kp COLON  &kp EQUAL       &none
+&none  &kp RA(LEFT_BRACKET)  &kp RA(N8)  &kp RIGHT_BRACKET                  &kp RPAR    &kp RA(N0)    &kp RA(GRAVE)  &kp UNDER  &kp RA(DOT)    &kp SEMI   &kp APOSTROPHE  &none
                                          &mo 7                              &mo 6       &none         &none          &none      &none
             >;
         };
@@ -388,7 +388,7 @@
             bindings = <
 &none  &none         &none         &out OUT_USB  &out OUT_BLE  &none    &none  &none  &none  &none  &none  &none
 &none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none    &none  &none  &none  &none  &none  &none
-&none  &none         &none         &to 1         &to 0         &none    &none  &none  &none  &none  &none  &none
+&none  &none         &none         &to 0         &to 1         &none    &none  &none  &none  &none  &none  &none
                                    &none         &none         &none    &none  &none  &none
             >;
         };
