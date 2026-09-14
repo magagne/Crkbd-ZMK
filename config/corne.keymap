@@ -45,67 +45,67 @@
         Combo_Macro_M10 {
             bindings = <&Macro_M10>;
             key-positions = <1 25>;
-            layers = <2>;
+            layers = <2 6>;
         };
 
         Combo_Macro_M11 {
             bindings = <&Macro_M11>;
             key-positions = <26 2>;
-            layers = <2>;
+            layers = <2 6>;
         };
 
         Combo_Macro_M12 {
             bindings = <&Macro_M12>;
             key-positions = <33 9>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         Combo_Macro_M13 {
             bindings = <&Macro_M13>;
             key-positions = <10 34>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         Combo_BrightnessUp_Mac {
             bindings = <&kp LC(LS(LA(LG(F10))))>;
             key-positions = <6 18>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         Combo_BrightnessDown_Mac {
             bindings = <&kp LC(LS(LA(LG(F11))))>;
             key-positions = <30 18>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         Combo_BrightnessUp_Win {
             bindings = <&kp C_BRI_UP>;
             key-positions = <6 18>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         Combo_BrightnessDown_Win {
             bindings = <&kp C_BRI_DN>;
             key-positions = <30 18>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         Combo_VolumeUp {
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <5 17>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         Combo_VolumeDown {
             bindings = <&kp C_VOL_DN>;
             key-positions = <29 17>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         Combo_Unlock {
             bindings = <&studio_unlock>;
             key-positions = <10 1>;
-            layers = <7>;
+            layers = <0 4>;
         };
     };
 
