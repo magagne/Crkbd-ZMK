@@ -341,7 +341,7 @@
             >;
         };
 
-        Mac_Sym_Layout_2 {
+        Mac_Symbol_Layout_2 {
             label = "Symbol";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(MINUS)   &none
@@ -381,7 +381,7 @@
             >;
         };
 
-        Win_Sym_Layout_6 {
+        Win_Symbol_Layout_6 {
             label = "Symbol";
             bindings = <
 &none  &kp EXCL              &kp AT      &kp HASH                           &kp DOLLAR  &kp PRCNT     &kp LS(N6)     &kp AMPS   &kp ASTRK      &kp PLUS   &kp RA(GRAVE)   &none
