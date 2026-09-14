@@ -424,10 +424,10 @@
         Config_Layout_10 {
             label = "Config";
             bindings = <
-&none  &none             &none           &out OUT_USB   &out OUT_BLE   &none    &none  &none  &none  &none  &none  &none
-&none  &Macro_SetiPhone  &Macro_SetiPad  &Macro_SetWin  &Macro_SetMac  &none    &none  &none  &none  &none  &none  &none
-&none  &none             &none           &none          &none          &none    &none  &none  &none  &none  &none  &none
-                                         &none          &none          &none    &none  &none  &none
+&none  &none             &none           &none          &none          &none    &none  &none         &none         &none  &none  &none
+&none  &Macro_SetiPhone  &Macro_SetiPad  &Macro_SetWin  &Macro_SetMac  &none    &none  &out OUT_BLE  &out OUT_USB  &none  &none  &none
+&none  &none             &none           &none          &none          &none    &none  &none         &none         &none  &none  &none
+                                         &none          &none          &none    &none  &none         &none
             >;
         };
 
