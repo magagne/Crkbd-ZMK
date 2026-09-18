@@ -27,6 +27,12 @@ static const struct mouse_activity_config mouse_activity_config = {
 static bool auto_mouse_layer_active;
 static zmk_keymap_layer_id_t auto_mouse_layer;
 
+static void mouse_activity_timeout(struct k_work *work);
+
+K_WORK_DELAYABLE_DEFINE(
+    mouse_activity_timeout_work,
+    mouse_activity_timeout
+);
 static void mouse_activity_timeout(struct k_work *work) {
     ARG_UNUSED(work);
 
@@ -105,8 +111,3 @@ static int mouse_activity_listener(const zmk_event_t *eh) {
 
 ZMK_LISTENER(mouse_activity, mouse_activity_listener);
 ZMK_SUBSCRIPTION(mouse_activity, raw_hid_received_event);
-
-K_WORK_DELAYABLE_DEFINE(
-    mouse_activity_timeout_work,
-    mouse_activity_timeout
-);
