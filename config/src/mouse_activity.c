@@ -106,6 +106,6 @@ static int mouse_activity_init(void) {
 
 SYS_INIT(
     mouse_activity_init,
-    APPLICATION,
-    CONFIG_APPLICATION_INIT_PRIORITY
+    POST_KERNEL,
+    CONFIG_KERNEL_INIT_PRIORITY_DEFAULT
 );
