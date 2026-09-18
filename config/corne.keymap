@@ -33,6 +33,14 @@
             ignore-modifiers;
         };
 
+        mouse_activity_config {
+            compatible = "zmk,mouse-activity";
+            mac-base-layer = <0>;
+            mac-mouse-layer = <3>;
+            windows-base-layer = <4>;
+            windows-mouse-layer = <7>;
+        };
+
         HID_DragScroll: HID_DragScroll {
             compatible = "zmk,behavior-raw-drag-scroll";
             #binding-cells = <0>;

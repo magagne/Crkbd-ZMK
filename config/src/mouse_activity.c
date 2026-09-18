@@ -1,4 +1,7 @@
+#define DT_DRV_COMPAT zmk_mouse_activity
+
 #include <zephyr/kernel.h>
+
 #include <zmk/event_manager.h>
 #include <zmk/keymap.h>
 #include <raw_hid/events.h>
@@ -6,32 +9,24 @@
 #define PLOOPY_MOUSE_ACTIVITY         0x41
 #define PLOOPY_MOUSE_ACTIVITY_VERSION 0x01
 
-#define MAC_BASE_LAYER                0
-#define MAC_MOUSE_LAYER               3
-#define WINDOWS_BASE_LAYER            4
-#define WINDOWS_MOUSE_LAYER           7
+struct mouse_activity_config {
+    zmk_keymap_layer_id_t mac_base_layer;
+    zmk_keymap_layer_id_t mac_mouse_layer;
+    zmk_keymap_layer_id_t windows_base_layer;
+    zmk_keymap_layer_id_t windows_mouse_layer;
+};
 
-static void mouse_activity_timeout(struct k_work *work);
+static const struct mouse_activity_config mouse_activity_config = {
+    .mac_base_layer = DT_INST_PROP(0, mac_base_layer),
+    .mac_mouse_layer = DT_INST_PROP(0, mac_mouse_layer),
+    .windows_base_layer = DT_INST_PROP(0, windows_base_layer),
+    .windows_mouse_layer = DT_INST_PROP(0, windows_mouse_layer),
+};
 
-K_WORK_DELAYABLE_DEFINE(
-    mouse_activity_timeout_work,
-    mouse_activity_timeout
-);
+static struct k_work_delayable mouse_activity_timeout_work;
 
 static bool auto_mouse_layer_active;
 static zmk_keymap_layer_id_t auto_mouse_layer;
-
-static zmk_keymap_layer_id_t get_mouse_layer(void) {
-    if (zmk_keymap_layer_active(WINDOWS_BASE_LAYER)) {
-        return WINDOWS_MOUSE_LAYER;
-    }
-
-    if (zmk_keymap_layer_active(MAC_BASE_LAYER)) {
-        return MAC_MOUSE_LAYER;
-    }
-
-    return UINT8_MAX;
-}
 
 static void mouse_activity_timeout(struct k_work *work) {
     ARG_UNUSED(work);
@@ -47,10 +42,22 @@ static void mouse_activity_timeout(struct k_work *work) {
     auto_mouse_layer_active = false;
 }
 
+static zmk_keymap_layer_id_t get_mouse_layer(void) {
+    if (zmk_keymap_layer_active(mouse_activity_config.windows_base_layer)) {
+        return mouse_activity_config.windows_mouse_layer;
+    }
+
+    if (zmk_keymap_layer_active(mouse_activity_config.mac_base_layer)) {
+        return mouse_activity_config.mac_mouse_layer;
+    }
+
+    return ZMK_KEYMAP_LAYER_ID_INVAL;
+}
+
 static void activate_mouse_layer(void) {
     zmk_keymap_layer_id_t target = get_mouse_layer();
 
-    if (target == UINT8_MAX) {
+    if (target == ZMK_KEYMAP_LAYER_ID_INVAL) {
         return;
     }
 
@@ -99,3 +106,8 @@ static int mouse_activity_listener(const zmk_event_t *eh) {
 
 ZMK_LISTENER(mouse_activity, mouse_activity_listener);
 ZMK_SUBSCRIPTION(mouse_activity, raw_hid_received_event);
+
+K_WORK_DELAYABLE_DEFINE(
+    mouse_activity_timeout_work,
+    mouse_activity_timeout
+);

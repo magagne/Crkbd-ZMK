@@ -1,0 +1,15 @@
+description: Ploopy mouse activity layer configuration
+compatible: "zmk,mouse-activity"
+properties:
+  mac-base-layer:
+    type: int
+    required: true
+  mac-mouse-layer:
+    type: int
+    required: true
+  windows-base-layer:
+    type: int
+    required: true
+  windows-mouse-layer:
+    type: int
+    required: true
