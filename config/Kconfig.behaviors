@@ -2,3 +2,11 @@ config ZMK_BEHAVIOR_RAW_DRAG_SCROLL
     bool
     default y
     depends on DT_HAS_ZMK_BEHAVIOR_RAW_DRAG_SCROLL_ENABLED
+
+config ZMK_MOUSE_ACTIVITY_TIMEOUT_MS
+    int "Mouse activity layer timeout"
+    default 700
+    depends on RAW_HID
+    help
+      Time in milliseconds after the last Ploopy mouse activity
+      before the automatically activated Mouse layer is released.
