@@ -23,7 +23,6 @@ static const struct mouse_activity_config mouse_activity_config = {
     .windows_mouse_layer = DT_INST_PROP(0, windows_mouse_layer),
 };
 
-static struct k_work_delayable mouse_activity_timeout_work;
 
 static bool auto_mouse_layer_active;
 static zmk_keymap_layer_id_t auto_mouse_layer;
