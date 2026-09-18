@@ -11,7 +11,12 @@
 #define WINDOWS_BASE_LAYER            4
 #define WINDOWS_MOUSE_LAYER           7
 
-static struct k_work_delayable mouse_activity_timeout_work;
+static void mouse_activity_timeout(struct k_work *work);
+
+K_WORK_DELAYABLE_DEFINE(
+    mouse_activity_timeout_work,
+    mouse_activity_timeout
+);
 
 static bool auto_mouse_layer_active;
 static zmk_keymap_layer_id_t auto_mouse_layer;
@@ -94,18 +99,3 @@ static int mouse_activity_listener(const zmk_event_t *eh) {
 
 ZMK_LISTENER(mouse_activity, mouse_activity_listener);
 ZMK_SUBSCRIPTION(mouse_activity, raw_hid_received_event);
-
-static int mouse_activity_init(void) {
-    k_work_init_delayable(
-        &mouse_activity_timeout_work,
-        mouse_activity_timeout
-    );
-
-    return 0;
-}
-
-SYS_INIT(
-    mouse_activity_init,
-    POST_KERNEL,
-    CONFIG_KERNEL_INIT_PRIORITY_DEFAULT
-);
