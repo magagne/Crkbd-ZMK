@@ -136,9 +136,13 @@ static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
     }
 
     if (caps_lock != last_caps_lock_indicator) {
+        const bool caps_lock_rising_edge =
+            !last_caps_lock_indicator && caps_lock;
+
         last_caps_lock_indicator = caps_lock;
 
-        if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
+        if (caps_lock_rising_edge &&
+            zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
             activate_auto_mouse_layer();
         }
     }
