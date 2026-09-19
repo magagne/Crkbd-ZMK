@@ -6,10 +6,11 @@
 #include <zmk/keymap.h>
 #include <raw_hid/events.h>
 #include <zmk/events/hid_indicators_changed.h>
-#include <dt-bindings/zmk/hid_indicators.h>
+#include <zephyr/sys/util.h>
 
 #define PLOOPY_MOUSE_ACTIVITY         0x41
 #define PLOOPY_MOUSE_ACTIVITY_VERSION 0x01
+#define PLOOPY_CAPS_LOCK_INDICATOR    BIT(1)
 
 struct mouse_activity_config {
     zmk_keymap_layer_id_t mac_base_layer;
@@ -126,7 +127,7 @@ static int led_mouse_activity_listener(const zmk_event_t *eh) {
     }
 
     const bool caps_lock =
-        (event->indicators & HID_INDICATOR_CAPS_LOCK) != 0;
+        (event->indicators & PLOOPY_CAPS_LOCK_INDICATOR) != 0;
 
     if (!caps_lock_indicator_initialized) {
         last_caps_lock_indicator = caps_lock;
