@@ -1,4 +1,4 @@
-#define DT_DRV_COMPAT zmk_mouse_activity
+#define DT_DRV_COMPAT zmk_auto_mouse_layer
 
 #include <zephyr/kernel.h>
 
@@ -8,18 +8,18 @@
 #include <zmk/events/hid_indicators_changed.h>
 #include <zephyr/sys/util.h>
 
-#define PLOOPY_MOUSE_ACTIVITY         0x41
-#define PLOOPY_MOUSE_ACTIVITY_VERSION 0x01
+#define PLOOPY_AUTO_MOUSE_LAYER         0x41
+#define PLOOPY_AUTO_MOUSE_LAYER_VERSION 0x01
 #define PLOOPY_CAPS_LOCK_INDICATOR    BIT(1)
 
-struct mouse_activity_config {
+struct auto_mouse_layer_config {
     zmk_keymap_layer_id_t mac_base_layer;
     zmk_keymap_layer_id_t mac_mouse_layer;
     zmk_keymap_layer_id_t windows_base_layer;
     zmk_keymap_layer_id_t windows_mouse_layer;
 };
 
-static const struct mouse_activity_config mouse_activity_config = {
+static const struct auto_mouse_layer_config auto_mouse_layer_config = {
     .mac_base_layer = DT_INST_PROP(0, mac_base_layer),
     .mac_mouse_layer = DT_INST_PROP(0, mac_mouse_layer),
     .windows_base_layer = DT_INST_PROP(0, windows_base_layer),
@@ -33,13 +33,13 @@ static zmk_keymap_layer_id_t auto_mouse_layer;
 static bool caps_lock_indicator_initialized;
 static bool last_caps_lock_indicator;
 
-static void mouse_activity_timeout(struct k_work *work);
+static void auto_mouse_layer_timeout(struct k_work *work);
 
 K_WORK_DELAYABLE_DEFINE(
-    mouse_activity_timeout_work,
-    mouse_activity_timeout
+    auto_mouse_layer_timeout_work,
+    auto_mouse_layer_timeout
 );
-static void mouse_activity_timeout(struct k_work *work) {
+static void auto_mouse_layer_timeout(struct k_work *work) {
     ARG_UNUSED(work);
 
     if (!auto_mouse_layer_active) {
@@ -53,20 +53,20 @@ static void mouse_activity_timeout(struct k_work *work) {
     auto_mouse_layer_active = false;
 }
 
-static zmk_keymap_layer_id_t get_mouse_layer(void) {
-    if (zmk_keymap_layer_active(mouse_activity_config.windows_base_layer)) {
-        return mouse_activity_config.windows_mouse_layer;
+static zmk_keymap_layer_id_t get_auto_mouse_layer(void) {
+    if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
+        return auto_mouse_layer_config.windows_mouse_layer;
     }
 
-    if (zmk_keymap_layer_active(mouse_activity_config.mac_base_layer)) {
-        return mouse_activity_config.mac_mouse_layer;
+    if (zmk_keymap_layer_active(auto_mouse_layer_config.mac_base_layer)) {
+        return auto_mouse_layer_config.mac_mouse_layer;
     }
 
     return ZMK_KEYMAP_LAYER_ID_INVAL;
 }
 
-static void activate_mouse_layer(void) {
-    zmk_keymap_layer_id_t target = get_mouse_layer();
+static void activate_auto_mouse_layer(void) {
+    zmk_keymap_layer_id_t target = get_auto_mouse_layer();
 
     if (target == ZMK_KEYMAP_LAYER_ID_INVAL) {
         return;
@@ -92,12 +92,12 @@ static void activate_mouse_layer(void) {
     }
 
     k_work_reschedule(
-        &mouse_activity_timeout_work,
-        K_MSEC(CONFIG_ZMK_MOUSE_ACTIVITY_TIMEOUT_MS)
+        &auto_mouse_layer_timeout_work,
+        K_MSEC(CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS)
     );
 }
 
-static int mouse_activity_listener(const zmk_event_t *eh) {
+static int hid_auto_mouse_layer_listener(const zmk_event_t *eh) {
     struct raw_hid_received_event *event =
         as_raw_hid_received_event(eh);
 
@@ -105,20 +105,20 @@ static int mouse_activity_listener(const zmk_event_t *eh) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    if (event->data[0] != PLOOPY_MOUSE_ACTIVITY ||
-        event->data[1] != PLOOPY_MOUSE_ACTIVITY_VERSION) {
+    if (event->data[0] != PLOOPY_AUTO_MOUSE_LAYER ||
+        event->data[1] != PLOOPY_AUTO_MOUSE_LAYER_VERSION) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    activate_mouse_layer();
+    activate_auto_mouse_layer();
 
     return ZMK_EV_EVENT_BUBBLE;
 }
 
-ZMK_LISTENER(mouse_activity, mouse_activity_listener);
-ZMK_SUBSCRIPTION(mouse_activity, raw_hid_received_event);
+ZMK_LISTENER(hid_auto_mouse_layer, hid_auto_mouse_layer_listener);
+ZMK_SUBSCRIPTION(hid_auto_mouse_layer, raw_hid_received_event);
 
-static int led_mouse_activity_listener(const zmk_event_t *eh) {
+static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
     const struct zmk_hid_indicators_changed *event =
         as_zmk_hid_indicators_changed(eh);
 
@@ -138,13 +138,13 @@ static int led_mouse_activity_listener(const zmk_event_t *eh) {
     if (caps_lock != last_caps_lock_indicator) {
         last_caps_lock_indicator = caps_lock;
 
-        if (zmk_keymap_layer_active(mouse_activity_config.windows_base_layer)) {
-            activate_mouse_layer();
+        if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
+            activate_auto_mouse_layer();
         }
     }
 
     return ZMK_EV_EVENT_BUBBLE;
 }
 
-ZMK_LISTENER(led_mouse_activity, led_mouse_activity_listener);
-ZMK_SUBSCRIPTION(led_mouse_activity, zmk_hid_indicators_changed);
+ZMK_LISTENER(led_auto_mouse_layer, led_auto_mouse_layer_listener);
+ZMK_SUBSCRIPTION(led_auto_mouse_layer, zmk_hid_indicators_changed);

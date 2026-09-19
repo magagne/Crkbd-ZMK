@@ -33,8 +33,8 @@
             ignore-modifiers;
         };
 
-        mouse_activity_config {
-            compatible = "zmk,mouse-activity";
+        auto_mouse_layer_config {
+            compatible = "zmk,auto-mouse-layer";
             mac-base-layer = <0>;
             mac-mouse-layer = <3>;
             windows-base-layer = <4>;
