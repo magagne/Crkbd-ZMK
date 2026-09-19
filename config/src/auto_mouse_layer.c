@@ -1,10 +1,6 @@
 #define DT_DRV_COMPAT zmk_auto_mouse_layer
 
 #include <zephyr/kernel.h>
-#include <zephyr/logging/log.h>
-
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
-
 #include <zmk/event_manager.h>
 #include <zmk/keymap.h>
 #include <raw_hid/events.h>
@@ -29,12 +25,9 @@ static const struct auto_mouse_layer_config auto_mouse_layer_config = {
     .windows_mouse_layer = DT_INST_PROP(0, windows_mouse_layer),
 };
 
-
 static bool auto_mouse_layer_active;
 static zmk_keymap_layer_id_t auto_mouse_layer;
 
-static bool caps_lock_indicator_initialized;
-static bool last_caps_lock_indicator;
 
 static void auto_mouse_layer_timeout(struct k_work *work);
 
