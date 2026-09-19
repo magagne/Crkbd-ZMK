@@ -9,6 +9,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/keymap.h>
 #include <raw_hid/events.h>
 #include <zmk/events/hid_indicators_changed.h>
+#include <zmk/events/caps_lock_activity.h>
 #include <zephyr/sys/util.h>
 
 #define PLOOPY_AUTO_MOUSE_LAYER         0x41
@@ -120,6 +121,29 @@ static int hid_auto_mouse_layer_listener(const zmk_event_t *eh) {
 
 ZMK_LISTENER(hid_auto_mouse_layer, hid_auto_mouse_layer_listener);
 ZMK_SUBSCRIPTION(hid_auto_mouse_layer, raw_hid_received_event);
+
+static int caps_auto_mouse_layer_listener(const zmk_event_t *eh) {
+    if (!as_zmk_caps_lock_activity(eh)) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
+        if (auto_mouse_layer_active &&
+            zmk_keymap_layer_active(auto_mouse_layer)) {
+            k_work_reschedule(
+                &auto_mouse_layer_timeout_work,
+                K_MSEC(CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS)
+            );
+        } else {
+            activate_auto_mouse_layer();
+        }
+    }
+
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(caps_auto_mouse_layer, caps_auto_mouse_layer_listener);
+ZMK_SUBSCRIPTION(caps_auto_mouse_layer, zmk_caps_lock_activity);
 
 static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
     const struct zmk_hid_indicators_changed *event =
