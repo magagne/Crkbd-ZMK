@@ -5,6 +5,8 @@
 #include <zmk/event_manager.h>
 #include <zmk/keymap.h>
 #include <raw_hid/events.h>
+#include <zmk/events/hid_indicators_changed.h>
+#include <dt-bindings/zmk/hid_indicators.h>
 
 #define PLOOPY_MOUSE_ACTIVITY         0x41
 #define PLOOPY_MOUSE_ACTIVITY_VERSION 0x01
@@ -26,6 +28,9 @@ static const struct mouse_activity_config mouse_activity_config = {
 
 static bool auto_mouse_layer_active;
 static zmk_keymap_layer_id_t auto_mouse_layer;
+
+static bool caps_lock_indicator_initialized;
+static bool last_caps_lock_indicator;
 
 static void mouse_activity_timeout(struct k_work *work);
 
@@ -111,3 +116,34 @@ static int mouse_activity_listener(const zmk_event_t *eh) {
 
 ZMK_LISTENER(mouse_activity, mouse_activity_listener);
 ZMK_SUBSCRIPTION(mouse_activity, raw_hid_received_event);
+
+static int led_mouse_activity_listener(const zmk_event_t *eh) {
+    const struct zmk_hid_indicators_changed *event =
+        as_zmk_hid_indicators_changed(eh);
+
+    if (!event) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    const bool caps_lock =
+        (event->indicators & HID_INDICATOR_CAPS_LOCK) != 0;
+
+    if (!caps_lock_indicator_initialized) {
+        last_caps_lock_indicator = caps_lock;
+        caps_lock_indicator_initialized = true;
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    if (caps_lock != last_caps_lock_indicator) {
+        last_caps_lock_indicator = caps_lock;
+
+        if (zmk_keymap_layer_active(mouse_activity_config.windows_base_layer)) {
+            activate_mouse_layer();
+        }
+    }
+
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(led_mouse_activity, led_mouse_activity_listener);
+ZMK_SUBSCRIPTION(led_mouse_activity, zmk_hid_indicators_changed);
