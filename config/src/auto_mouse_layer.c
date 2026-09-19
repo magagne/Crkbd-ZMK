@@ -1,6 +1,9 @@
 #define DT_DRV_COMPAT zmk_auto_mouse_layer
 
 #include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+
+LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include <zmk/event_manager.h>
 #include <zmk/keymap.h>
@@ -125,6 +128,9 @@ static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
     if (!event) {
         return ZMK_EV_EVENT_BUBBLE;
     }
+
+    LOG_INF("AUTO_MOUSE LED EVENT: indicators=0x%02x time=%u",
+            event->indicators, k_uptime_get_32());
 
     /*
      * Diagnostic:
