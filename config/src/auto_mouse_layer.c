@@ -42,15 +42,15 @@ K_WORK_DELAYABLE_DEFINE(
 static void auto_mouse_layer_timeout(struct k_work *work) {
     ARG_UNUSED(work);
 
-    /*
-     * DIAGNOSTIC ONLY:
-     * Temporarily disable automatic deactivation.
-     *
-     * CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS remains 450 ms.
-     * The work item is still scheduled, but this callback does
-     * not deactivate the Mouse layer.
-     */
-    return;
+    if (!auto_mouse_layer_active) {
+        return;
+    }
+
+    if (zmk_keymap_layer_active(auto_mouse_layer)) {
+        zmk_keymap_layer_deactivate(auto_mouse_layer);
+    }
+
+    auto_mouse_layer_active = false;
 }
 
 static zmk_keymap_layer_id_t get_auto_mouse_layer(void) {
