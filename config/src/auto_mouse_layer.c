@@ -126,28 +126,16 @@ static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    const bool caps_lock =
-        (event->indicators & PLOOPY_CAPS_LOCK_INDICATOR) != 0;
-
-    if (!caps_lock_indicator_initialized) {
-        last_caps_lock_indicator = caps_lock;
-        caps_lock_indicator_initialized = true;
-        return ZMK_EV_EVENT_BUBBLE;
-    }
-
     /*
-     * Windows Auto Mouse activity uses the Caps Lock LED state.
+     * Windows Auto Mouse activity uses the Caps Lock LED indicator.
      *
-     * OFF -> ON is the activity notification.
-     * ON -> OFF only updates the remembered state.
+     * Do not depend on an ON/OFF edge here. ZMK's HID-indicator
+     * notification is delivered through a shared work item, so the
+     * ON and OFF reports can be coalesced before this listener runs.
      */
-    if (!last_caps_lock_indicator && caps_lock) {
-        if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
-            activate_auto_mouse_layer();
-        }
+    if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
+        activate_auto_mouse_layer();
     }
-
-    last_caps_lock_indicator = caps_lock;
 
     return ZMK_EV_EVENT_BUBBLE;
 }
