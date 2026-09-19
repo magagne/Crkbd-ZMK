@@ -1,7 +1,6 @@
 #define DT_DRV_COMPAT zmk_auto_mouse_layer
 
 #include <zephyr/kernel.h>
-
 #include <zmk/event_manager.h>
 #include <zmk/keymap.h>
 #include <raw_hid/events.h>
@@ -26,12 +25,9 @@ static const struct auto_mouse_layer_config auto_mouse_layer_config = {
     .windows_mouse_layer = DT_INST_PROP(0, windows_mouse_layer),
 };
 
-
 static bool auto_mouse_layer_active;
 static zmk_keymap_layer_id_t auto_mouse_layer;
 
-static bool caps_lock_indicator_initialized;
-static bool last_caps_lock_indicator;
 
 static void auto_mouse_layer_timeout(struct k_work *work);
 
@@ -126,20 +122,47 @@ static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    const bool caps_lock =
-        (event->indicators & PLOOPY_CAPS_LOCK_INDICATOR) != 0;
-
-    if (!caps_lock_indicator_initialized) {
-        last_caps_lock_indicator = caps_lock;
-        caps_lock_indicator_initialized = true;
+    if (!zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    if (caps_lock != last_caps_lock_indicator) {
-        last_caps_lock_indicator = caps_lock;
+    bool caps_on =
+        (event->indicators & PLOOPY_CAPS_LOCK_INDICATOR) != 0;
 
-        if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
-            activate_auto_mouse_layer();
+    /*
+     * Windows Auto Mouse is state-based:
+     *
+     *   Caps ON  -> Windows Mouse layer ON
+     *   Caps OFF -> Windows Mouse layer OFF
+     *
+     * Do not use the normal Auto Mouse timeout here.
+     * The 450 ms timeout belongs to the Raw HID/Mac path.
+     */
+    if (caps_on) {
+        k_work_cancel_delayable(&auto_mouse_layer_timeout_work);
+
+        if (!zmk_keymap_layer_active(
+                auto_mouse_layer_config.windows_mouse_layer)) {
+            if (zmk_keymap_layer_activate(
+                    auto_mouse_layer_config.windows_mouse_layer) == 0) {
+                auto_mouse_layer =
+                    auto_mouse_layer_config.windows_mouse_layer;
+                auto_mouse_layer_active = true;
+            }
+        }
+    } else {
+        k_work_cancel_delayable(&auto_mouse_layer_timeout_work);
+
+        if (auto_mouse_layer_active &&
+            auto_mouse_layer ==
+                auto_mouse_layer_config.windows_mouse_layer &&
+            zmk_keymap_layer_active(auto_mouse_layer)) {
+            zmk_keymap_layer_deactivate(auto_mouse_layer);
+        }
+
+        if (auto_mouse_layer ==
+            auto_mouse_layer_config.windows_mouse_layer) {
+            auto_mouse_layer_active = false;
         }
     }
 
