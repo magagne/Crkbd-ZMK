@@ -25,9 +25,16 @@ Mac Mouse layer.
 
 Windows does not use the Raw HID bridge for Auto Mouse Layer.
 
-The Ploopy generates a Caps Lock keyboard event. Windows then updates the
-Caps Lock LED state and sends that state to the keyboard. The ZMK firmware
-uses the Caps Lock transition as the Auto Mouse Layer signal.
+The Ploopy generates a Caps Lock keyboard event when physical ball movement
+starts. Windows updates the Caps Lock state and sends the resulting LED state
+to the keyboard. The ZMK firmware uses that Caps Lock LED state as the
+Auto Mouse Layer signal:
+
+- Caps Lock ON → Windows Mouse layer ON
+- Caps Lock OFF → Windows Mouse layer OFF
+
+The Windows path is state-based and does not use the normal Auto Mouse Layer
+timeout. The 450 ms timeout applies to the Raw HID/macOS path.
 
 The LED signals are separate:
 
@@ -51,12 +58,14 @@ does not claim ownership.
 
 ### Timeout
 
-The current timeout is:
+The current Raw HID/macOS timeout is:
 
-    CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS=500
+    CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS=450
 
-After the timeout expires without another Auto Mouse Layer notification, the
-controller releases a Mouse layer that it activated itself.
+After the timeout expires without another Raw HID Auto Mouse Layer
+notification, the controller releases a Mouse layer that it activated itself.
+
+The Windows Caps Lock LED path is state-based and does not use this timeout.
 
 ## Other pointing features
 
