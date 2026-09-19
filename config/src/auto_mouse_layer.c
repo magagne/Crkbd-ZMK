@@ -135,14 +135,19 @@ static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    if (caps_lock != last_caps_lock_indicator) {
-        last_caps_lock_indicator = caps_lock;
-
-        if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer) &&
-            !auto_mouse_layer_active) {
+    /*
+     * Windows Auto Mouse activity uses the Caps Lock LED state.
+     *
+     * OFF -> ON is the activity notification.
+     * ON -> OFF only updates the remembered state.
+     */
+    if (!last_caps_lock_indicator && caps_lock) {
+        if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
             activate_auto_mouse_layer();
         }
     }
+
+    last_caps_lock_indicator = caps_lock;
 
     return ZMK_EV_EVENT_BUBBLE;
 }
