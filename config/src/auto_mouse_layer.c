@@ -127,14 +127,26 @@ static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
     }
 
     /*
-     * Windows Auto Mouse activity uses the Caps Lock LED indicator.
+     * Diagnostic:
      *
-     * Do not depend on an ON/OFF edge here. ZMK's HID-indicator
-     * notification is delivered through a shared work item, so the
-     * ON and OFF reports can be coalesced before this listener runs.
+     * A Windows Caps LED event is an Auto Mouse activity notification.
+     *
+     * If Auto Mouse already owns the Windows Mouse layer, refresh only
+     * its timeout. Do not deactivate/re-activate the layer.
+     *
+     * If Auto Mouse does not currently own the layer, use the normal
+     * activation path.
      */
     if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
-        activate_auto_mouse_layer();
+        if (auto_mouse_layer_active &&
+            zmk_keymap_layer_active(auto_mouse_layer)) {
+            k_work_reschedule(
+                &auto_mouse_layer_timeout_work,
+                K_MSEC(CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS)
+            );
+        } else {
+            activate_auto_mouse_layer();
+        }
     }
 
     return ZMK_EV_EVENT_BUBBLE;
