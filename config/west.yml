@@ -10,7 +10,7 @@ manifest:
   projects:
     - name: zmk
       remote: magagne
-      revision: f0e971b0b9a67c974d377e0f6c7873ef85dad6e0
+      revision: edf5c0814fd3ea202e43aad2d68fd32e882a518c
       import: app/west.yml
 
     - name: zmk-raw-hid

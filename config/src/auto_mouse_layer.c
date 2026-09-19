@@ -9,7 +9,6 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/keymap.h>
 #include <raw_hid/events.h>
 #include <zmk/events/hid_indicators_changed.h>
-#include <zmk/events/caps_lock_activity.h>
 #include <zephyr/sys/util.h>
 
 #define PLOOPY_AUTO_MOUSE_LAYER         0x41
@@ -122,29 +121,6 @@ static int hid_auto_mouse_layer_listener(const zmk_event_t *eh) {
 ZMK_LISTENER(hid_auto_mouse_layer, hid_auto_mouse_layer_listener);
 ZMK_SUBSCRIPTION(hid_auto_mouse_layer, raw_hid_received_event);
 
-static int caps_auto_mouse_layer_listener(const zmk_event_t *eh) {
-    if (!as_zmk_caps_lock_activity(eh)) {
-        return ZMK_EV_EVENT_BUBBLE;
-    }
-
-    if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
-        if (auto_mouse_layer_active &&
-            zmk_keymap_layer_active(auto_mouse_layer)) {
-            k_work_reschedule(
-                &auto_mouse_layer_timeout_work,
-                K_MSEC(CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS)
-            );
-        } else {
-            activate_auto_mouse_layer();
-        }
-    }
-
-    return ZMK_EV_EVENT_BUBBLE;
-}
-
-ZMK_LISTENER(caps_auto_mouse_layer, caps_auto_mouse_layer_listener);
-ZMK_SUBSCRIPTION(caps_auto_mouse_layer, zmk_caps_lock_activity);
-
 static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
     const struct zmk_hid_indicators_changed *event =
         as_zmk_hid_indicators_changed(eh);
@@ -153,29 +129,47 @@ static int led_auto_mouse_layer_listener(const zmk_event_t *eh) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    LOG_INF("AUTO_MOUSE LED EVENT: indicators=0x%02x time=%u",
-            event->indicators, k_uptime_get_32());
+    if (!zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    bool caps_on =
+        (event->indicators & PLOOPY_CAPS_LOCK_INDICATOR) != 0;
 
     /*
-     * Diagnostic:
+     * Windows Auto Mouse is state-based:
      *
-     * A Windows Caps LED event is an Auto Mouse activity notification.
+     *   Caps ON  -> Windows Mouse layer ON
+     *   Caps OFF -> Windows Mouse layer OFF
      *
-     * If Auto Mouse already owns the Windows Mouse layer, refresh only
-     * its timeout. Do not deactivate/re-activate the layer.
-     *
-     * If Auto Mouse does not currently own the layer, use the normal
-     * activation path.
+     * Do not use the normal Auto Mouse timeout here.
+     * The 450 ms timeout belongs to the Raw HID/Mac path.
      */
-    if (zmk_keymap_layer_active(auto_mouse_layer_config.windows_base_layer)) {
+    if (caps_on) {
+        k_work_cancel_delayable(&auto_mouse_layer_timeout_work);
+
+        if (!zmk_keymap_layer_active(
+                auto_mouse_layer_config.windows_mouse_layer)) {
+            if (zmk_keymap_layer_activate(
+                    auto_mouse_layer_config.windows_mouse_layer) == 0) {
+                auto_mouse_layer =
+                    auto_mouse_layer_config.windows_mouse_layer;
+                auto_mouse_layer_active = true;
+            }
+        }
+    } else {
+        k_work_cancel_delayable(&auto_mouse_layer_timeout_work);
+
         if (auto_mouse_layer_active &&
+            auto_mouse_layer ==
+                auto_mouse_layer_config.windows_mouse_layer &&
             zmk_keymap_layer_active(auto_mouse_layer)) {
-            k_work_reschedule(
-                &auto_mouse_layer_timeout_work,
-                K_MSEC(CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS)
-            );
-        } else {
-            activate_auto_mouse_layer();
+            zmk_keymap_layer_deactivate(auto_mouse_layer);
+        }
+
+        if (auto_mouse_layer ==
+            auto_mouse_layer_config.windows_mouse_layer) {
+            auto_mouse_layer_active = false;
         }
     }
 
