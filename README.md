@@ -97,4 +97,4 @@ The Auto Mouse Layer implementation is:
 
 The device-tree binding is:
 
-    config/dts/bindings/zmk,behavior-auto-mouse-layer.yaml
+    config/dts/bindings/behaviors/zmk,behavior-auto-mouse-layer.yaml
