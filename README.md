@@ -60,7 +60,7 @@ does not claim ownership.
 
 The current Raw HID/macOS timeout is:
 
-    CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS=450
+    CONFIG_ZMK_BEHAVIOR_AUTO_MOUSE_LAYER_TIMEOUT_MS=450
 
 After the timeout expires without another Raw HID Auto Mouse Layer
 notification, the controller releases a Mouse layer that it activated itself.
@@ -97,4 +97,4 @@ The Auto Mouse Layer implementation is:
 
 The device-tree binding is:
 
-    config/dts/bindings/zmk,auto-mouse-layer.yaml
+    config/dts/bindings/zmk,behavior-auto-mouse-layer.yaml

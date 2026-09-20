@@ -89,7 +89,7 @@ static void activate_auto_mouse_layer(void) {
 
     k_work_reschedule(
         &auto_mouse_layer_timeout_work,
-        K_MSEC(CONFIG_ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS)
+        K_MSEC(CONFIG_ZMK_BEHAVIOR_AUTO_MOUSE_LAYER_TIMEOUT_MS)
     );
 }
 

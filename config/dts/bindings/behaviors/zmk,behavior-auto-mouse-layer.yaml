@@ -1,5 +1,5 @@
 description: Ploopy AutoMouseLayer configuration
-compatible: "zmk,auto-mouse-layer"
+compatible: "zmk,behavior-auto-mouse-layer"
 properties:
   mac-base-layer:
     type: int

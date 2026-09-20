@@ -3,7 +3,7 @@ config ZMK_BEHAVIOR_RAW_DRAG_SCROLL
     default y
     depends on DT_HAS_ZMK_BEHAVIOR_RAW_DRAG_SCROLL_ENABLED
 
-config ZMK_AUTO_MOUSE_LAYER_TIMEOUT_MS
+config ZMK_BEHAVIOR_AUTO_MOUSE_LAYER_TIMEOUT_MS
     int "AutoMouseLayer timeout"
     # Longer default is useful for debugging.
     default 700

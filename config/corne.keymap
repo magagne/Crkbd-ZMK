@@ -34,7 +34,7 @@
         };
 
         auto_mouse_layer_config {
-            compatible = "zmk,auto-mouse-layer";
+            compatible = "zmk,behavior-auto-mouse-layer";
             mac-base-layer = <0>;
             mac-mouse-layer = <3>;
             windows-base-layer = <4>;
