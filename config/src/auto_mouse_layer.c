@@ -18,11 +18,13 @@ struct auto_mouse_layer_config {
     zmk_keymap_layer_id_t windows_mouse_layer;
 };
 
+#define AUTO_MOUSE_LAYER_CONFIG DT_PATH(behaviors, auto_mouse_layer_config)
+
 static const struct auto_mouse_layer_config auto_mouse_layer_config = {
-    .mac_base_layer = DT_INST_PROP(0, mac_base_layer),
-    .mac_mouse_layer = DT_INST_PROP(0, mac_mouse_layer),
-    .windows_base_layer = DT_INST_PROP(0, windows_base_layer),
-    .windows_mouse_layer = DT_INST_PROP(0, windows_mouse_layer),
+    .mac_base_layer = DT_PROP(AUTO_MOUSE_LAYER_CONFIG, mac_base_layer),
+    .mac_mouse_layer = DT_PROP(AUTO_MOUSE_LAYER_CONFIG, mac_mouse_layer),
+    .windows_base_layer = DT_PROP(AUTO_MOUSE_LAYER_CONFIG, windows_base_layer),
+    .windows_mouse_layer = DT_PROP(AUTO_MOUSE_LAYER_CONFIG, windows_mouse_layer),
 };
 
 static bool auto_mouse_layer_active;
