@@ -362,10 +362,10 @@
         Mac_Mouse_Layout_3 {
             label = "Mouse";
             bindings = <
-&none  &none     &none      &HID_DragScroll  &kp LCTRL   &none          &none           &none           &none           &none            &none  &none
-&none  &kp LALT  &mkp MCLK  &mkp RCLK        &mkp LCLK   &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
-&none  &none     &none      &none            &LCLK_LCLK  &none          &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
-                            &none            &none       &skq LSHIFT    &none           &mkp MB4        &mkp MB5
+&none  &none     &none      &HID_DragScroll  &kp LCTRL   &none        &none           &none           &none           &none            &none  &none
+&none  &kp LALT  &mkp MCLK  &mkp RCLK        &LCLK_LCLK  &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &none     &none      &none            &none       &none        &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                            &none            &none       &mkp LCLK    &none           &mkp MB4        &mkp MB5
             >;
         };
 
@@ -402,10 +402,10 @@
         Win_Mouse_Layout_7 {
             label = "Mouse";
             bindings = <
-&none  &none     &kp SCROLLLOCK  &LED_DragScroll  &kp LCTRL   &none          &none           &none           &none           &none            &none  &none
-&none  &kp LALT  &mkp MCLK       &mkp RCLK        &mkp LCLK   &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
-&none  &none     &none           &none            &LCLK_LCLK  &none          &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
-                                 &none            &none       &skq LSHIFT    &none           &mkp MB4        &mkp MB5
+&none  &none     &kp SCROLLLOCK  &LED_DragScroll  &kp LCTRL   &none        &none           &none           &none           &none            &none  &none
+&none  &kp LALT  &mkp MCLK       &mkp RCLK        &LCLK_LCLK  &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &none     &none           &none            &none       &none        &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                                 &none            &none       &mkp LCLK    &none           &mkp MB4        &mkp MB5
             >;
         };
 
