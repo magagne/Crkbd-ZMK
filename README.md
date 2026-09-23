@@ -93,7 +93,7 @@ The custom firmware configuration is under:
 
 The Auto Mouse Layer implementation is:
 
-    config/src/auto_mouse_layer.c
+    config/src/behavior_auto_mouse_layer.c
 
 The device-tree binding is:
 
