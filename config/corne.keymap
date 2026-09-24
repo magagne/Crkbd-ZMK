@@ -362,10 +362,10 @@
         Mac_Mouse_Layout_3 {
             label = "Mouse";
             bindings = <
-&none  &none         &none      &LCLK_LCLK      &kp LCTRL       &none              &none           &none           &none           &none            &none  &none
-&none  &kp LEFT_ALT  &mkp MCLK  &mkp RCLK       &mkp LCLK       &none              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
-&none  &none         &none      &kp RA(LG(N9))  &kp RA(LG(N0))  &none              &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
-                                &none           &none           &HID_DragScroll    &none           &none           &none
+&none  &none         &none      &LCLK_LCLK      &kp LCTRL                 &none              &none           &none           &none           &none            &none  &none
+&none  &kp LALT      &mkp MCLK  &mkp RCLK       &mkp HID_DragScroll       &none              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &none         &none      &kp RA(LG(N9))  &kp RA(LG(N0))            &none              &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                                &none           &none                     &mkp LCLK          &none           &none           &none
             >;
         };
 
@@ -402,12 +402,12 @@
         Win_Mouse_Layout_7 {
             label = "Mouse";
             bindings = <
-&none  &none     &none      &LCLK_LCLK    &kp LCTRL      &none              &none           &none           &none           &none            &none  &none
-&none  &kp LALT  &mkp MCLK  &mkp RCLK     &mkp LCLK      &none              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
-&none  &none     &none      &kp LA(LEFT)  &kp LA(RIGHT)  &kp SLCK           &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
-                            &none         &none          &LED_DragScroll    &none           &none           &none
+&none  &none         &none      &LCLK_LCLK      &kp LCTRL                 &none              &none           &none           &none           &none            &none  &none
+&none  &kp LALT      &mkp MCLK  &mkp RCLK       &mkp LED_DragScroll       &kp SCROLLLOCK    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &none         &none      &kp RA(LG(N9))  &kp RA(LG(N0))            &none              &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
+                                &none           &none                     &mkp LCLK          &none           &none           &none
             >;
-        };
+      };
 
         Num_Layout_8 {
             label = "Num";
