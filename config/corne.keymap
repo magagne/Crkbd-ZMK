@@ -332,20 +332,20 @@
         Mac_Base_Layout_0 {
             label = "Apple";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                  &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
-                     &mo 8  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 9
+&none            &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &kp RA(RIGHT_BRACKET)  &none
+&kp LG(LS(TAB))  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                  &kp LG(TAB)
+&none            &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
+                               &mo 8  &mo 1  &skq LSHIFT    &kp SPACE  &mo 2  &mo 9
             >;
         };
 
         Mac_Extend_Layout_1 {
             label = "Extend";
             bindings = <
-&none  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)   &kp LG(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
-&none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
-&none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 10          &mo 11
+&none         &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)   &kp LG(LS(Z))    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
+&kp LC(LEFT)  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &kp LC(RIGHT)
+&none         &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
+                                      &none        &none       &none            &kp RETURN      &mo 10          &mo 11
             >;
         };
 
@@ -372,20 +372,20 @@
         Win_Base_Layout_4 {
             label = "Windows";
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)  &none
-&none  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                  &none
-&none  &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
-                     &mo 8  &mo 5  &skq LSHIFT    &kp SPACE  &mo 6  &mo 9
+&none            &kp Q  &kp W  &kp F  &kp P  &kp B          &kp J      &kp L  &kp U      &kp Y    &kp RC(RIGHT_BRACKET)  &none
+&kp LA(LS(TAB))  &kp A  &kp R  &kp S  &kp T  &kp G          &kp M      &kp N  &kp E      &kp I    &kp O                  &kp LA(TAB)
+&none            &kp Z  &kp X  &kp C  &kp D  &kp V          &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH               &none
+                               &mo 8  &mo 5  &skq LSHIFT    &kp SPACE  &mo 6  &mo 9
             >;
         };
 
         Win_Extend_Layout_5 {
             label = "Extend";
             bindings = <
-&none  &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
-&none  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &none
-&none  &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
-                               &none        &none       &none            &kp RETURN      &mo 10          &mo 11
+&none                   &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)   &kp LC(Y)        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp PRINTSCREEN  &none
+&kp LC(LG(LEFT_ARROW))  &skq LALT  &skq LGUI    &skq LSHIFT  &skq LCTRL  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESC          &kp LC(LG(RIGHT))
+&none                   &skq RALT  &kp LS(TAB)  &kp TAB      &skq RCTRL  &kp RETURN       &kp DELETE      &kp BACKSPACE   &kp TAB       &kp INSERT       &kp CAPS         &none
+                                                &none        &none       &none            &kp RETURN      &mo 10          &mo 11
             >;
         };
 
@@ -403,7 +403,7 @@
             label = "Mouse";
             bindings = <
 &none  &none     &none      &none         &kp LCTRL      &none              &none           &none           &none           &none            &none  &none
-&none  &kp LALT  &mkp MCLK  &mkp RCLK     &mkp LCLK      &LCLK_LCLK         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &none
+&none  &kp LALT  &mkp MCLK  &mkp RCLK     &mkp LCLK      &LCLK_LCLK         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none  &kp LA(TAB)
 &none  &none     &none      &kp LA(LEFT)  &kp LA(RIGHT)  &kp SLCK           &none           &msc SCRL_UP    &msc SCRL_DOWN  &none            &none  &none
                             &none         &none          &LED_DragScroll    &none           &none           &none
             >;
